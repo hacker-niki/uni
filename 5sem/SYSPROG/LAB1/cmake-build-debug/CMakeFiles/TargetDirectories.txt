@@ -1,0 +1,4 @@
+C:/Users/user/Desktop/uni/SYSPROG/LAB1/cmake-build-debug/CMakeFiles/LAB1.dir
+C:/Users/user/Desktop/uni/SYSPROG/LAB1/cmake-build-debug/CMakeFiles/test.dir
+C:/Users/user/Desktop/uni/SYSPROG/LAB1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/user/Desktop/uni/SYSPROG/LAB1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

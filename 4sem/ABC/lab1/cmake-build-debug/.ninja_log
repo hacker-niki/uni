@@ -1,0 +1,15 @@
+# ninja log v5
+0	9	1713290731452308943	CMakeFiles/cmake-cpp-nasm.dir/calcS.asm.o	2e8f90683b3daa76
+0	20	1714423374434710429	CMakeFiles/lab1.dir/calcS.asm.o	1e9cfc923fc6c8c9
+530	606	1714449024929585290	lab1	9240657c48b7a0e9
+0	20	1714423374434710429	CMakeFiles/lab1.dir/calcY.asm.o	b7477f582b949a80
+0	31	1714449066146254562	build.ninja	6779ff288064d906
+0	1623	1714421354631452096	CMakeFiles/lab1_gpu.dir/main_gpu.cpp.o	b7dfab73985f522c
+1	571	1713904420588126301	CMakeFiles/cmake-cpp-nasm.dir/main.cpp.o	d264d6d33c386bef
+0	8	1713252941866532556	CMakeFiles/cmake-cpp-nasm.dir/asm.asm.o	ee6efb225ab18cb6
+1	530	1714449024852918617	CMakeFiles/lab1.dir/main.cpp.o	4c6f39f99c37a1b
+0	8	1713290147688952093	CMakeFiles/cmake-cpp-nasm.dir/calcY.asm.o	72759bff7c65103d
+2	18	1714449073986255058	CMakeFiles/lab1_HT.dir/calcY.asm.o	d585c171d47977c7
+1	18	1714449073986255058	CMakeFiles/lab1_HT.dir/calcS.asm.o	25bb5edd6dcf0b15
+1	634	1714449074602921764	CMakeFiles/lab1_HT.dir/main.cpp.o	dfa7e5d145fcfd7
+635	703	1714449074669588435	lab1_HT	76bba00a5fdb21d6

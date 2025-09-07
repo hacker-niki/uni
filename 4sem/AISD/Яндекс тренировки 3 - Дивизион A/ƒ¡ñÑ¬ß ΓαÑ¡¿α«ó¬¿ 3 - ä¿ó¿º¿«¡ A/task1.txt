@@ -1,0 +1,54 @@
+#include <iostream>
+#include <fstream>
+#include <map>
+#include <algorithm>
+#include <string>
+
+int main() {
+    std::ifstream file("input.txt");
+    std::map<char, int> dict;
+    int max = 1;
+    std::string line;
+    while (getline(file, line))
+    {
+        for (char c : line)
+        {
+            if (c > 32)
+            {
+                if (dict.count(c))
+                {
+                    dict[c]++;
+                    max = std::max(max, dict[c]);
+                }
+                else
+                {
+                    dict[c] = 1;
+                }
+            }
+        }
+    }
+    std::string s;
+    for (auto i : dict)
+    {
+        s += i.first;
+    }
+    
+    sort(s.begin(), s.end());
+    for (int i = max; i > 0; i--) {
+        std::string str = "";
+        for (char c : s) {
+            if (dict[c] >= i)
+            {
+                str += '#';
+            }
+            else
+            {
+                str += ' ';
+            }
+        }
+        std::cout << str << '\n';
+        max--;
+    }
+    std::cout << s << '\n';
+    return 0;
+}

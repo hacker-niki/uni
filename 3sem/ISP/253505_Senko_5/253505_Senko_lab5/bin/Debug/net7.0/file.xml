@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfPyramid xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Pyramid>
+    <Name>qwerty</Name>
+    <Pharaohs>
+      <Pharaoh>
+        <YearsOld>123</YearsOld>
+        <Name>ewq</Name>
+      </Pharaoh>
+      <Pharaoh>
+        <YearsOld>456</YearsOld>
+        <Name>qwe</Name>
+      </Pharaoh>
+    </Pharaohs>
+  </Pyramid>
+  <Pyramid>
+    <Name>qwerty</Name>
+    <Pharaohs>
+      <Pharaoh>
+        <YearsOld>123</YearsOld>
+        <Name>ewq</Name>
+      </Pharaoh>
+      <Pharaoh>
+        <YearsOld>456</YearsOld>
+        <Name>qwe</Name>
+      </Pharaoh>
+    </Pharaohs>
+  </Pyramid>
+  <Pyramid>
+    <Name>qwerty</Name>
+    <Pharaohs>
+      <Pharaoh>
+        <YearsOld>123</YearsOld>
+        <Name>ewq</Name>
+      </Pharaoh>
+      <Pharaoh>
+        <YearsOld>456</YearsOld>
+        <Name>qwe</Name>
+      </Pharaoh>
+    </Pharaohs>
+  </Pyramid>
+</ArrayOfPyramid>

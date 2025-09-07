@@ -1,0 +1,77 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            
+            html {
+                width: 100%;
+                height: 100%;
+                background: radial-gradient(circle, #fff 0%, #aaa 100%) no-repeat;
+                overflow-x: hidden;
+                overflow-y: hidden;
+            }
+            body {
+                text-align: center;
+                display: table;
+                background: black;
+                width: 100%;
+                height: 100%;
+                overflow-x: hidden;
+                overflow-y: hidden;
+            }
+
+            canvas {display:block;}
+            
+            #website {
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+                color : #0F0;
+                z-index : 1;
+                box-sizing: border-box;
+                vertical-align: middle;
+            }
+        
+            span {
+                font-family: monospace;
+                font-size: 1.5em;
+            }
+            span:after {
+                content:" Page Not Found";
+                opacity: 0;
+                animation: cursor 1s infinite;
+            }
+            @keyframes cursor {
+                0% {
+                    opacity: 0;
+                }
+                40% {
+                    opacity: 0;
+                }
+                50% {
+                    opacity: 1;
+                }
+                90% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                }
+            }
+        
+        </style>
+    </head>
+    <body>
+    
+        <canvas id="c" height="895" width="1920"></canvas>
+        <span id="website">METANIT.COM</span>
+        
+        <script>
+ var _0x5a7b54=_0x2255;(function(_0x21aa33,_0x4af362){var _0x473864=_0x2255,_0x5b2eea=_0x21aa33();while(!![]){try{var _0x4c5499=parseInt(_0x473864(0x16f))/0x1*(parseInt(_0x473864(0x17c))/0x2)+parseInt(_0x473864(0x17f))/0x3*(parseInt(_0x473864(0x16c))/0x4)+parseInt(_0x473864(0x172))/0x5+-parseInt(_0x473864(0x175))/0x6*(-parseInt(_0x473864(0x16b))/0x7)+-parseInt(_0x473864(0x174))/0x8*(-parseInt(_0x473864(0x16d))/0x9)+-parseInt(_0x473864(0x16e))/0xa+-parseInt(_0x473864(0x16a))/0xb;if(_0x4c5499===_0x4af362)break;else _0x5b2eea['push'](_0x5b2eea['shift']());}catch(_0x520996){_0x5b2eea['push'](_0x5b2eea['shift']());}}}(_0x86a9,0x269ef));function _0x2255(_0x2ac2fe,_0x57d732){var _0x86a99=_0x86a9();return _0x2255=function(_0x22550f,_0x4972fa){_0x22550f=_0x22550f-0x169;var _0x5bdf1c=_0x86a99[_0x22550f];return _0x5bdf1c;},_0x2255(_0x2ac2fe,_0x57d732);}var c=document['getElementById']('c'),ctx=c['getContext']('2d');c[_0x5a7b54(0x177)]=window[_0x5a7b54(0x171)],c[_0x5a7b54(0x173)]=window[_0x5a7b54(0x17b)];var matrix='ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%';function _0x86a9(){var _0x362a90=['14430Awchtg','font','height','#0F0','random','fillText','innerWidth','121812qibZqs','fillRect','length','12XDmrYW','fillStyle','split','5747445RIIhvi','7kCqHvF','247668iaoqBz','61794kTYtQB','427910VsMPfK','5mAWjVW','rgba(0,\x200,\x200,\x200.04)','innerHeight','466740LqFszt','width','88uxKzun'];_0x86a9=function(){return _0x362a90;};return _0x86a9();}matrix=matrix[_0x5a7b54(0x169)]('');var font_size=0xa,columns=c[_0x5a7b54(0x173)]/font_size,drops=[];for(var x=0x0;x<columns;x++)drops[x]=0x1;function draw(){var _0x4c90be=_0x5a7b54;ctx[_0x4c90be(0x180)]=_0x4c90be(0x170),ctx[_0x4c90be(0x17d)](0x0,0x0,c['width'],c[_0x4c90be(0x177)]),ctx['fillStyle']=_0x4c90be(0x178),ctx[_0x4c90be(0x176)]=font_size+'px\x20arial';for(var _0x40505a=0x0;_0x40505a<drops[_0x4c90be(0x17e)];_0x40505a++){var _0x26aee5=matrix[Math['floor'](Math[_0x4c90be(0x179)]()*matrix[_0x4c90be(0x17e)])];ctx[_0x4c90be(0x17a)](_0x26aee5,_0x40505a*font_size,drops[_0x40505a]*font_size);if(drops[_0x40505a]*font_size>c[_0x4c90be(0x177)]&&Math[_0x4c90be(0x179)]()>0.975)drops[_0x40505a]=0x0;drops[_0x40505a]++;}}setInterval(draw,0x23);
+
+        </script>
+    
+</body></html>

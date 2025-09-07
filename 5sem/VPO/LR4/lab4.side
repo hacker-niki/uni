@@ -1,0 +1,3538 @@
+{
+  "id": "34116041-9425-4457-95eb-cf39f03da62c",
+  "version": "2.0",
+  "name": "lab4",
+  "url": "https://www.hse.ru",
+  "tests": [{
+    "id": "25440ee2-23b6-4205-aa04-4a116652c105",
+    "name": "Test main topbar",
+    "commands": [{
+      "id": "7eafc5ed-bffa-480e-a086-b80626cc3818",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bc2bd704-7bb8-463b-b4e4-28e3c49bd8c9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "2505x1415",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f3e642d7-51af-4e7b-9aed-64d50a1b80b1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Программа развития",
+      "targets": [
+        ["linkText=Программа развития", "linkText"],
+        ["css=.topmenu__item:nth-child(1) > .link_white", "css:finder"],
+        ["xpath=//a[contains(text(),'Программа развития')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://strategy.hse.ru/')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Программа развития')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bdd7e78f-f7c0-470d-bf77-b6b3d8c8dad4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.simple-logo > svg",
+      "targets": [
+        ["css=.simple-logo > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "de2c3391-f0f9-4fcf-ae61-d2d10cc23112",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Преподаватели и сотрудники",
+      "targets": [
+        ["linkText=Преподаватели и сотрудники", "linkText"],
+        ["css=.topmenu__item:nth-child(2) > .link_white", "css:finder"],
+        ["xpath=//a[contains(text(),'Преподаватели и сотрудники')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.hse.ru/org/persons/')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Преподаватели и сотрудники')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "977ade0e-5545-48df-92c0-d8e9caf9a37b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg",
+      "targets": [
+        ["css=.control > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "41770be7-d998-4093-83b4-ab5b9695cfc3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Факультеты и институты",
+      "targets": [
+        ["linkText=Факультеты и институты", "linkText"],
+        ["css=.topmenu__item:nth-child(3) > .link_white", "css:finder"],
+        ["xpath=//a[contains(text(),'Факультеты и институты')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.hse.ru/education/faculty/')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Факультеты и институты')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "87105af6-9382-4aa5-9bda-b43482cdffcf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg > .control__path",
+      "targets": [
+        ["css=.control > svg > .control__path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "d1ebe3e4-0ba1-452b-90a7-daa29c2daa60",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Выпускники",
+      "targets": [
+        ["linkText=Выпускники", "linkText"],
+        ["css=.topmenu__item:nth-child(4) > .link_white", "css:finder"],
+        ["xpath=//a[contains(text(),'Выпускники')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://alumni.hse.ru/')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Выпускники')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "af645347-4828-465b-a17c-11687a661901",
+      "comment": "",
+      "command": "click",
+      "target": "css=.simple-logo path",
+      "targets": [
+        ["css=.simple-logo path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa981796-a146-445c-9689-45bd860faf3f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Спасибо, Вышка",
+      "targets": [
+        ["linkText=Спасибо, Вышка", "linkText"],
+        ["css=.topmenu__item:nth-child(5) > .link_white", "css:finder"],
+        ["xpath=//a[contains(text(),'Спасибо, Вышка')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://spasibo.hse.ru/')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Спасибо, Вышка')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eaa13555-257e-4676-8883-0942f225a9db",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg > path",
+      "targets": [
+        ["css=.control > svg > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "2565868d-389e-41a4-97b9-6fe4d9d624da",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=«Вышка для своих»",
+      "targets": [
+        ["linkText=«Вышка для своих»", "linkText"],
+        ["css=.topmenu__item:nth-child(6) > .link_white", "css:finder"],
+        ["xpath=//a[contains(text(),'«Вышка для своих»')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.hse.ru/our/')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'«Вышка для своих»')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c026d7d0-3bec-44bb-b7b4-eda24ecac174",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Национальный исследовательский университет «Высшая школа экономики»",
+      "targets": [
+        ["linkText=Национальный исследовательский университет «Высшая школа экономики»", "linkText"],
+        ["css=.header_breadcrumb__link", "css:finder"],
+        ["xpath=(//a[contains(@href, '//www.hse.ru')])[7]", "xpath:href"],
+        ["xpath=//div[3]/div/div/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "55766b01-5add-4ac5-90d6-f14ca0e13eff",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=«Вышка для своих»",
+      "targets": [
+        ["linkText=«Вышка для своих»", "linkText"],
+        ["css=.topmenu__item:nth-child(6) > .link_white", "css:finder"],
+        ["xpath=//a[contains(text(),'«Вышка для своих»')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.hse.ru/our/')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'«Вышка для своих»')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "844259b1-8279-4246-86f8-419cfe65aae1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.header_breadcrumb__link > span",
+      "targets": [
+        ["css=.header_breadcrumb__link > span", "css:finder"],
+        ["xpath=//li/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Национальный исследовательский университет «Высшая школа экономики»')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e6d4e724-28e2-4bb5-97a8-731c55e13395",
+      "comment": "",
+      "command": "click",
+      "target": "css=.main-panel__right > .control span:nth-child(3)",
+      "targets": [
+        ["css=.main-panel__right > .control span:nth-child(3)", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a623e955-7107-44b7-8643-b19432a8c0bf",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Санкт-Петербург",
+      "targets": [
+        ["linkText=Санкт-Петербург", "linkText"],
+        ["css=.main-panel__right li:nth-child(2) > .with-icon", "css:finder"],
+        ["xpath=//a[contains(text(),'Санкт-Петербург')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '//spb.hse.ru/')]", "xpath:href"],
+        ["xpath=//span/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Санкт-Петербург')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "172dd7c2-bdb9-436f-a132-b9b63805cb33",
+      "comment": "",
+      "command": "click",
+      "target": "css=.main-panel__right > .control span:nth-child(3)",
+      "targets": [
+        ["css=.main-panel__right > .control span:nth-child(3)", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e216d277-6008-44b2-a6cb-7793eb1478bb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.main-panel__right > .control li:nth-child(1)",
+      "targets": [
+        ["css=.main-panel__right > .control li:nth-child(1)", "css:finder"],
+        ["xpath=//span/div/ul/li", "xpath:position"],
+        ["xpath=//li[contains(.,'Москва')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b98d5a3-5d24-4cdd-af2a-f9e57658c0ca",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Москва",
+      "targets": [
+        ["linkText=Москва", "linkText"],
+        ["css=.main-panel__right li:nth-child(1) > .with-icon", "css:finder"],
+        ["xpath=//a[contains(text(),'Москва')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '//hse.ru/')]", "xpath:href"],
+        ["xpath=//span/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Москва')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bcdd9ebd-13d3-48e3-b442-5e03de191029",
+      "comment": "",
+      "command": "click",
+      "target": "css=.main-panel__right .control_svg",
+      "targets": [
+        ["css=.main-panel__right .control_svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "1ff3197f-544b-434b-a90e-528de16ba51b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.header__logo",
+      "targets": [
+        ["css=.header__logo", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "3ed0b82b-ef7a-49b1-a515-a747b177b85b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.header__logo > path:nth-child(3)",
+      "targets": [
+        ["css=.header__logo > path:nth-child(3)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "79bb4fb0-98cf-4801-a764-367cf3cb4c3b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Главная",
+      "targets": [
+        ["linkText=Главная", "linkText"],
+        ["css=.breadcrumbs__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Главная')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Главная')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f6d92ac-b537-4d6e-b91b-616056090164",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "127b0830-5795-477b-b7cc-8b52b46751f7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.main-panel__right .main-lang__control",
+      "targets": [
+        ["css=.main-panel__right .main-lang__control", "css:finder"],
+        ["xpath=//div/div/div[4]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "70def54f-8375-4b61-99b9-79d3d4adb5ea",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=EN",
+      "targets": [
+        ["linkText=EN", "linkText"],
+        ["css=.main-lang_show-list .js-lang-button", "css:finder"],
+        ["xpath=//a[contains(text(),'EN')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '//www.hse.ru/en/')]", "xpath:href"],
+        ["xpath=//div[4]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'EN')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "751a234f-8023-4093-b4bd-130851736c6b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.main-panel__right .main-lang__control",
+      "targets": [
+        ["css=.main-panel__right .main-lang__control", "css:finder"],
+        ["xpath=//div/div/div[4]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "78745f42-1ebf-4693-aba2-ac33f7cc0361",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=RU",
+      "targets": [
+        ["linkText=RU", "linkText"],
+        ["css=.dropdown-lang_show-list .dropdown-lang__item:nth-child(1) > .dropdown-lang__link", "css:finder"],
+        ["xpath=//a[contains(text(),'RU')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://admissions.hse.ru/')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'RU')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "94ec7e92-4a12-4a44-9f6d-b31ac850b1ed",
+    "name": "Test site top bar",
+    "commands": [{
+      "id": "0e24d7d9-db5f-43f9-95b3-f9b3f218e0de",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a3c6a754-a0ec-4e55-beeb-27a3c9983be7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "2505x1415",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9329ad83-5660-40ec-b847-771d7c640f78",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Поступление",
+      "targets": [
+        ["linkText=Поступление", "linkText"],
+        ["css=.main-menu__item:nth-child(1) > .main-menu__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Поступление')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.hse.ru/abitur')]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Поступление')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1588e7c7-35fe-4bba-ac43-c0e775be4a04",
+      "comment": "",
+      "command": "click",
+      "target": "css=circle",
+      "targets": [
+        ["css=circle", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "321f9f5c-2087-468e-b323-265ef405e52f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Образование",
+      "targets": [
+        ["linkText=Образование", "linkText"],
+        ["css=.main-menu__item:nth-child(2) > .main-menu__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Образование')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.hse.ru/eduland')]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Образование')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf531498-4eb1-4cb7-b899-7a1e9ba68063",
+      "comment": "",
+      "command": "click",
+      "target": "css=circle",
+      "targets": [
+        ["css=circle", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ec25b2a-f7a3-4e79-94c6-566ae25bffad",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Наука",
+      "targets": [
+        ["linkText=Наука", "linkText"],
+        ["css=.main-menu__item:nth-child(3) > .main-menu__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Наука')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.hse.ru/science/')]", "xpath:href"],
+        ["xpath=//div[2]/div/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Наука')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3136071f-6165-4308-9694-3322803f576e",
+      "comment": "",
+      "command": "click",
+      "target": "css=svg:nth-child(1) > path:nth-child(2)",
+      "targets": [
+        ["css=svg:nth-child(1) > path:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c1633b2-3e13-424a-8208-cc98bb18ccda",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Экспертиза",
+      "targets": [
+        ["linkText=Экспертиза", "linkText"],
+        ["css=.main-menu__item:nth-child(4) > .main-menu__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Экспертиза')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.hse.ru/expertise/')]", "xpath:href"],
+        ["xpath=//div[2]/div/ul/li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Экспертиза')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "667808ce-0bff-4bed-a7fa-c800e65ae9c8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg",
+      "targets": [
+        ["css=.control > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "f726d6c1-2ca4-4f1f-a4d7-1c84afa61788",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=О Вышке",
+      "targets": [
+        ["linkText=О Вышке", "linkText"],
+        ["css=.main-menu__item:nth-child(5) > .main-menu__link", "css:finder"],
+        ["xpath=//a[contains(text(),'О Вышке')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://www.hse.ru/info/')])[3]", "xpath:href"],
+        ["xpath=//div[2]/div/ul/li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'О Вышке')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cacd3711-a1e9-4b87-b1d0-6bfc7e2cd774",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg",
+      "targets": [
+        ["css=.control > svg", "css:finder"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "272e501d-6bfb-463c-9eba-c949f548e0d0",
+    "name": "Test search",
+    "commands": [{
+      "id": "0c59550e-18b0-4148-a544-05d4eccde0ae",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8f6a634b-865b-4eed-95cb-0c6a39daae5c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1489x846",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "034a6ba7-20ae-46e6-95fc-de42b666d414",
+      "comment": "",
+      "command": "click",
+      "target": "name=text",
+      "targets": [
+        ["name=text", "name"],
+        ["css=.main-input__field", "css:finder"],
+        ["xpath=//input[@name='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c07767c-09a8-4996-b5e0-e783b3a1eb0d",
+      "comment": "",
+      "command": "type",
+      "target": "name=text",
+      "targets": [
+        ["name=text", "name"],
+        ["css=.main-input__field", "css:finder"],
+        ["xpath=//input[@name='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "студенты"
+    }, {
+      "id": "48b93f3b-f934-4f2f-9340-ddb0b23405ca",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=text",
+      "targets": [
+        ["name=text", "name"],
+        ["css=.main-input__field", "css:finder"],
+        ["xpath=//input[@name='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "b1dc5698-2933-45aa-83e6-48846a082396",
+      "comment": "",
+      "command": "click",
+      "target": "css=.main-input__button > svg",
+      "targets": [
+        ["css=.main-input__button > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "64b9a4e6-5add-4141-b2cf-ed6f16e3a3e6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=по ссылке",
+      "targets": [
+        ["linkText=по ссылке", "linkText"],
+        ["css=div > .link:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'по ссылке')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/search/search.html')])[2]", "xpath:href"],
+        ["xpath=//div/div/div/div/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'по ссылке')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c2470f3-3038-47b5-ba74-ee5c16a2c87f",
+      "comment": "",
+      "command": "click",
+      "target": "id=search-input",
+      "targets": [
+        ["id=search-input", "id"],
+        ["css=#search-input", "css:finder"],
+        ["xpath=//input[@id='search-input']", "xpath:attributes"],
+        ["xpath=//div[@id='mainarea']/form/div/table/tbody/tr/td/div/input", "xpath:idRelative"],
+        ["xpath=//td/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0da2c96-a21d-47d6-a353-0d41b29d98bc",
+      "comment": "",
+      "command": "type",
+      "target": "id=search-input",
+      "targets": [
+        ["id=search-input", "id"],
+        ["css=#search-input", "css:finder"],
+        ["xpath=//input[@id='search-input']", "xpath:attributes"],
+        ["xpath=//div[@id='mainarea']/form/div/table/tbody/tr/td/div/input", "xpath:idRelative"],
+        ["xpath=//td/div/input", "xpath:position"]
+      ],
+      "value": "студенты"
+    }, {
+      "id": "bc6a8205-010b-4471-8375-724f52f75fec",
+      "comment": "",
+      "command": "click",
+      "target": "name=submit",
+      "targets": [
+        ["name=submit", "name"],
+        ["css=.button:nth-child(2)", "css:finder"],
+        ["xpath=//button[@name='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='mainarea']/form/div/table/tbody/tr/td/div/button", "xpath:idRelative"],
+        ["xpath=//td/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Поиск')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f39e3593-c83a-4cfe-a2c8-22683f0a9373",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mainareacol",
+      "targets": [
+        ["css=.mainareacol", "css:finder"],
+        ["xpath=//td", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "da7d66cb-4e95-4d59-a3d2-aca1c8b73056",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.sinfo > .first_child",
+      "targets": [
+        ["css=.sinfo > .first_child", "css:finder"],
+        ["xpath=//div[@id='mainarea']/div[3]/p", "xpath:idRelative"],
+        ["xpath=//div[3]/p", "xpath:position"]
+      ],
+      "value": "Результаты поиска «студенты»: 1-20 из 50 страниц"
+    }, {
+      "id": "ad472e17-d456-49ed-ad87-c687d34dc9bc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.post_first",
+      "targets": [
+        ["css=.post_first", "css:finder"],
+        ["xpath=//div[2]/div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "77c2ea1e-097a-43a9-9431-bd11ed0e3d68",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "754a3d1a-a0db-4a0c-a88e-42a36bc71d8a",
+    "name": "Test news",
+    "commands": [{
+      "id": "2fbdf825-a39b-4436-a923-706f8401dcbc",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e846e8a5-66ee-4336-a84b-321de7838dea",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1010",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "795d8754-5428-4a0e-8b5f-77017de32dc8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Все новости",
+      "targets": [
+        ["linkText=Все новости", "linkText"],
+        ["css=.main-section__row:nth-child(2) > .main-section__more", "css:finder"],
+        ["xpath=//a[contains(text(),'Все новости')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://www.hse.ru/news/')])[2]", "xpath:href"],
+        ["xpath=//section/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Все новости')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "23bf3daa-1b51-4168-9c18-60adb28cb8f6",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.card__inner",
+      "targets": [
+        ["css=.card__inner", "css:finder"],
+        ["xpath=//div[3]/div[2]/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "355a4a85-95ad-4032-bb14-82ca2a1742b1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sidebar__inner",
+      "targets": [
+        ["css=.sidebar__inner", "css:finder"],
+        ["xpath=//div[4]/div[3]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d4f628d-023a-4e7f-b82d-bdeed947e15b",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.first_child .h5",
+      "targets": [
+        ["css=.first_child .h5", "css:finder"],
+        ["xpath=//div[2]/div/div/div/div", "xpath:position"]
+      ],
+      "value": "РУБРИКИ"
+    }, {
+      "id": "5d9fb711-811d-4b8e-b062-9ee0766f012f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover > .b-day-number",
+      "targets": [
+        ["css=.hover > .b-day-number", "css:finder"],
+        ["xpath=//div[12]/a[20]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7898021f-30ea-489e-a018-28f2e6fdefd3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.post_first",
+      "targets": [
+        ["css=.post_first", "css:finder"],
+        ["xpath=//div[3]/div[2]/div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bbd8c53f-3155-445d-8389-f0be91b1d9c2",
+      "comment": "",
+      "command": "verifyText",
+      "target": "linkText=В НИУ ВШЭ стартовала XIV Международная научная конференция по форсайту и инновационной политике",
+      "targets": [
+        ["linkText=В НИУ ВШЭ стартовала XIV Международная научная конференция по форсайту и инновационной политике", "linkText"],
+        ["css=.post_first .link", "css:finder"],
+        ["xpath=//a[contains(text(),'В НИУ ВШЭ стартовала XIV Международная научная конференция по форсайту и инновационной политике')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/news/science/980523155.html')]", "xpath:href"],
+        ["xpath=//h2/a", "xpath:position"],
+        ["xpath=//a[contains(.,'В НИУ ВШЭ стартовала XIV Международная научная конференция по форсайту и инновационной политике')]", "xpath:innerText"]
+      ],
+      "value": "В НИУ ВШЭ стартовала XIV Международная научная конференция по форсайту и инновационной политике"
+    }, {
+      "id": "abed637a-a051-4518-8cff-7588c08718ce",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.post_first > .post__content img",
+      "targets": [
+        ["css=.post_first > .post__content img", "css:finder"],
+        ["xpath=//img[@alt='Иллюстрация к новости: В НИУ ВШЭ стартовала XIV Международная научная конференция по форсайту и инновационной политике']", "xpath:img"],
+        ["xpath=//div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ced1012-9f4e-4edb-aaf8-928570a34e68",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(2) > .pseudo",
+      "targets": [
+        ["css=li:nth-child(2) > .pseudo", "css:finder"],
+        ["xpath=//div[2]/div/div/div/div/ul/li[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Завтра')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd48dbe2-8d62-435e-bf54-9aafbe46ddd5",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "90fb9b0a-69c0-42c4-94aa-43a0d0de5767",
+    "name": "Test community",
+    "commands": [{
+      "id": "27ecc4e8-f494-4a87-8f56-0929910e87d4",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e2de8f0-a04b-4676-af6d-702610c6ce99",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "2505x1415",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4d989f2c-9f48-4a15-bd7d-dc1ea9697364",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Перейти",
+      "targets": [
+        ["linkText=Перейти", "linkText"],
+        ["css=.main-community__button > .main-button", "css:finder"],
+        ["xpath=//a[contains(text(),'Перейти')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://www.hse.ru/hse_community')])[2]", "xpath:href"],
+        ["xpath=//section[2]/div/div/div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Перейти')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "af50ea3c-dc2f-411a-bce7-a10a427dc93e",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.promo-title",
+      "targets": [
+        ["css=.promo-title", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Вышка.Комьюнити')]", "xpath:innerText"]
+      ],
+      "value": "Вышка.Комьюнити"
+    }, {
+      "id": "23868c96-8972-4e02-9cae-0b4480963960",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg > .control__path",
+      "targets": [
+        ["css=.control > svg > .control__path", "css:finder"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "46e0e5c8-5c84-4e17-ae2e-5f9721892c68",
+    "name": "Test events",
+    "commands": [{
+      "id": "d4e66a86-e55a-403c-8e3f-b04299fa4d0d",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9b5d790f-fbe6-4d6d-b9e5-cb9ec7062f53",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "2505x1415",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2e63f840-21e3-41df-8922-087b234eb195",
+      "comment": "",
+      "command": "click",
+      "target": "id=events-show-more",
+      "targets": [
+        ["id=events-show-more", "id"],
+        ["css=#events-show-more", "css:finder"],
+        ["xpath=//button[@id='events-show-more']", "xpath:attributes"],
+        ["xpath=//section[3]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Показать еще')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "12bcbee8-65d4-4f1c-9fc9-182dda804607",
+      "comment": "",
+      "command": "click",
+      "target": "css=.main-section__footer:nth-child(3)",
+      "targets": [
+        ["css=.main-section__footer:nth-child(3)", "css:finder"],
+        ["xpath=//section[3]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "be3c0e41-955a-438e-b71a-5804fb0aba6d",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.main-section__footer:nth-child(3) > .main-button:nth-child(1)",
+      "targets": [
+        ["css=.main-section__footer:nth-child(3) > .main-button:nth-child(1)", "css:finder"],
+        ["xpath=(//a[contains(text(),'Все мероприятия')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'announcements/')])[16]", "xpath:href"],
+        ["xpath=//section[3]/div/div[2]/a", "xpath:position"]
+      ],
+      "value": "Все мероприятия"
+    }, {
+      "id": "cc66b27f-f94a-4646-aa2a-a71a89f5e05d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.main-section__footer:nth-child(3) > .main-button:nth-child(1)",
+      "targets": [
+        ["css=.main-section__footer:nth-child(3) > .main-button:nth-child(1)", "css:finder"],
+        ["xpath=(//a[contains(text(),'Все мероприятия')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'announcements/')])[16]", "xpath:href"],
+        ["xpath=//section[3]/div/div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef87b8d3-477f-4085-a0bf-0d408de54e3b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.main-section__inner",
+      "targets": [
+        ["css=.main-section__inner", "css:finder"],
+        ["xpath=//section/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "43e53d70-cefd-46a8-abe7-5793d347d322",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.ann-caption",
+      "targets": [
+        ["css=.ann-caption", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Все мероприятия ВШЭ')]", "xpath:innerText"]
+      ],
+      "value": "Все мероприятия ВШЭ"
+    }, {
+      "id": "1e37fb9f-c93b-427b-ad26-062a86cbac0f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.main-panel__bottom > .main-logo path:nth-child(2)",
+      "targets": [
+        ["css=.main-panel__bottom > .main-logo path:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "80972e36-9c16-4620-9cfc-b091113ead7a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Подписка",
+      "targets": [
+        ["linkText=Подписка", "linkText"],
+        ["css=.main-button_subscribe", "css:finder"],
+        ["xpath=//a[contains(text(),'Подписка')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.hse.ru/news/announcements/?mode=expand&subscribe=1')]", "xpath:href"],
+        ["xpath=//section[3]/div/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Подписка')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "570c1d50-dc9a-4f79-a5a4-73c150304d81",
+      "comment": "",
+      "command": "click",
+      "target": "css=.layout",
+      "targets": [
+        ["css=.layout", "css:finder"],
+        ["xpath=//body/div/div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "81957d14-4901-4503-87b9-0efb598269e5",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Подписка на анонсы мероприятий Высшей школы экономики')]", "xpath:innerText"]
+      ],
+      "value": "Подписка на анонсы мероприятий Высшей школы экономики"
+    }, {
+      "id": "ac07467b-1f5b-4414-b1a9-607118aa6364",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg > path",
+      "targets": [
+        ["css=.control > svg > path", "css:finder"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "fc6f83d5-7e12-4d6d-8e81-8345fa612524",
+    "name": "Check 360",
+    "commands": [{
+      "id": "51ac3476-66c0-40a1-b72c-5f69e407ba4e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "470e23e6-16f9-4168-8400-d050cb9f58c0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "2505x1415",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "20708ca8-38ca-463f-8fe6-d2f7c51e4e4d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.main-metro-card_2h .main-metro-card__text",
+      "targets": [
+        ["css=.main-metro-card_2h .main-metro-card__text", "css:finder"],
+        ["xpath=//a/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Построй свою индивидуальную образовательную траекторию')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce7738f9-ff8a-452e-9924-542581ddf03b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dpoc-logo path",
+      "targets": [
+        ["css=.dpoc-logo path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "637a228d-5e59-4c92-9c22-42222f092126",
+      "comment": "",
+      "command": "click",
+      "target": "css=.js-tiles--visible .main-metro-card:nth-child(2) > .main-metro-card__content",
+      "targets": [
+        ["css=.js-tiles--visible .main-metro-card:nth-child(2) > .main-metro-card__content", "css:finder"],
+        ["xpath=//a[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "085b623a-6996-45d5-8385-a124aac5b8ac",
+      "comment": "",
+      "command": "click",
+      "target": "css=circle",
+      "targets": [
+        ["css=circle", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "2efb3e7d-7e21-4e5e-a0da-3f2b38a6c39c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.js-tiles--visible .main-metro-card:nth-child(3) > .main-metro-card__content",
+      "targets": [
+        ["css=.js-tiles--visible .main-metro-card:nth-child(3) > .main-metro-card__content", "css:finder"],
+        ["xpath=//a[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9b118ef-c711-481b-91a5-206ee729ed06",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ctlg-panel__logo path:nth-child(2)",
+      "targets": [
+        ["css=.ctlg-panel__logo path:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "f74ce169-fd30-4373-a360-95dc86ffa8ed",
+      "comment": "",
+      "command": "click",
+      "target": "css=.js-tiles--visible .main-metro-card:nth-child(4) > .main-metro-card__content",
+      "targets": [
+        ["css=.js-tiles--visible .main-metro-card:nth-child(4) > .main-metro-card__content", "css:finder"],
+        ["xpath=//a[4]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b6ce5fb5-015e-4672-b5bb-d75ead781f31",
+      "comment": "",
+      "command": "click",
+      "target": "css=.simple-logo path",
+      "targets": [
+        ["css=.simple-logo path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "71d424cd-9ae9-4a4a-9840-1069205fefb0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.js-tiles--visible .main-metro-card:nth-child(5)",
+      "targets": [
+        ["css=.js-tiles--visible .main-metro-card:nth-child(5)", "css:finder"],
+        ["xpath=(//a[contains(@href, 'https://elearning.hse.ru/mooc')])[2]", "xpath:href"],
+        ["xpath=//a[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4787f9cb-f3e1-4713-be00-16bd2918e932",
+      "comment": "",
+      "command": "click",
+      "target": "css=.no-underline path:nth-child(1)",
+      "targets": [
+        ["css=.no-underline path:nth-child(1)", "css:finder"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "1169e02e-a281-4c10-abda-bb984937f267",
+    "name": "Test footer",
+    "commands": [{
+      "id": "91a3deb7-182a-419f-82a4-facda13681b2",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "81260ce8-ecab-480e-9580-122961fdd1dd",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "2505x1415",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "819ca19a-e341-48e3-8c5d-f4bbff0ba999",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=О ВЫШКЕ",
+      "targets": [
+        ["linkText=О ВЫШКЕ", "linkText"],
+        ["css=.main-footer__nav:nth-child(1) > .main-footer__item-heading > .main-footer__link", "css:finder"],
+        ["xpath=//a[contains(text(),'О ВЫШКЕ')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '//www.hse.ru/org/hse/info/')]", "xpath:href"],
+        ["xpath=//footer/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'О ВЫШКЕ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "29cac1bc-b1d0-44ee-9515-ca52187738b3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg > .control__path",
+      "targets": [
+        ["css=.control > svg > .control__path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "6eb9dcaa-4cd1-4df1-a098-3749d417903d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Цифры и факты",
+      "targets": [
+        ["linkText=Цифры и факты", "linkText"],
+        ["css=.main-footer__nav:nth-child(1) > .main-footer__item:nth-child(2) > .main-footer__link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Цифры и факты')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '//www.hse.ru/figures/')])[2]", "xpath:href"],
+        ["xpath=//footer/div/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c083735e-673e-433d-a875-1da164a29a7c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.simple-logo path",
+      "targets": [
+        ["css=.simple-logo path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "9afa3b04-c82c-4e7e-8ff6-2209b6654eca",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Руководство и структура",
+      "targets": [
+        ["linkText=Руководство и структура", "linkText"],
+        ["css=.main-footer__nav:nth-child(1) > .main-footer__item:nth-child(3) > .main-footer__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Руководство и структура')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '//www.hse.ru/orgstructure/')])[4]", "xpath:href"],
+        ["xpath=//footer/div/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Руководство и структура')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d3d1bf78-fa5d-4e20-8f52-992ac825e0fa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg > path",
+      "targets": [
+        ["css=.control > svg > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "6cd735b2-934d-4a35-b867-69ca064c9a62",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Устойчивое развитие в НИУ ВШЭ",
+      "targets": [
+        ["linkText=Устойчивое развитие в НИУ ВШЭ", "linkText"],
+        ["css=.main-footer__nav:nth-child(1) > .main-footer__item:nth-child(4) > .main-footer__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Устойчивое развитие в НИУ ВШЭ')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://sustainability.hse.ru/')]", "xpath:href"],
+        ["xpath=//footer/div/ul/li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Устойчивое развитие в НИУ ВШЭ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "804846cc-8e59-47db-b607-a5f149a19beb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.simple-logo > svg",
+      "targets": [
+        ["css=.simple-logo > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c303d55-a128-401b-b984-dcb97f272133",
+      "comment": "",
+      "command": "click",
+      "target": "css=.main-footer__nav:nth-child(1)",
+      "targets": [
+        ["css=.main-footer__nav:nth-child(1)", "css:finder"],
+        ["xpath=//footer/div/ul", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d02c33d1-0cd1-45c6-9e80-6dec0f6aa59d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.main-footer__nav:nth-child(1) > .main-footer__item:nth-child(5) > .main-footer__link",
+      "targets": [
+        ["css=.main-footer__nav:nth-child(1) > .main-footer__item:nth-child(5) > .main-footer__link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Преподаватели и сотрудники')])[4]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '//www.hse.ru/org/persons/')])[7]", "xpath:href"],
+        ["xpath=//footer/div/ul/li[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "12168a66-19f5-44ef-b0db-25d95379f983",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg > path",
+      "targets": [
+        ["css=.control > svg > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c7879de-cdfc-4485-93fb-f83212dd80d1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Корпуса и общежития",
+      "targets": [
+        ["linkText=Корпуса и общежития", "linkText"],
+        ["css=.main-footer__nav:nth-child(1) > .main-footer__item:nth-child(6) > .main-footer__link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Корпуса и общежития')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '//www.hse.ru/buildinghse')])[3]", "xpath:href"],
+        ["xpath=//footer/div/ul/li[6]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "13f49400-5adf-4f9d-917c-fd2c51a5ca68",
+      "comment": "",
+      "command": "click",
+      "target": "css=.simple-logo path",
+      "targets": [
+        ["css=.simple-logo path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "19a2d4c2-be78-4691-ae26-11e5368f7336",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Закупки",
+      "targets": [
+        ["linkText=Закупки", "linkText"],
+        ["css=.main-footer__nav:nth-child(1) > .main-footer__item:nth-child(7) > .main-footer__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Закупки')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.hse.ru/org/hse/aup/procurement/')]", "xpath:href"],
+        ["xpath=//li[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Закупки')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "596cec2c-4776-4d16-93c1-bf50dec0c6a1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg > path",
+      "targets": [
+        ["css=.control > svg > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "6426afda-7737-424b-87ec-eef309aa446e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Обращения граждан в НИУ ВШЭ",
+      "targets": [
+        ["linkText=Обращения граждан в НИУ ВШЭ", "linkText"],
+        ["css=.main-footer__nav:nth-child(1) > .main-footer__item:nth-child(8) > .main-footer__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Обращения граждан в НИУ ВШЭ')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '//www.hse.ru/appeal/')]", "xpath:href"],
+        ["xpath=//li[8]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Обращения граждан в НИУ ВШЭ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "23232cac-ed5c-46d9-946f-e9d8d570590e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg",
+      "targets": [
+        ["css=.control > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "4585a385-fe85-4276-96a2-87bfd7dc42f3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Фонд целевого капитала",
+      "targets": [
+        ["linkText=Фонд целевого капитала", "linkText"],
+        ["css=.main-footer__nav:nth-child(1) > .main-footer__item:nth-child(9) > .main-footer__link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Фонд целевого капитала')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '//endowment.hse.ru/')])[2]", "xpath:href"],
+        ["xpath=//li[9]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "695e2f06-0d08-454d-b271-0f2dbc1ef6d7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg > path",
+      "targets": [
+        ["css=.control > svg > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "1de4e9a4-fde2-4056-9952-9d7f7e240ef8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Противодействие коррупции",
+      "targets": [
+        ["linkText=Противодействие коррупции", "linkText"],
+        ["css=.main-footer__nav:nth-child(1) > .main-footer__item:nth-child(10) > .main-footer__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Противодействие коррупции')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.hse.ru/anticorruption')]", "xpath:href"],
+        ["xpath=//li[10]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Противодействие коррупции')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d2f89bb-d633-4aa8-80ed-5c18ade11634",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg > path",
+      "targets": [
+        ["css=.control > svg > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "723172a6-812a-4a66-a779-586d2ab202bc",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Сведения о доходах, расходах, об имуществе и обязательствах имущественного характера",
+      "targets": [
+        ["linkText=Сведения о доходах, расходах, об имуществе и обязательствах имущественного характера", "linkText"],
+        ["css=.main-footer__nav:nth-child(1) > .main-footer__item:nth-child(11) > .main-footer__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Сведения о доходах, расходах, об имуществе и обязательствах имущественного характера')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.hse.ru/anticorruption/information')]", "xpath:href"],
+        ["xpath=//li[11]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Сведения о доходах, расходах, об имуществе и обязательствах имущественного характера')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "705bdb1f-722d-4ac0-981f-eee5860c81bc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg > path",
+      "targets": [
+        ["css=.control > svg > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "94b483c4-b25d-4137-81d2-a43de4bd6e1c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Сведения об образовательной организации",
+      "targets": [
+        ["linkText=Сведения об образовательной организации", "linkText"],
+        ["css=.main-footer__nav:nth-child(1) > .main-footer__item:nth-child(12) > .main-footer__link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Сведения об образовательной организации')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '//www.hse.ru/sveden/')])[2]", "xpath:href"],
+        ["xpath=//li[12]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f23ee98c-32ff-4ed7-83cb-e5ea9324a5e9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg > path",
+      "targets": [
+        ["css=.control > svg > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5937de3-f7f5-4d3f-8254-2ef77a5f054c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Людям с ограниченными возможностями здоровья",
+      "targets": [
+        ["linkText=Людям с ограниченными возможностями здоровья", "linkText"],
+        ["css=.main-footer__item:nth-child(13) > .main-footer__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Людям с ограниченными возможностями здоровья')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://inclusive.hse.ru/')])[2]", "xpath:href"],
+        ["xpath=//li[13]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Людям с ограниченными возможностями здоровья')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "79d100dd-9ca4-4886-9d43-4e28a7181023",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg > path",
+      "targets": [
+        ["css=.control > svg > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f514c4b-0d45-4d79-b909-529ffb329b05",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Единая платежная страница",
+      "targets": [
+        ["linkText=Единая платежная страница", "linkText"],
+        ["css=.main-footer__item:nth-child(14) > .main-footer__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Единая платежная страница')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://pay.hse.ru/')]", "xpath:href"],
+        ["xpath=//li[14]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Единая платежная страница')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "df677640-d145-4e48-b1e2-ddce83055468",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg",
+      "targets": [
+        ["css=.control > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "36dd935a-8780-49f8-badb-7bde76abc9c8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Работа в Вышке",
+      "targets": [
+        ["linkText=Работа в Вышке", "linkText"],
+        ["css=.main-footer__item:nth-child(15) > .main-footer__link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Работа в Вышке')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://www.hse.ru/career')])[2]", "xpath:href"],
+        ["xpath=//li[15]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "457de476-91d4-493d-9ff7-6c395b3332cf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg > .control__path",
+      "targets": [
+        ["css=.control > svg > .control__path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "1ab2bba3-6440-4afd-a2e8-42ebde9be784",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=ОБРАЗОВАНИЕ",
+      "targets": [
+        ["linkText=ОБРАЗОВАНИЕ", "linkText"],
+        ["css=.main-footer__nav:nth-child(2) > .main-footer__item-heading > .main-footer__link", "css:finder"],
+        ["xpath=//a[contains(text(),'ОБРАЗОВАНИЕ')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '//www.hse.ru/education/')])[6]", "xpath:href"],
+        ["xpath=//footer/div/ul[2]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'ОБРАЗОВАНИЕ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9427bbba-eed2-45e7-9adf-89da83c9b798",
+      "comment": "",
+      "command": "click",
+      "target": "css=path:nth-child(1)",
+      "targets": [
+        ["css=path:nth-child(1)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "d9d620a0-cfce-4ac9-ba2a-e8dd855872d8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Лицей",
+      "targets": [
+        ["linkText=Лицей", "linkText"],
+        ["css=.main-footer__nav:nth-child(2) > .main-footer__item:nth-child(2) > .main-footer__link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Лицей')])[3]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '//school.hse.ru')])[4]", "xpath:href"],
+        ["xpath=//footer/div/ul[2]/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "59837892-bca2-444f-bb05-80356da7b84b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.simple-logo path",
+      "targets": [
+        ["css=.simple-logo path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd188952-59ef-4967-9802-282671b33f5b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Довузовская подготовка",
+      "targets": [
+        ["linkText=Довузовская подготовка", "linkText"],
+        ["css=.main-footer__nav:nth-child(2) > .main-footer__item:nth-child(3) > .main-footer__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Довузовская подготовка')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://fdp.hse.ru/')])[6]", "xpath:href"],
+        ["xpath=//footer/div/ul[2]/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Довузовская подготовка')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ba5b50b0-4e1f-4c31-82d3-1087f68bf44b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sv-logo__svg",
+      "targets": [
+        ["css=.sv-logo__svg", "css:finder"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5759bd5-1bc4-44c0-877e-86d3c2011cb0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Олимпиады",
+      "targets": [
+        ["linkText=Олимпиады", "linkText"],
+        ["css=.main-footer__nav:nth-child(2) > .main-footer__item:nth-child(4) > .main-footer__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Олимпиады')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '//olymp.hse.ru/')])[7]", "xpath:href"],
+        ["xpath=//footer/div/ul[2]/li[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a99fed7-2f7c-409b-88f1-aefce65006aa",
+      "comment": "",
+      "command": "click",
+      "target": "css=circle",
+      "targets": [
+        ["css=circle", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "87f9460b-374f-4936-8670-af2a0273cb3b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Прием в бакалавриат",
+      "targets": [
+        ["linkText=Прием в бакалавриат", "linkText"],
+        ["css=.main-footer__nav:nth-child(2) > .main-footer__item:nth-child(5) > .main-footer__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Прием в бакалавриат')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '//ba.hse.ru/')])[4]", "xpath:href"],
+        ["xpath=//footer/div/ul[2]/li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Прием в бакалавриат')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "351a8aaa-75fc-438b-94fa-8d6f3261abe6",
+      "comment": "",
+      "command": "click",
+      "target": "css=circle",
+      "targets": [
+        ["css=circle", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef35810a-52e7-435e-908b-eff32869da5a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Вышка+",
+      "targets": [
+        ["linkText=Вышка+", "linkText"],
+        ["css=.main-footer__nav:nth-child(2) > .main-footer__item:nth-child(6) > .main-footer__link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Вышка+')])[3]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://www.hse.ru/plus')])[4]", "xpath:href"],
+        ["xpath=//footer/div/ul[2]/li[6]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c5b7866-7041-4c6b-a42a-b5780db5f01d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg > .control__path",
+      "targets": [
+        ["css=.control > svg > .control__path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f548fd6-285c-4b7b-9e60-a6f554db55ae",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Прием в магистратуру",
+      "targets": [
+        ["linkText=Прием в магистратуру", "linkText"],
+        ["css=.main-footer__nav:nth-child(2) > .main-footer__item:nth-child(7) > .main-footer__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Прием в магистратуру')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '//ma.hse.ru/')])[3]", "xpath:href"],
+        ["xpath=//ul[2]/li[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Прием в магистратуру')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4bbf9d3a-8d80-408a-b99b-610e136e085e",
+      "comment": "",
+      "command": "click",
+      "target": "css=circle",
+      "targets": [
+        ["css=circle", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "d79ecfd0-964e-4f4e-b400-3e4b2b0be904",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Аспирантура",
+      "targets": [
+        ["linkText=Аспирантура", "linkText"],
+        ["css=.main-footer__nav:nth-child(2) > .main-footer__item:nth-child(8) > .main-footer__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Аспирантура')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '//aspirantura.hse.ru/')])[3]", "xpath:href"],
+        ["xpath=//ul[2]/li[8]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Аспирантура')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "45db088c-5147-46d3-b033-9f7b367dfb49",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg",
+      "targets": [
+        ["css=.control > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "8f3da93c-5723-4b50-ac3e-b6aece6088ce",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Дополнительное образование",
+      "targets": [
+        ["linkText=Дополнительное образование", "linkText"],
+        ["css=.main-footer__nav:nth-child(2) > .main-footer__item:nth-child(9) > .main-footer__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Дополнительное образование')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '//busedu.hse.ru/')])[6]", "xpath:href"],
+        ["xpath=//ul[2]/li[9]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Дополнительное образование')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e72bd9a-7709-4b34-99c8-c8a475abc177",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ctlg-panel__logo path:nth-child(2)",
+      "targets": [
+        ["css=.ctlg-panel__logo path:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "c3d8c0ad-1c4c-4a2b-9f51-852d5c878192",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Центр развития карьеры",
+      "targets": [
+        ["linkText=Центр развития карьеры", "linkText"],
+        ["css=.main-footer__nav:nth-child(2) > .main-footer__item:nth-child(10) > .main-footer__link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Центр развития карьеры')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://career.hse.ru/')])[2]", "xpath:href"],
+        ["xpath=//ul[2]/li[10]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3db992a9-4c32-41a6-bded-a35a806b0759",
+      "comment": "",
+      "command": "click",
+      "target": "css=.simple-logo > svg",
+      "targets": [
+        ["css=.simple-logo > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "10abac35-d07a-42ff-b64b-26cc3e70e619",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Бизнес-инкубатор ВШЭ",
+      "targets": [
+        ["linkText=Бизнес-инкубатор ВШЭ", "linkText"],
+        ["css=.main-footer__nav:nth-child(2) > .main-footer__item:nth-child(11) > .main-footer__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Бизнес-инкубатор ВШЭ')]", "xpath:link"],
+        ["xpath=(//a[@href='http://inc.hse.ru/'])[2]", "xpath:href"],
+        ["xpath=//ul[2]/li[11]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Бизнес-инкубатор ВШЭ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "888becf0-8c27-4d93-86e4-02390816189f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg",
+      "targets": [
+        ["css=.control > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "e56572c6-34af-4db0-bc67-33b2753674f1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=перейдите по ссылке",
+      "targets": [
+        ["linkText=перейдите по ссылке", "linkText"],
+        ["css=.main-footer__nav:nth-child(2) > .main-footer__item:nth-child(12) > .main-footer__link", "css:finder"],
+        ["xpath=//a[contains(text(),'перейдите по ссылке')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://bus.gov.ru/qrcode/rate/446215')]", "xpath:href"],
+        ["xpath=//ul[2]/li[12]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'перейдите по ссылке')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f56959a8-ab60-4ee4-878c-5d00f587f312",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "884610b4-a7ef-41f4-b63b-3c8c16ff5315",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=НАУКА",
+      "targets": [
+        ["linkText=НАУКА", "linkText"],
+        ["css=.main-footer__nav:nth-child(3) > .main-footer__item-heading > .main-footer__link", "css:finder"],
+        ["xpath=//a[contains(text(),'НАУКА')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '//www.hse.ru/science/')])[12]", "xpath:href"],
+        ["xpath=//ul[3]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'НАУКА')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8f787be2-8c9e-41fc-b287-ee9d3882639e",
+      "comment": "",
+      "command": "click",
+      "target": "css=circle",
+      "targets": [
+        ["css=circle", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "ded7cfe6-c57e-4d39-b1c0-57f8a73232aa",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Научные подразделения",
+      "targets": [
+        ["linkText=Научные подразделения", "linkText"],
+        ["css=.main-footer__nav:nth-child(3) > .main-footer__item:nth-child(2) > .main-footer__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Научные подразделения')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '//www.hse.ru/science/centers')])[2]", "xpath:href"],
+        ["xpath=//ul[3]/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Научные подразделения')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd0b6c28-e111-41be-b315-45227dc9f799",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e6c6fa1-a526-44a8-aef9-7ad45901f27d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Исследовательские проекты",
+      "targets": [
+        ["linkText=Исследовательские проекты", "linkText"],
+        ["css=.navigation:nth-child(3) > .navigation__item:nth-child(3) > .navigation__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Исследовательские проекты')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.hse.ru/org/projects/')]", "xpath:href"],
+        ["xpath=//ul[3]/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Исследовательские проекты')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9c7565e-5f86-4e11-8480-3acc169a05de",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "454ff316-93d0-433a-ad22-964128ad5dd4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Мониторинги",
+      "targets": [
+        ["linkText=Мониторинги", "linkText"],
+        ["css=.main-footer__nav:nth-child(3) > .main-footer__item:nth-child(4) > .main-footer__link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Мониторинги')])[3]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '//www.hse.ru/monitoring/')])[3]", "xpath:href"],
+        ["xpath=//ul[3]/li[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "46f459b0-f92c-4698-9060-a5eee81cd8e7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg",
+      "targets": [
+        ["css=.control > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee04f4c2-39a1-4805-83dd-625853872352",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Диссертационные советы",
+      "targets": [
+        ["linkText=Диссертационные советы", "linkText"],
+        ["css=.main-footer__nav:nth-child(3) > .main-footer__item:nth-child(5) > .main-footer__link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Диссертационные советы')])[2]", "xpath:link"],
+        ["xpath=//a[contains(@href, '//www.hse.ru/science/disscoun/')]", "xpath:href"],
+        ["xpath=//ul[3]/li[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c43168c-3750-4052-9703-0ff071212372",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg",
+      "targets": [
+        ["css=.control > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "dfd840bf-b67a-46ef-9723-5092b0e09441",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Защиты диссертаций",
+      "targets": [
+        ["linkText=Защиты диссертаций", "linkText"],
+        ["css=.main-footer__nav:nth-child(3) > .main-footer__item:nth-child(6) > .main-footer__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Защиты диссертаций')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://aspirantura.hse.ru/defence/announcements/')]", "xpath:href"],
+        ["xpath=//ul[3]/li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Защиты диссертаций')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2e25127d-ad38-48ed-98b7-a5ba3d6a4b67",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg",
+      "targets": [
+        ["css=.control > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "eca284f9-b1d0-491b-bbc7-cbc32eb49a97",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Академическое развитие",
+      "targets": [
+        ["linkText=Академическое развитие", "linkText"],
+        ["css=.main-footer__nav:nth-child(3) > .main-footer__item:nth-child(7) > .main-footer__link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Академическое развитие')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '//academics.hse.ru/')])[3]", "xpath:href"],
+        ["xpath=//ul[3]/li[7]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d22b477-de88-42eb-90fd-d9a6f5b3fd2d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg > path",
+      "targets": [
+        ["css=.control > svg > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "9195a68d-7dfe-41b4-a553-ce8fe93631a9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Конкурсы и гранты",
+      "targets": [
+        ["linkText=Конкурсы и гранты", "linkText"],
+        ["css=.main-footer__nav:nth-child(3) > .main-footer__item:nth-child(8) > .main-footer__link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Конкурсы и гранты')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '//www.hse.ru/science/hsegrants')])[2]", "xpath:href"],
+        ["xpath=//ul[3]/li[8]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a29a98a-a850-435c-8a3a-f2502d34c300",
+      "comment": "",
+      "command": "click",
+      "target": "css=circle",
+      "targets": [
+        ["css=circle", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "7df461eb-a66e-4c78-b17e-672637f2218c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Внешние научно-информационные ресурсы",
+      "targets": [
+        ["linkText=Внешние научно-информационные ресурсы", "linkText"],
+        ["css=.main-footer__nav:nth-child(3) > .main-footer__item:nth-child(9) > .main-footer__link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Внешние научно-информационные ресурсы')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://tes.hse.ru/databases')])[2]", "xpath:href"],
+        ["xpath=//ul[3]/li[9]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a5fd780-c196-47f8-8769-9960225399dc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg",
+      "targets": [
+        ["css=.control > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed4ea1ab-a0f9-47f5-85fe-f52a05975db8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=РЕСУРСЫ",
+      "targets": [
+        ["linkText=РЕСУРСЫ", "linkText"],
+        ["css=.main-footer__nav:nth-child(4) > .main-footer__item-heading > .main-footer__link", "css:finder"],
+        ["xpath=//a[contains(text(),'РЕСУРСЫ')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '//publications.hse.ru')])[2]", "xpath:href"],
+        ["xpath=//ul[4]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'РЕСУРСЫ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "700ccf6c-e1f9-42f1-9796-af6ddc01a011",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control_home svg",
+      "targets": [
+        ["css=.control_home svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "eda6def4-d99b-4dcb-aaa6-6e7cb1a2c14a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Библиотека",
+      "targets": [
+        ["linkText=Библиотека", "linkText"],
+        ["css=.main-footer__nav:nth-child(4) > .main-footer__item:nth-child(2) > .main-footer__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Библиотека')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://library.hse.ru/')])[2]", "xpath:href"],
+        ["xpath=//ul[4]/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Библиотека')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e8b60dfa-3f09-4b8e-bb65-885e83936721",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg",
+      "targets": [
+        ["css=.control > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "62aae892-2547-43e4-8e10-914c1cf45a32",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Издательский дом ВШЭ",
+      "targets": [
+        ["linkText=Издательский дом ВШЭ", "linkText"],
+        ["css=.main-footer__nav:nth-child(4) > .main-footer__item:nth-child(3) > .main-footer__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Издательский дом ВШЭ')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '//id.hse.ru')]", "xpath:href"],
+        ["xpath=//ul[4]/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Издательский дом ВШЭ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c90eaa73-22bb-462d-94a9-983c51ba2c15",
+      "comment": "",
+      "command": "click",
+      "target": "css=.id-logo__svg > path:nth-child(2)",
+      "targets": [
+        ["css=.id-logo__svg > path:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "eeaf077a-c313-49ab-ba1b-9f9751b2bd35",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Книжный магазин «БукВышка»",
+      "targets": [
+        ["linkText=Книжный магазин «БукВышка»", "linkText"],
+        ["css=.main-footer__nav:nth-child(4) > .main-footer__item:nth-child(4) > .main-footer__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Книжный магазин «БукВышка»')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '//bookshop.hse.ru/')])[2]", "xpath:href"],
+        ["xpath=//ul[4]/li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Книжный магазин «БукВышка»')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "90093752-c33c-4151-a36f-cb79eb07f11e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg > .control__path",
+      "targets": [
+        ["css=.control > svg > .control__path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "e628de5a-1796-4a57-8f00-98825866e35f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Типография",
+      "targets": [
+        ["linkText=Типография", "linkText"],
+        ["css=.main-footer__nav:nth-child(4) > .main-footer__item:nth-child(5) > .main-footer__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Типография')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://print.hse.ru/')]", "xpath:href"],
+        ["xpath=//ul[4]/li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Типография')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f876c36b-7d13-4104-9961-374bcc2b84ef",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg > path",
+      "targets": [
+        ["css=.control > svg > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "d1cbdac6-9073-4a72-bfc2-8d00fc50702c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Медиацентр",
+      "targets": [
+        ["linkText=Медиацентр", "linkText"],
+        ["css=.main-footer__nav:nth-child(4) > .main-footer__item:nth-child(6) > .main-footer__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Медиацентр')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://mc.hse.ru/')]", "xpath:href"],
+        ["xpath=//ul[4]/li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Медиацентр')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "608d6b1b-6b35-4636-82b8-c09ba43ba410",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg > path",
+      "targets": [
+        ["css=.control > svg > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "b30fed9c-3a1c-4a6c-baa5-4756f7f051eb",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Журналы ВШЭ",
+      "targets": [
+        ["linkText=Журналы ВШЭ", "linkText"],
+        ["css=.main-footer__nav:nth-child(4) > .main-footer__item:nth-child(7) > .main-footer__link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Журналы ВШЭ')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '//www.hse.ru/science/journals')])[2]", "xpath:href"],
+        ["xpath=//ul[4]/li[7]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "15dfca93-a8f4-4334-88b7-6e053d4ce55f",
+      "comment": "",
+      "command": "click",
+      "target": "css=svg:nth-child(1) > path:nth-child(2)",
+      "targets": [
+        ["css=svg:nth-child(1) > path:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "5d17b285-d98d-47e3-b7dd-21218f80b424",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Публикации",
+      "targets": [
+        ["linkText=Публикации", "linkText"],
+        ["css=.main-footer__nav:nth-child(4) > .main-footer__item:nth-child(8) > .main-footer__link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Публикации')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '//publications.hse.ru')])[3]", "xpath:href"],
+        ["xpath=//ul[4]/li[8]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "33bb5d01-4e05-4f23-a53c-ab24eafa971d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control_home svg",
+      "targets": [
+        ["css=.control_home svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "8cd9ae7d-4901-4ff6-b3f5-17d6f06bfa48",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Редактору",
+      "targets": [
+        ["linkText=Редактору", "linkText"],
+        ["css=.main-link_light", "css:finder"],
+        ["xpath=//a[contains(text(),'Редактору')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.hse.ru/adm?newportal=1')]", "xpath:href"],
+        ["xpath=//footer/div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Редактору')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d6987432-5bc0-4b55-9fa9-fef6974c6810",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b07d6b75-72e3-48fa-a26a-b5478c890652",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Политика конфиденциальности",
+      "targets": [
+        ["linkText=Политика конфиденциальности", "linkText"],
+        ["css=.main-footer__link:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Политика конфиденциальности')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://www.hse.ru/data_protection_regulation')])[2]", "xpath:href"],
+        ["xpath=//footer/div[2]/div/p/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Политика конфиденциальности')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7311f57d-65d8-4cfe-b921-a99c1e4c7bb8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg > path",
+      "targets": [
+        ["css=.control > svg > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d5e80b8-2f82-456f-8cf0-790ee680e655",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Правила применения рекомендательных технологий в НИУ ВШЭ",
+      "targets": [
+        ["linkText=Правила применения рекомендательных технологий в НИУ ВШЭ", "linkText"],
+        ["css=.main-footer__link:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Правила применения рекомендательных технологий в НИУ ВШЭ')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://portal.hse.ru/recomtech')]", "xpath:href"],
+        ["xpath=//p/a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'Правила применения рекомендательных технологий в НИУ ВШЭ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a23974ff-0bbc-4d67-9618-b732347e73b8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.simple-logo > svg",
+      "targets": [
+        ["css=.simple-logo > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "7af60630-60c1-40e8-a09a-155c1062d3f5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Карта сайта",
+      "targets": [
+        ["linkText=Карта сайта", "linkText"],
+        ["css=.main-footer__link:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'Карта сайта')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.hse.ru/sitemap.html')]", "xpath:href"],
+        ["xpath=//p/a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'Карта сайта')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "28fab9fd-5253-450d-8125-2b0b3bb47e54",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg",
+      "targets": [
+        ["css=.control > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "d32948f3-1bcc-4929-98e3-d7f1f34d9238",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Школе дизайна НИУ ВШЭ",
+      "targets": [
+        ["linkText=Школе дизайна НИУ ВШЭ", "linkText"],
+        ["css=.main-footer__info:nth-child(2) > .main-footer__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Школе дизайна НИУ ВШЭ')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://design.hse.ru/')]", "xpath:href"],
+        ["xpath=//footer/div[2]/div/p[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Школе дизайна НИУ ВШЭ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f6f3eb3-b8aa-4194-a3c1-e4120c9aed4f",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "7ed7c92c-9d53-4869-8e19-6e4318f27ee4",
+    "name": "Test contacts",
+    "commands": [{
+      "id": "b5d120c2-e545-46db-8c0b-20e4bad4c5ae",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "52ed4716-f653-4b46-83a2-793c60135750",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "2505x1415",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1e155cd8-7176-4079-a9d3-654b38f7e74d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Главный корпус",
+      "targets": [
+        ["linkText=Главный корпус", "linkText"],
+        ["css=.main-contacts__item:nth-child(1) > .b a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Главный корпус')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://www.hse.ru/contacts.html')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/p/strong/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dda44381-4b56-497d-9cba-b66fc3ae0ae7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg > path",
+      "targets": [
+        ["css=.control > svg > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "b1644738-52f1-424c-a237-e0832d6e01b5",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,2404)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15913357-8a8f-40cf-a4ed-481ca386b08e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Узнать телефонный номер сотрудника",
+      "targets": [
+        ["linkText=Узнать телефонный номер сотрудника", "linkText"],
+        ["css=.main-contacts__item:nth-child(1) > p:nth-child(7) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Узнать телефонный номер сотрудника')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://www.hse.ru/org/persons/')])[5]", "xpath:href"],
+        ["xpath=//div[2]/div/p[7]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "677abdbd-1d33-4069-a34f-2780d4bd9c6b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg > path",
+      "targets": [
+        ["css=.control > svg > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f86fe42-aa8f-4888-8851-ab09c932ab79",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,32)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "59f8cdb0-8aa1-4479-8a33-b6e2ff696849",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Приемная комиссия",
+      "targets": [
+        ["linkText=Приемная комиссия", "linkText"],
+        ["css=.main-contacts__item:nth-child(2) > .b a", "css:finder"],
+        ["xpath=//a[contains(text(),'Приемная комиссия')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://ba.hse.ru/')])[3]", "xpath:href"],
+        ["xpath=//div[2]/p/strong/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Приемная комиссия')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1d40435-af66-4493-b0a3-832767619f8e",
+      "comment": "",
+      "command": "click",
+      "target": "css=circle",
+      "targets": [
+        ["css=circle", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "f2a22e96-0189-4974-bae0-4a33b4ffec6a",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,5)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b1f740d3-8eb3-465c-8403-9a425e215d9a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.main-contacts__column",
+      "targets": [
+        ["css=.main-contacts__column", "css:finder"],
+        ["xpath=//section[7]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6dbceb1d-346c-469a-91ac-b7f3de169fd8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.main-contacts__item:nth-child(2)",
+      "targets": [
+        ["css=.main-contacts__item:nth-child(2)", "css:finder"],
+        ["xpath=//section[7]/div/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "773c0c41-8517-41fc-83cd-05e2e7b3700b",
+      "comment": "",
+      "command": "click",
+      "target": "css=p:nth-child(5) strong",
+      "targets": [
+        ["css=p:nth-child(5) strong", "css:finder"],
+        ["xpath=//a/strong", "xpath:position"],
+        ["xpath=//strong[contains(.,'MyHSEhouse - твои возможности для жизни в большом городе')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2f04c44e-8fc0-4ec1-917a-6595232e1301",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg",
+      "targets": [
+        ["css=.control > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "548452ff-3b35-496e-81b2-8d950c7dda7b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Общежития",
+      "targets": [
+        ["linkText=Общежития", "linkText"],
+        ["css=p:nth-child(6) > strong > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Общежития')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.hse.ru/dormitory/')]", "xpath:href"],
+        ["xpath=//p[6]/strong/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Общежития')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d7601db-e337-45ae-9323-a20e279e9ee9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg",
+      "targets": [
+        ["css=.control > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "0d1aa064-c8f7-403d-99f3-b58d005e7a57",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Управление размещения студентов",
+      "targets": [
+        ["linkText=Управление размещения студентов", "linkText"],
+        ["css=p:nth-child(7) > strong > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Управление размещения студентов')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.hse.ru/sho')]", "xpath:href"],
+        ["xpath=//p[7]/strong/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Управление размещения студентов')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c1f0e08-3952-4b30-ae5f-69fe19889615",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg",
+      "targets": [
+        ["css=.control > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b6bbec5-ae23-4981-848f-f557838296e4",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,719)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9488b503-81f8-4cea-8bbf-8ec6cfa9941a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Управление размещения студентов",
+      "targets": [
+        ["linkText=Управление размещения студентов", "linkText"],
+        ["css=p:nth-child(7) > strong > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Управление размещения студентов')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.hse.ru/sho')]", "xpath:href"],
+        ["xpath=//p[7]/strong/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Управление размещения студентов')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "715206df-eee5-46c8-8011-d83ffc13b094",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg > .control__path",
+      "targets": [
+        ["css=.control > svg > .control__path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "57818b09-ad63-4865-aadc-bc937590a80c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Приемная комиссия\nдля иностранных граждан",
+      "targets": [
+        ["linkText=Приемная комиссия\nдля иностранных граждан", "linkText"],
+        ["css=.main-contacts__item:nth-child(3) strong > a", "css:finder"],
+        ["xpath=(//a[contains(@href, 'https://admissions.hse.ru/')])[7]", "xpath:href"],
+        ["xpath=//div[3]/p/strong/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Приемная комиссия\nдля иностранных граждан')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "00526486-7542-43f4-bdcc-f20f4ff40b8c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg",
+      "targets": [
+        ["css=.control > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "d6fa3801-550b-42b0-8e10-1ccc67464f91",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Управление международного партнёрства",
+      "targets": [
+        ["linkText=Управление международного партнёрства", "linkText"],
+        ["css=.b > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Управление международного партнёрства')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://ipo.hse.ru/')]", "xpath:href"],
+        ["xpath=//div[3]/p[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Управление международного партнёрства')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e9db1988-1f6a-489e-a57c-a2a7ffcdcd98",
+      "comment": "",
+      "command": "click",
+      "target": "css=.simple-logo path",
+      "targets": [
+        ["css=.simple-logo path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "50b065ba-cd44-43f4-a31e-eae7c6aadc51",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Карта зданий",
+      "targets": [
+        ["linkText=Карта зданий", "linkText"],
+        ["css=.main-contacts__item:nth-child(3) > p:nth-child(7) > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Карта зданий')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://www.hse.ru/buildinghse')])[2]", "xpath:href"],
+        ["xpath=//div[3]/p[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Карта зданий')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c022a0c-bb72-45cf-9e7a-610a2da218fd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.simple-logo path",
+      "targets": [
+        ["css=.simple-logo path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f0f658e-a67c-4d3c-ad86-f64abfb1b41d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Проложить маршрут",
+      "targets": [
+        ["linkText=Проложить маршрут", "linkText"],
+        ["css=p:nth-child(7) > a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Проложить маршрут')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.hse.ru/org/hse/buildinghse/track')]", "xpath:href"],
+        ["xpath=//p[7]/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Проложить маршрут')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cda45fce-01e5-4e9d-ad6e-d01e13ba47bd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.simple-logo > svg",
+      "targets": [
+        ["css=.simple-logo > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f481e72-ae5f-40b4-88fa-e338dbedce1a",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,200)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "88cdc87e-d9ad-4df2-a2c3-20f631da9492",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Пресс-служба ВШЭ",
+      "targets": [
+        ["linkText=Пресс-служба ВШЭ", "linkText"],
+        ["css=.main-contacts__item:nth-child(4) > .b a", "css:finder"],
+        ["xpath=//a[contains(text(),'Пресс-служба ВШЭ')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.hse.ru/pr/press')]", "xpath:href"],
+        ["xpath=//div[4]/p/strong/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Пресс-служба ВШЭ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "206c0956-ff09-423c-987b-13d3d5f355a2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg",
+      "targets": [
+        ["css=.control > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "9c70f0c5-82be-4b69-a20b-64783863aaa1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Пресс-релизы",
+      "targets": [
+        ["linkText=Пресс-релизы", "linkText"],
+        ["css=p:nth-child(3) > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Пресс-релизы')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://pr.hse.ru/news')]", "xpath:href"],
+        ["xpath=//div[4]/p[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Пресс-релизы')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "89acb4ce-9a31-48d4-8df4-ed2592a26335",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg",
+      "targets": [
+        ["css=.control > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "faf97f0d-cce0-44a1-9bef-23d0aa8f0992",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,2428)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "627b79a8-3c9f-4f8b-9258-940f9a9f67d2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Условия использования материалов",
+      "targets": [
+        ["linkText=Условия использования материалов", "linkText"],
+        ["css=p > .link", "css:finder"],
+        ["xpath=//a[contains(text(),'Условия использования материалов')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.hse.ru/copyright')]", "xpath:href"],
+        ["xpath=//p[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Условия использования материалов')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4830779a-099c-4ff8-814e-8fb22cbc3417",
+      "comment": "",
+      "command": "click",
+      "target": "css=.control > svg > path",
+      "targets": [
+        ["css=.control > svg > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "242661ed-c349-4b27-8e72-d66ba34c2715",
+      "comment": "",
+      "command": "click",
+      "target": "css=p:nth-child(6) > a > strong",
+      "targets": [
+        ["css=p:nth-child(6) > a > strong", "css:finder"],
+        ["xpath=//p[6]/a/strong", "xpath:position"],
+        ["xpath=//strong[contains(.,'Профилактика Covid-19')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "3b78e48c-1c63-44f7-957a-9a96fbc8523d",
+    "name": "Test navigation ",
+    "commands": [{
+      "id": "9ad13e49-cd8d-46df-ae19-38ff253fe254",
+      "comment": "",
+      "command": "open",
+      "target": "/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d4d26801-7af4-4d2a-aa53-a93f052c5c37",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1489x839",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e74dfc31-bf6c-44df-9cf4-f18868c69184",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Admissions",
+      "targets": [
+        ["linkText=Admissions", "linkText"],
+        ["css=.main-menu__item:nth-child(1) > .main-menu__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Admissions')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://admissions.hse.ru/en/')]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Admissions')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d4237ff1-c882-41cb-939a-7551b7c6f2d4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.b-row__item--offset_0",
+      "targets": [
+        ["css=.b-row__item--offset_0", "css:finder"],
+        ["xpath=//div[3]/div[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "123bb3d8-b69a-4070-a576-d14bd937d3eb",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.promo-title",
+      "targets": [
+        ["css=.promo-title", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'International Admissions')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c17b1fff-8141-459e-a192-bc9249b59759",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "33ebd84e-ebe2-43e0-ab7c-648553f9ac4b",
+    "name": "Test navigation 2 second Link",
+    "commands": [{
+      "id": "b6c09f7b-c1c7-4793-8dd5-a0fe992feaef",
+      "comment": "",
+      "command": "open",
+      "target": "/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d71f5386-da28-42a0-8b98-608a08b23d06",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1489x846",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f7392ed8-5c52-4537-ac7c-e5c01a7f4d69",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Programmes & Courses",
+      "targets": [
+        ["linkText=Programmes & Courses", "linkText"],
+        ["css=.main-menu__item:nth-child(2) > .main-menu__link", "css:finder"],
+        ["xpath=//a[contains(text(),'Programmes & Courses')]", "xpath:link"],
+        ["xpath=//a[@href='http://www.hse.ru/en/education/']", "xpath:href"],
+        ["xpath=//div[2]/div[2]/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Programmes & Courses')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b1239091-91bb-4686-988a-d55180722f75",
+      "comment": "",
+      "command": "click",
+      "target": "css=.filter__name_direction_bachelor .filter__box",
+      "targets": [
+        ["css=.filter__name_direction_bachelor .filter__box", "css:finder"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "03989dab-dede-42f3-8082-3c7ead21af37",
+      "comment": "",
+      "command": "select",
+      "target": "css=.filter__name_direction_bachelor .filter__box",
+      "targets": [],
+      "value": "label=Acting"
+    }, {
+      "id": "7a06ae0f-d909-4124-9553-f31aec64affa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.filter__box > option:nth-child(2)",
+      "targets": [
+        ["css=.filter__box > option:nth-child(2)", "css:finder"],
+        ["xpath=//option[@value='525380630']", "xpath:attributes"],
+        ["xpath=//option[2]", "xpath:position"],
+        ["xpath=//option[contains(.,'Acting')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b770cc79-1f84-4cd8-b05c-d2bd385e707a",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Study at HSE University – Higher School of Economics National Research University",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "909de022-5f22-4970-89cf-e25208982d7f",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "css=.filter__name_direction_bachelor .filter__box",
+      "targets": [
+        ["css=.filter__name_direction_bachelor .filter__box", "css:finder"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "147.4666748046875,12.199996948242188"
+    }, {
+      "id": "ef154ecd-8412-42d4-a179-fddb80ca9940",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "css=.filter__name_language .filter__item:nth-child(1)",
+      "targets": [
+        ["css=.filter__name_language .filter__item:nth-child(1)", "css:finder"],
+        ["xpath=//div[5]/div[2]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Russian')]", "xpath:innerText"]
+      ],
+      "value": "13.4666748046875,3.899993896484375"
+    }, {
+      "id": "4528df6a-61fc-42d9-b475-552802dcaacc",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=.filter__name_language .filter__item:nth-child(1)",
+      "targets": [
+        ["css=.filter__name_language .filter__item:nth-child(1)", "css:finder"],
+        ["xpath=//div[5]/div[2]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Russian')]", "xpath:innerText"]
+      ],
+      "value": "13.4666748046875,3.899993896484375"
+    }, {
+      "id": "26efecf5-9a9c-4e23-855f-c69d5103b3d4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.filter__name_language .filter__item:nth-child(1) > .filter__label",
+      "targets": [
+        ["css=.filter__name_language .filter__item:nth-child(1) > .filter__label", "css:finder"],
+        ["xpath=//div[5]/div[2]/label/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Russian')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d4e4df03-67b2-4e35-a009-2105290c0c08",
+      "comment": "",
+      "command": "click",
+      "target": "css=.filter__name_language .filter__item:nth-child(2) > .filter__label",
+      "targets": [
+        ["css=.filter__name_language .filter__item:nth-child(2) > .filter__label", "css:finder"],
+        ["xpath=//div[5]/div[2]/label[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'English')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "595d238b-b9f9-4fbc-bcc2-483a97288234",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.filter__name_direction_bachelor .filter__box",
+      "targets": [
+        ["css=.filter__name_direction_bachelor .filter__box", "css:finder"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "Acting\\nAdvertising and Public Relations\\nApplied Mathematics\\nApplied Mathematics and Informatics\\nAsian and African Studies\\nBiology\\nBusiness Informatics\\nChemistry\\nComputer Security\\nCultural Studies\\nDesign\\nEconomics\\nFine Art\\nFundamental and Applied Linguistics\\nGeography\\nHistory\\nHistory of Art\\nInformatics and Computer Engineering\\nInformation and Communication Technologies and Systems\\nInformation Security\\nInternational Relations\\nInternational Studies\\nJournalism\\nLegal Studies\\nLinguistics\\nManagement\\nMathematics\\nMedia Communications\\nPhilology\\nPhilosophy\\nPhysics\\nPolitical Science\\nPsychology\\nPublic Administration\\nPublic Policy and Social Sciences\\nSociology\\nSoftware Engineering\\nUrban Studies"
+    }, {
+      "id": "5a1e045a-f054-4083-9d3c-c0bbd569b410",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "600de849-1e5c-45c7-8a19-31029ee3ec5e",
+    "name": "Test translate",
+    "commands": [{
+      "id": "bf6e00ad-c8ca-47cf-b8fc-0ba7d8bee1bc",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "39fbac63-8be8-44aa-9469-a24275e1e2bc",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1489x846",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f515f53e-0c35-4b02-b279-6262a7c119df",
+      "comment": "",
+      "command": "click",
+      "target": "css=.main-panel__right > .main-lang path",
+      "targets": [
+        ["css=.main-panel__right > .main-lang path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "c2d24631-5820-4be5-b707-a847a16347ba",
+      "comment": "",
+      "command": "click",
+      "target": "css=.main-lang_show-list .main-lang__item:nth-child(1)",
+      "targets": [
+        ["css=.main-lang_show-list .main-lang__item:nth-child(1)", "css:finder"],
+        ["xpath=//div/div/div/div[4]/ul/li", "xpath:position"],
+        ["xpath=//li[contains(.,'EN')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c34cbea9-2c04-4e1c-8bff-99b9f17c354f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.main-panel__right .main-lang__control",
+      "targets": [
+        ["css=.main-panel__right .main-lang__control", "css:finder"],
+        ["xpath=//div/div/div[4]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a639096c-c628-4a41-9a77-c8a8db6d4226",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=EN",
+      "targets": [
+        ["linkText=EN", "linkText"],
+        ["css=.main-lang_show-list .js-lang-button", "css:finder"],
+        ["xpath=//a[contains(text(),'EN')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '//www.hse.ru/en/')]", "xpath:href"],
+        ["xpath=//div[4]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'EN')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0d23b4d3-d5c0-4a70-a41f-31ab4c195643",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "name=text",
+      "targets": [
+        ["name=text", "name"],
+        ["css=.main-input__field", "css:finder"],
+        ["xpath=//input[@name='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "-6,17"
+    }, {
+      "id": "f02e1191-4420-4ed6-9411-c27baa3b4996",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "name=text",
+      "targets": [
+        ["name=text", "name"],
+        ["css=.main-input__field", "css:finder"],
+        ["xpath=//input[@name='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "-6,17"
+    }, {
+      "id": "4decc002-368b-4f2e-8d9b-fc061435f7c7",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "name=text",
+      "targets": [
+        ["name=text", "name"],
+        ["css=.main-input__field", "css:finder"],
+        ["xpath=//input[@name='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "-6,17"
+    }, {
+      "id": "a2f0b6ba-a349-4ba9-bc47-1dab11a40613",
+      "comment": "",
+      "command": "click",
+      "target": "css=.main-panel__bottom",
+      "targets": [
+        ["css=.main-panel__bottom", "css:finder"],
+        ["xpath=//div[4]/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1bf27886-214e-4e50-a4bf-1a98a5023f1c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.main-panel__bottom",
+      "targets": [
+        ["css=.main-panel__bottom", "css:finder"],
+        ["xpath=//div[4]/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c95e5fbb-54da-47b3-8565-e269b7befa2f",
+      "comment": "",
+      "command": "verifyText",
+      "target": "linkText=About",
+      "targets": [
+        ["linkText=About", "linkText"],
+        ["css=.main-menu__item:nth-child(5) > .main-menu__link", "css:finder"],
+        ["xpath=(//a[contains(text(),'About')])[2]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.hse.ru/en/info/')]", "xpath:href"],
+        ["xpath=//div[2]/div/ul/li[5]/a", "xpath:position"]
+      ],
+      "value": "About"
+    }, {
+      "id": "9ee1be3e-d785-43f9-b0a0-a0f9d82815bb",
+      "comment": "",
+      "command": "click",
+      "target": "name=text",
+      "targets": [
+        ["name=text", "name"],
+        ["css=.main-input__field", "css:finder"],
+        ["xpath=//input[@name='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c62fac89-91bf-4f51-905a-0321e2ec6cbf",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "2157b6c8-a16f-45ad-bafd-27deafa8c459",
+    "name": "Test registration ",
+    "commands": [{
+      "id": "5258c461-d286-4fc6-9fe5-15694f677a56",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "33d5a1ec-6cce-473a-a222-3242eaea9098",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1010",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4b976fa8-7ac3-4439-ab8d-d12eaa375568",
+      "comment": "",
+      "command": "click",
+      "target": "css=.has-hiddenscroll",
+      "targets": [
+        ["css=.has-hiddenscroll", "css:finder"],
+        ["xpath=//body", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a116247-d9c0-4a38-b951-d45e7ead0a94",
+      "comment": "",
+      "command": "click",
+      "target": "css=.main-panel__right .control_svg",
+      "targets": [
+        ["css=.main-panel__right .control_svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "81c7f1dc-216e-4d06-b2bc-5eb72f2d9777",
+      "comment": "",
+      "command": "click",
+      "target": "css=p:nth-child(1) > .btn",
+      "targets": [
+        ["css=p:nth-child(1) > .btn", "css:finder"],
+        ["xpath=(//a[contains(text(),'Зарегистрироваться')])[2]", "xpath:link"],
+        ["xpath=//section[@id='elk-home-login']/div[2]/div/div/div/p/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/registration')])[2]", "xpath:href"],
+        ["xpath=//p/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0c2f937c-34e1-4674-ab0f-367d638f3b43",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='form-registration']/div/div[4]/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "6!=]j}bibC}]tiW"
+    }, {
+      "id": "874d7c6a-60e8-4395-a715-65e58a173ecc",
+      "comment": "",
+      "command": "click",
+      "target": "id=lastName",
+      "targets": [
+        ["id=lastName", "id"],
+        ["name=lastName", "name"],
+        ["css=#lastName", "css:finder"],
+        ["xpath=//input[@id='lastName']", "xpath:attributes"],
+        ["xpath=//form[@id='form-registration']/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "858449aa-9fd2-448a-8d2c-1432b1375ea1",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastName",
+      "targets": [
+        ["id=lastName", "id"],
+        ["name=lastName", "name"],
+        ["css=#lastName", "css:finder"],
+        ["xpath=//input[@id='lastName']", "xpath:attributes"],
+        ["xpath=//form[@id='form-registration']/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "31d7a96f-861b-4fa3-8d6e-c8d99349f447",
+      "comment": "",
+      "command": "click",
+      "target": "id=firstName",
+      "targets": [
+        ["id=firstName", "id"],
+        ["name=firstName", "name"],
+        ["css=#firstName", "css:finder"],
+        ["xpath=//input[@id='firstName']", "xpath:attributes"],
+        ["xpath=//form[@id='form-registration']/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a02aa64-43f3-45d0-a82a-6478536cc1a1",
+      "comment": "",
+      "command": "type",
+      "target": "id=firstName",
+      "targets": [
+        ["id=firstName", "id"],
+        ["name=firstName", "name"],
+        ["css=#firstName", "css:finder"],
+        ["xpath=//input[@id='firstName']", "xpath:attributes"],
+        ["xpath=//form[@id='form-registration']/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "c40f9b81-afd6-4509-af57-96098d06c2c3",
+      "comment": "",
+      "command": "click",
+      "target": "id=patronymic",
+      "targets": [
+        ["id=patronymic", "id"],
+        ["name=patronymic", "name"],
+        ["css=#patronymic", "css:finder"],
+        ["xpath=//input[@id='patronymic']", "xpath:attributes"],
+        ["xpath=//form[@id='form-registration']/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "24c5b754-a803-4d94-90c2-3ad1f8054e91",
+      "comment": "",
+      "command": "type",
+      "target": "id=patronymic",
+      "targets": [
+        ["id=patronymic", "id"],
+        ["name=patronymic", "name"],
+        ["css=#patronymic", "css:finder"],
+        ["xpath=//input[@id='patronymic']", "xpath:attributes"],
+        ["xpath=//form[@id='form-registration']/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "108a801e-0845-48d3-b9cd-d794701f24aa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.auth-component__section",
+      "targets": [
+        ["css=.auth-component__section", "css:finder"],
+        ["xpath=//main/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "23ab666b-f26e-4386-bbd9-9430e1ced104",
+      "comment": "",
+      "command": "click",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//form[@id='form-registration']/div/div[4]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "684e131f-5b87-4ac3-ba9e-f11ec239bb62",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//form[@id='form-registration']/div/div[4]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": "+7 (985) 006-99-29"
+    }, {
+      "id": "2b5a4707-8223-42a1-889f-59cb8e9ac91f",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='form-registration']/div/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "69055f55-3747-49ee-abaf-3d1bc7e62584",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='form-registration']/div/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5636d84f-126e-403a-ba48-4ca18feab8df",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='form-registration']/div/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "ma"
+    }, {
+      "id": "a6396f3e-fb15-4aef-9ff6-76aa5175b92c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.auth-component__section",
+      "targets": [
+        ["css=.auth-component__section", "css:finder"],
+        ["xpath=//main/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "602d4534-9c7b-4ac6-8735-33951c6942a3",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='form-registration']/div/div[4]/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "59a6589c-c17b-4eb8-8a4f-82bee4eab613",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='form-registration']/div/div[4]/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "0634ca11-9f96-400c-a59e-3046930fd5e9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inputWrap-password:nth-child(4)",
+      "targets": [
+        ["css=.inputWrap-password:nth-child(4)", "css:finder"],
+        ["xpath=//form[@id='form-registration']/div/div[4]/div[4]", "xpath:idRelative"],
+        ["xpath=//div[4]/div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8187030b-fe5e-40d6-827a-acb264c5ee2d",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.error:nth-child(5)",
+      "targets": [
+        ["css=.error:nth-child(5)", "css:finder"],
+        ["xpath=//form[@id='form-registration']/div/div[4]/div[4]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[4]/div[4]/div[2]", "xpath:position"]
+      ],
+      "value": "Пароль должен содержать не менее 8 символов"
+    }, {
+      "id": "19a87fba-1bc4-456e-9b15-505a625a3c4a",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='form-registration']/div/div[4]/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bff87906-19dd-4543-8ffc-a36e2a41d013",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='form-registration']/div/div[4]/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "6!=]j}bibC}]tiW"
+    }, {
+      "id": "56c2c8d6-a455-4a83-bd1d-7272116c8b0a",
+      "comment": "",
+      "command": "click",
+      "target": "id=passwordConfirm",
+      "targets": [
+        ["id=passwordConfirm", "id"],
+        ["name=passwordConfirm", "name"],
+        ["css=#passwordConfirm", "css:finder"],
+        ["xpath=//input[@id='passwordConfirm']", "xpath:attributes"],
+        ["xpath=//form[@id='form-registration']/div/div[4]/div[5]/input", "xpath:idRelative"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bbd39a05-06f8-4316-81d4-f65ff511c743",
+      "comment": "",
+      "command": "type",
+      "target": "id=passwordConfirm",
+      "targets": [
+        ["id=passwordConfirm", "id"],
+        ["name=passwordConfirm", "name"],
+        ["css=#passwordConfirm", "css:finder"],
+        ["xpath=//input[@id='passwordConfirm']", "xpath:attributes"],
+        ["xpath=//form[@id='form-registration']/div/div[4]/div[5]/input", "xpath:idRelative"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": "6!=]j}bibC}]tiW"
+    }, {
+      "id": "632b3482-6bb7-406d-88dc-39803cb90e98",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inputCheckbox:nth-child(1) > label",
+      "targets": [
+        ["css=.inputCheckbox:nth-child(1) > label", "css:finder"],
+        ["xpath=//form[@id='form-registration']/div[3]/div/label", "xpath:idRelative"],
+        ["xpath=//div[3]/div/label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "89db6d3f-b3fb-4966-b4d6-ced0b6a699f9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inputCheckbox:nth-child(2) > label",
+      "targets": [
+        ["css=.inputCheckbox:nth-child(2) > label", "css:finder"],
+        ["xpath=//form[@id='form-registration']/div[3]/div[2]/label", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cec37d8c-1bad-4f21-9ee4-a4b9266d7305",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inputCheckbox:nth-child(3) > label",
+      "targets": [
+        ["css=.inputCheckbox:nth-child(3) > label", "css:finder"],
+        ["xpath=//form[@id='form-registration']/div[3]/div[3]/label", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f39cf4d-e7d3-4e65-bf22-8081a2cf74d3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.inputCheckbox:nth-child(4) > label",
+      "targets": [
+        ["css=.inputCheckbox:nth-child(4) > label", "css:finder"],
+        ["xpath=//form[@id='form-registration']/div[3]/div[4]/label", "xpath:idRelative"],
+        ["xpath=//div[3]/div[4]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Я ознакомился с Правилами пользования Библиотекой НИУ ВШЭ и обязуюсь их выполнять.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "65ddbe1e-aca0-45cc-b7aa-a6afbcc04e81",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='form-registration']/div/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3d1c182f-6847-4f42-b1aa-5199789511a9",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='form-registration']/div/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "maail@mail"
+    }, {
+      "id": "c3f76a67-366a-4fab-aa28-5bc0ab843117",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='form-registration']/div/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "60100879-d9ed-4915-9b15-b199fa6a770a",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='form-registration']/div/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "maail@mail.mail"
+    }, {
+      "id": "a8930fa8-3d2a-4f69-8e3b-21942dba8911",
+      "comment": "",
+      "command": "click",
+      "target": "css=.w-full",
+      "targets": [
+        ["css=.w-full", "css:finder"],
+        ["xpath=//main/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a3b1bc4-0074-469f-b203-b87e11213995",
+      "comment": "",
+      "command": "click",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//form[@id='form-registration']/div/div[4]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "feb3cc0d-05ea-4145-b97f-dd9f8d7a783a",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//form[@id='form-registration']/div/div[4]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": "+7 (985) 006-99-23"
+    }, {
+      "id": "f3568b38-a98e-4d1e-bf24-b0c465b46fca",
+      "comment": "",
+      "command": "click",
+      "target": "css=.w-full",
+      "targets": [
+        ["css=.w-full", "css:finder"],
+        ["xpath=//main/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "85b22218-dafb-40f8-a612-6dab5b74d2e5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-checkout",
+      "targets": [
+        ["css=.btn-checkout", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='form-registration']/div[5]/button", "xpath:idRelative"],
+        ["xpath=//div[5]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Регистрация')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f795ad4c-efe9-41fb-a224-757ca2295485",
+      "comment": "",
+      "command": "click",
+      "target": "id=confirmationCode",
+      "targets": [
+        ["id=confirmationCode", "id"],
+        ["name=confirmationCode", "name"],
+        ["css=.confirm__message:nth-child(2) #confirmationCode", "css:finder"],
+        ["xpath=//input[@id='confirmationCode']", "xpath:attributes"],
+        ["xpath=//form[@id='form-registration']/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ac64636-88cd-4a05-a77f-c3b7b8b19b7e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.confirm__message:nth-child(4) #confirmationCode",
+      "targets": [
+        ["css=.confirm__message:nth-child(4) #confirmationCode", "css:finder"],
+        ["xpath=(//input[@id='confirmationCode'])[2]", "xpath:attributes"],
+        ["xpath=//form[@id='form-registration']/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e9c5f3f-9dce-4ebf-8558-6903d33eb137",
+      "comment": "",
+      "command": "click",
+      "target": "id=confirmationCode",
+      "targets": [
+        ["id=confirmationCode", "id"],
+        ["name=confirmationCode", "name"],
+        ["css=.confirm__message:nth-child(2) #confirmationCode", "css:finder"],
+        ["xpath=//input[@id='confirmationCode']", "xpath:attributes"],
+        ["xpath=//form[@id='form-registration']/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "314ded14-9581-4075-8288-564b8de0724b",
+      "comment": "",
+      "command": "type",
+      "target": "id=confirmationCode",
+      "targets": [
+        ["id=confirmationCode", "id"],
+        ["name=confirmationCode", "name"],
+        ["css=.confirm__message:nth-child(2) #confirmationCode", "css:finder"],
+        ["xpath=//input[@id='confirmationCode']", "xpath:attributes"],
+        ["xpath=//form[@id='form-registration']/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "1221"
+    }, {
+      "id": "e5c71746-c8dd-4437-a596-e22db4515a91",
+      "comment": "",
+      "command": "click",
+      "target": "css=.confirm__message:nth-child(4) #confirmationCode",
+      "targets": [
+        ["css=.confirm__message:nth-child(4) #confirmationCode", "css:finder"],
+        ["xpath=(//input[@id='confirmationCode'])[2]", "xpath:attributes"],
+        ["xpath=//form[@id='form-registration']/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b32a428-a84b-46da-a428-90f366a455ba",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "350910e6-af7b-4028-92d3-ca67dfbaf232",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["25440ee2-23b6-4205-aa04-4a116652c105"]
+  }],
+  "urls": ["https://www.hse.ru/"],
+  "plugins": []
+}

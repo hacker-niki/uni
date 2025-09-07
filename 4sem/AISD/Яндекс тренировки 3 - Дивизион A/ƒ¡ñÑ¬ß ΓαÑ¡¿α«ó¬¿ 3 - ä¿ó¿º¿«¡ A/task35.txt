@@ -1,0 +1,59 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <cmath>
+#include <vector>
+#include <set>
+
+using namespace std;
+
+long long n; // число вершин
+vector<vector<int>> g; // граф
+vector<int> InDegree, Order;
+set<int, greater<int> > maxHeap;
+
+
+int main()
+{
+    cin >> n;
+
+    g.assign(n + 1, vector<int>());
+    InDegree.assign(n + 1, 0);
+
+    for (long long i = 1; i <= n; i++)
+    {
+        long long b;
+        cin >> b;
+        for (long long j = 1; j <= b; j++)
+        {
+            long long d;
+            cin>>d;
+            g[i].push_back(d);
+            InDegree[d]++;
+        }
+    }
+
+    for (long long i = 1; i < InDegree.size(); i++)
+    {
+        if (InDegree[i] == 0) maxHeap.insert(i);
+    }
+    while (!maxHeap.empty())
+    {
+        long long v = *maxHeap.begin();
+        maxHeap.erase(maxHeap.begin());
+
+        Order.push_back(v);
+        for (long long i = 0; i < g[v].size(); i++)
+        {
+            long long to = g[v][i];
+            InDegree[to]--;
+            if (InDegree[to] == 0) maxHeap.insert(to);
+        }
+    }
+    
+    for (long long i = Order.size()-1; i >= 0; i--)
+    {
+        cout << Order[i] << ' ';
+    }
+
+}

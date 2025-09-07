@@ -1,0 +1,44 @@
+﻿@inject IDataService DataService
+@using WEB_253505.BlazorWasm.Services
+@implements IDisposable
+
+@if (DataService.Products == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in DataService.Products)
+            {
+                <tr>
+                    <td>@product.Name</td>
+                    <td>@product.Price BYN</td>
+                    <td><button class="btn btn-outline-primary" @onclick="() => OnItemSelected.Invoke(product.Id)">Details</button></td>
+                </tr>
+            }
+        </tbody>    
+    </table>
+}
+
+@code {
+    [Parameter]
+    public Action<int> OnItemSelected { get; set; }
+
+    protected override void OnInitialized()
+    {
+        DataService.DataLoaded += StateHasChanged;
+    }
+    public void Dispose()
+    {
+        DataService.DataLoaded -= StateHasChanged;
+    }
+}

@@ -1,0 +1,66 @@
+﻿@model LabViewModel
+
+<h1>@ViewData["Laboratory"]</h1>
+<h3>Список</h3>
+<ol type="A">
+    <li>
+        элемент 1 списка
+    </li>
+    <li>
+        элемент 2 списка
+    </li>
+</ol>
+<hr class="mt-2" />
+<h3 class="mt-2">Форма</h3>
+
+<ul class="list-unstyled ms-5 mb-1 mt-2">
+    <li>
+        <input type="checkbox" id="checkbox1" />
+        <label for="checkbox1">Чек-бокс 1</label>
+    </li>
+    <li>
+        <input type="checkbox" id="checkbox2" />
+        <label for="checkbox2">Чек-бокс 2</label>
+    </li>
+</ul>
+
+<fieldset class="ms-4 list-group list-group-horizontal">
+    <div class="list-group-item border-0">
+        <input type="radio" id="radio1" name="radio" value="radio1" />
+        <label for="radio1">Радио 1</label>
+    </div>
+
+    <div class="list-group-item border-0">
+        <input type="radio" id="radio2" name="radio" value="radio2" />
+        <label for="radio3">Радио 2</label>
+    </div>
+
+    <div class="list-group-item border-0">
+        <input type="radio" id="radio3" name="radio" value="radio3" />
+        <label for="radio3">Радио 3</label>
+    </div>
+</fieldset>
+
+<form id="login-form" method="post">
+    <div class="row col-6">
+        <div class="col-2">
+            <label for="login" class="form-label me-5">Логин</label>
+            <label for="password" class="form-label me-5">Пароль</label>
+            <label class="form-label mt-2 me-5" for="SelectId" asp-for="SelectedId">Выбор</label>
+        </div>
+
+        <div class="col-6">
+            <div class="row">
+                <input type="text" class="form-text" placeholder="Введите имя" id="login" name="login" required />
+            </div>
+            <div class="row">
+                <input type="password" class="form-text" placeholder="Введите пароль" id="password" name="password" required />
+            </div>
+            <div class="row mt-2">
+                <select id="SelectId" asp-for="SelectedId" asp-items="@ViewBag.selectList"></select>
+            </div>
+        </div>
+
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Отправить</button>
+</form>

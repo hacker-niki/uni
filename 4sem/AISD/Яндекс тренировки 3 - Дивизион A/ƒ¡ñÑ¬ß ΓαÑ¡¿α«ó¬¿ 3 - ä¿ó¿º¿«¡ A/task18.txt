@@ -1,0 +1,61 @@
+#include <iostream>
+#include <queue>
+#include <vector>
+
+using namespace std;
+
+
+
+struct CompareFirst {
+    bool operator()(const std::pair<int, int>& p1, const std::pair<int, int>& p2) {
+        return p1.first > p2.first; // Обратный порядок для создания минимальной кучи
+    }
+};
+
+int main()
+{
+    int n, k;
+    cin >> k >> n;
+    vector<int> ans;
+
+    priority_queue<int, vector<int>, greater<int>> typics;
+    for (int i = 0; i < k; i++)
+    {
+        typics.push(i);
+    }
+    priority_queue<pair<int, int>, vector<pair<int, int>>, CompareFirst> times;
+
+    //times.push(make_pair(4, 1));
+    //times.push(make_pair(5, 0));
+    //times.push(make_pair(2, 10));
+
+    int t1, t2;
+    pair<int, int> p;
+    for (int i = 0; i < n; i++)
+    {
+        cin >> t1 >> t2;
+
+        while (!times.empty() && times.top().first < t1)
+        {
+            typics.push(times.top().second);
+            times.pop();
+        }
+        if (!typics.empty()) {
+            ans.push_back(typics.top() + 1);
+            times.push(make_pair(t2, typics.top()));
+            typics.pop();
+        }
+        else
+        {
+            cout << 0 << ' ' << i + 1;
+            return 0;
+
+        }
+    }
+    for (int i = 0; i < ans.size(); i++)
+    {
+        cout << ans[i] << '\n';
+    }
+
+    return 0;
+}

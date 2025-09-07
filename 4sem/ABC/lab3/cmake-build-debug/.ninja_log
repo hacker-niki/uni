@@ -1,0 +1,4 @@
+# ninja log v5
+526	611	1710844607849410904	cmake-cpp-nasm	417e085d560bec82
+2	526	1710844607766077571	CMakeFiles/cmake-cpp-nasm.dir/main.cpp.o	3a5a033fff7c61dd
+7	24	1709641532578132745	CMakeFiles/cmake-cpp-nasm.dir/asm.asm.o	27a11225dca7140a

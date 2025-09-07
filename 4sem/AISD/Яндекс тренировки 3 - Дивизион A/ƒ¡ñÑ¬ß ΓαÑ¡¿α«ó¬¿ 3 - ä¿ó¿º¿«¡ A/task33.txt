@@ -1,0 +1,81 @@
+#include <vector>
+#include <cmath>
+#include <iostream>
+#include <iomanip>
+
+struct Point
+{
+	int x, y;
+};
+
+int main()
+{
+	int n;
+	std::cin >> n;
+	std::vector<Point> p(n);
+
+	for (int i = 0; i < n; i++)
+	{
+		std::cin >> p[i].x >> p[i].y;
+	}
+
+	int left = 0;
+	int right = 20000 * 20000 * 2 + 1;
+	std::vector<int> ansColor;
+	while (left + 1 < right)
+	{
+		int mid = (left + right) / 2;
+		int nocolor = 0;
+		std::vector<int> color(n, nocolor);
+		std::vector<int> stack;
+		bool good = true;
+		for (int i = 0; i < n && good; i++)
+		{
+			if (color[i] == nocolor)
+			{
+				stack.push_back(i);
+				color[i] = 1;
+				while (!stack.empty() && good)
+				{
+					int cur = stack.back();
+					stack.pop_back();
+					for (int next = 0; next < n; next++)
+					{
+						{
+							if (next != cur && (pow(p[cur].x - p[next].x, 2) + pow(p[cur].y - p[next].y, 2)) < mid)
+							{
+								if (color[next] == 0)
+								{
+									color[next] = 3 - color[cur];
+									stack.push_back(next);
+								}
+								else if (color[next] == color[cur])
+								{
+									good = false;
+									break;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		if (good)
+		{
+			left = mid;
+			ansColor = color;
+		}
+		else
+		{
+			right = mid;
+		}
+	}
+
+	std::cout << std::setprecision(20) << std::sqrt(left) / 2 << '\n';
+	for (int i = 0; i < n; i++)
+	{
+		std::cout << ansColor[i] << ' ';
+	}
+
+	return 0;
+}

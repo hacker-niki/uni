@@ -1,0 +1,51 @@
+#include <iostream>
+
+int main()
+{
+    int n, m, k, a, ans;
+    std::cin >> n >> m >> k;
+    int** mas = new int* [n];
+    int** mas2 = new int* [k];
+
+    for (int i = 0; i < n; i++)
+    {
+        mas[i] = new int[m];
+    }
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            std::cin >> a;
+            for (int k = j; k < m; k++)
+            {
+                if (j == 0)
+                {
+                    mas[i][k] = 0;
+                }
+                mas[i][k] += a;
+            }
+        }
+    }
+    
+    for (int i = 0; i < k; i++)
+    {
+        mas2[i] = new int[4];
+        for (int j = 0; j < 4; j++)
+        {
+            std::cin >> mas2[i][j];
+        }
+    }
+    for (int i = 0; i < k; i++)
+    {
+        ans = 0;
+        for (int j = mas2[i][0]; j <= mas2[i][2]; j++)
+        {
+            if (mas2[i][1] - 2 < 0)
+                ans += mas[j - 1][mas2[i][3] - 1];
+            else
+                ans += mas[j - 1][mas2[i][3] - 1] - mas[j - 1][mas2[i][1] - 2];
+        }
+        std::cout << ans << '\n';
+    }
+    return 0;
+}

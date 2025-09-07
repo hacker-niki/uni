@@ -1,0 +1,18 @@
+  ADDR B1 B2 B3 B4 Z:\lab3\5.asm                                    PAGE       1
+
+                    org $8000
+  8000 86 FF        ldaa #$ff
+  8002 18 CE 82 00  ldy #$8200
+  8006 4F           clra
+  8007 CE 00 00     ldx #0
+                   p
+  800A 18 E6 00     ldab 0,y
+  800D 18 08        iny
+  800F 3A           abx
+  8010 C6 00        ldab #0
+  8012 4A           deca
+  8013 26 F5        bne p
+
+  Symbol Table 
+
+  P                  800A

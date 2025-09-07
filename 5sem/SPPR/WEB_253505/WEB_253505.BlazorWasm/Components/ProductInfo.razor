@@ -1,0 +1,38 @@
+﻿@using WEB_253505.BlazorWasm.Services
+@using WEB_253505.Domain.Entities
+@inject IDataService DataService
+
+<style>
+	.rounded-custom {
+		border-radius: 15px;
+	}
+</style>
+
+@if (SelectedItem is not null)
+{
+	<div class="card rounded-custom mb-3" style="max-width: fit-content;">
+		<div class="card-header">
+			@if (!string.IsNullOrEmpty(SelectedItem.Image))
+			{
+				<img src="@SelectedItem.Image" class="card-img-top" alt="Device image" style="max-width:300px;" />
+			}
+		</div>
+		<div class="card-body">
+			<h2>@SelectedItem.Name</h2>
+			<p>@SelectedItem.Description</p>
+			<h3>Price: @SelectedItem.Price BYN</h3>
+		</div>
+	</div>
+}
+
+
+@code {
+
+	[Parameter]
+	public Product SelectedItem { get; set; }
+
+	protected override void OnInitialized()
+	{
+
+	}
+}

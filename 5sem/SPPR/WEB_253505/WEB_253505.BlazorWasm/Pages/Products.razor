@@ -1,0 +1,31 @@
+﻿@page "/products"
+@attribute [Authorize]
+@using Microsoft.AspNetCore.Authorization;
+@using WEB_253505.BlazorWasm.Services
+@using WEB_253505.Domain.Entities
+@using WEB_253505.BlazorWasm.Components
+
+<PageTitle>Products</PageTitle>
+<CategorySelector/>
+<ProductsList OnItemSelected="OnProductSelected"/>
+<Pager/>
+<ProductInfo SelectedItem="SelectedProduct"/>
+
+@code {
+    [Inject]
+    public IDataService DataService{ get; set; }
+
+    
+    Product SelectedProduct { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await DataService.GetProductListAsync();
+    }
+
+    void OnProductSelected(int id)
+    {
+        SelectedProduct = DataService.Products.FirstOrDefault(d => d.Id == id);
+        StateHasChanged();
+    }
+}

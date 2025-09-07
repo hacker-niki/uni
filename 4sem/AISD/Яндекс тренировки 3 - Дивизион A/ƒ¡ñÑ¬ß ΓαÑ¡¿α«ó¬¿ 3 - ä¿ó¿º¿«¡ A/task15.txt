@@ -1,0 +1,97 @@
+#include <iostream>
+#include <stack>
+#include <string>
+
+int count = 1;
+int currBranch = 0;
+int mas[2] = {-1, -1};
+int a, b;*/
+
+bool checkXML(std::string str)
+{
+    std::stack<std::string> st;
+    std::string strtost = "";
+    bool flag = true;
+    //int back = 0;                        <a>>/a>
+    try
+    {
+        if (str[0] != '<')
+        {
+            return false;
+        }
+        for (int i = 0; i < str.length(); i++)
+        {
+            if (str[i] == '>' && ((i != str.length() - 1 && str[i + 1] != '<') || str[i - 1] == '>' || str[i - 1] == '<' || str[i - 1] == '/'))
+                return false;
+            if (str[i] == '<' && (str[i + 1] == '<' || str[i + 1] == '>' || (i != 0 && str[i - 1] != '>')))
+                return false;
+            if (str[i] == '/' && str[i - 1] != '<')
+                return false;
+            if (str[i] == '<')
+            {
+                flag = true;
+            }
+            else if (str[i] == '>')
+            {
+                if (flag)
+                {
+                    st.push(strtost);
+                }
+                else if (!st.empty() and st.top() == strtost)
+                {
+                    st.pop();
+                }
+                else
+                {
+                    return false;
+                }
+                strtost = "";
+            }
+            else if (str[i] == '/')
+            {
+                flag = false;
+            }
+            else
+            {
+                strtost += str[i];
+            }
+        }
+        if (st.empty())
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    catch (...)
+    {
+        return false;
+    }
+}
+
+int main()
+{
+    std::string str;
+    getline(std::cin, str);
+    char mas[]{ 'a', 'b','c','d','e'   ,'f','g','h','i','j',    'k', 'l','m','n','o',   'p', 'q','r','s','t',   'u','w','y','x','z'   ,'v', '<', '>', '/' };
+    bool f = false;
+    for (int i = 0; i < str.length(); i++)
+    {
+        for (int j = 0; j < 29; j++)
+        {
+            std::string str2 = str;
+            str2[i] = mas[j];
+            if (checkXML(str2))
+            {
+                std::cout << str2;
+                f = true;
+                break;
+            }
+        }
+        if (f)
+            break;
+    }
+    return 0;
+}

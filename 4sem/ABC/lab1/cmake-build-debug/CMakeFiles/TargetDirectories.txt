@@ -1,0 +1,3 @@
+/home/nikita/uni/4sem/ABC/lab1/cmake-build-debug/CMakeFiles/lab1_HT.dir
+/home/nikita/uni/4sem/ABC/lab1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/nikita/uni/4sem/ABC/lab1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

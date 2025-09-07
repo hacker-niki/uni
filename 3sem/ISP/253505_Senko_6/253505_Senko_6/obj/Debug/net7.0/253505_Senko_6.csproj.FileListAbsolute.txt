@@ -1,0 +1,15 @@
+/home/nikita/uni/3sem/ISP/253505_Senko_6/253505_Senko_6/bin/Debug/net7.0/253505_Senko_6
+/home/nikita/uni/3sem/ISP/253505_Senko_6/253505_Senko_6/bin/Debug/net7.0/253505_Senko_6.deps.json
+/home/nikita/uni/3sem/ISP/253505_Senko_6/253505_Senko_6/bin/Debug/net7.0/253505_Senko_6.runtimeconfig.json
+/home/nikita/uni/3sem/ISP/253505_Senko_6/253505_Senko_6/bin/Debug/net7.0/253505_Senko_6.dll
+/home/nikita/uni/3sem/ISP/253505_Senko_6/253505_Senko_6/bin/Debug/net7.0/253505_Senko_6.pdb
+/home/nikita/uni/3sem/ISP/253505_Senko_6/253505_Senko_6/obj/Debug/net7.0/253505_Senko_6.csproj.AssemblyReference.cache
+/home/nikita/uni/3sem/ISP/253505_Senko_6/253505_Senko_6/obj/Debug/net7.0/253505_Senko_6.GeneratedMSBuildEditorConfig.editorconfig
+/home/nikita/uni/3sem/ISP/253505_Senko_6/253505_Senko_6/obj/Debug/net7.0/253505_Senko_6.AssemblyInfoInputs.cache
+/home/nikita/uni/3sem/ISP/253505_Senko_6/253505_Senko_6/obj/Debug/net7.0/253505_Senko_6.AssemblyInfo.cs
+/home/nikita/uni/3sem/ISP/253505_Senko_6/253505_Senko_6/obj/Debug/net7.0/253505_Senko_6.csproj.CoreCompileInputs.cache
+/home/nikita/uni/3sem/ISP/253505_Senko_6/253505_Senko_6/obj/Debug/net7.0/253505_Senko_6.dll
+/home/nikita/uni/3sem/ISP/253505_Senko_6/253505_Senko_6/obj/Debug/net7.0/refint/253505_Senko_6.dll
+/home/nikita/uni/3sem/ISP/253505_Senko_6/253505_Senko_6/obj/Debug/net7.0/253505_Senko_6.pdb
+/home/nikita/uni/3sem/ISP/253505_Senko_6/253505_Senko_6/obj/Debug/net7.0/253505_Senko_6.genruntimeconfig.cache
+/home/nikita/uni/3sem/ISP/253505_Senko_6/253505_Senko_6/obj/Debug/net7.0/ref/253505_Senko_6.dll

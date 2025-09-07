@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<pyramids>
+  <pyramid>
+    <name>qwerty</name>
+    <pharaohs>
+      <pharaoh>
+        <name>ewq</name>
+        <yearsOld>123</yearsOld>
+      </pharaoh>
+      <pharaoh>
+        <name>qwe</name>
+        <yearsOld>456</yearsOld>
+      </pharaoh>
+    </pharaohs>
+  </pyramid>
+  <pyramid>
+    <name>qwerty</name>
+    <pharaohs>
+      <pharaoh>
+        <name>ewq</name>
+        <yearsOld>123</yearsOld>
+      </pharaoh>
+      <pharaoh>
+        <name>qwe</name>
+        <yearsOld>456</yearsOld>
+      </pharaoh>
+    </pharaohs>
+  </pyramid>
+  <pyramid>
+    <name>qwerty</name>
+    <pharaohs>
+      <pharaoh>
+        <name>ewq</name>
+        <yearsOld>123</yearsOld>
+      </pharaoh>
+      <pharaoh>
+        <name>qwe</name>
+        <yearsOld>456</yearsOld>
+      </pharaoh>
+    </pharaohs>
+  </pyramid>
+</pyramids>

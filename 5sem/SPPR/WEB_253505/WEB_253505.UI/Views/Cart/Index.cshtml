@@ -1,0 +1,35 @@
+<main>
+    <h1>Ваша корзина:</h1>
+    <table class="table">
+        <tbody>
+        @foreach (var item in Model.CartItems)
+        {
+            <tr>
+                <td>
+                    <img src="@item.Value.Product.Image" style="max-width:150px;">
+                </td>
+                <td>
+                    @item.Value.Product.Name
+                </td>
+                <td>
+                    @item.Value.Product.Description
+                </td>
+                <td>
+                    @item.Value.Product.Price BYN
+                </td>
+                <td>
+                    @item.Value.Count шт.
+                </td>
+                <td>
+                    <a class="btn btn-danger"
+                       asp-action="Delete"
+                       asp-controller="Cart"
+                       asp-route-id="@item.Value.Product.Id">
+                        <i class="fa-regular fa-trash-can"></i> Удалить
+                    </a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</main>

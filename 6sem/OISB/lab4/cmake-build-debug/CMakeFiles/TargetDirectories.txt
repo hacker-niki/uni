@@ -1,0 +1,5 @@
+/home/nikita/uni/6sem/OISB/lab4/cmake-build-debug/CMakeFiles/server.dir
+/home/nikita/uni/6sem/OISB/lab4/cmake-build-debug/CMakeFiles/client.dir
+/home/nikita/uni/6sem/OISB/lab4/cmake-build-debug/CMakeFiles/attack.dir
+/home/nikita/uni/6sem/OISB/lab4/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/nikita/uni/6sem/OISB/lab4/cmake-build-debug/CMakeFiles/rebuild_cache.dir

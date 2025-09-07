@@ -1,0 +1,132 @@
+#include <iostream>
+#include <vector>
+#include <queue>
+
+using namespace std;
+
+vector<vector<int>> g;
+
+int f( int n, int m)
+{
+  queue<pair<int, int>> q;
+  q.push(make_pair(n, m));
+  pair<int, int>* directions = new pair<int, int>[8] {};
+  directions[0] = make_pair(1, 2);
+  directions[1] = make_pair(-1, 2);
+  directions[2] = make_pair(-2, 1);
+  directions[3] = make_pair(-2, -1);
+  directions[4] = make_pair(1, -2);
+  directions[5] = make_pair(-1, -2);
+  directions[6] = make_pair(2, 1);
+  directions[7] = make_pair(2, -1);
+
+  while (!q.empty()) {
+    pair<int, int> v = q.front();
+    /*cout << "start point " << v.first << ':' << v.second << '\n';
+    cout << "q size" << q.size()<< '\n';*/
+
+    q.pop();
+    for (int i = 0; i < 8; ++i)
+    {
+      int a = v.first + directions[i].first;
+      int b = v.second + directions[i].second;
+      if ((a > 7 || a < 0) || (b > 7 || b < 0))
+      {
+      }
+      else if (g[a][b] == 0)
+      {
+        g[a][b] = g[v.first][v.second];
+        g[a][b]+=1;
+        q.push(make_pair(a, b));
+      }
+    }
+    /*for (int i = 0; i < 15; i++)
+    {
+      for (int j = 0; j < 15; j++)
+      {
+        if(i== v.first and j == v.second)
+          cout <<'!' << g[i][j] << " ";
+        else
+          cout << g[i][j] << " ";
+      }
+      cout << "\n";
+    }*/
+  }
+  return 0;
+}
+
+int main()
+{
+  //int** g = new int* [15];
+  for (int i = 0; i < 8; i++)
+  {
+    vector<int> as;
+    as.assign(8, 0);
+    g.push_back(as);
+  }
+  
+
+  //for (int i = 0; i < 15; i++)
+  //{
+  //  g[i] = new int[15] {};
+  //}
+  
+
+  char a, b;
+  int a1, a2, b1, b2;
+    cin >> a >> b1;
+    cin >> b >> b2;
+
+  b1--;
+  b2--;
+
+  a1 = (int)a - 97;
+  a2 = (int)b - 97;
+
+
+    g[a1][b1] = -1;// red horse
+
+  /*for (int i = 0; i < 15; i++)
+  {
+    for (int j = 0; j < 15; j++)
+    {
+      cout << g[i][j] <<" ";
+    }
+    cout << "\n";
+  }*/
+
+  //
+  //g[a2][b2].first = 2;//green horse
+  //
+  f(a1, b1);
+
+  //cout << "final result \n";
+  //for (int i = 0; i < 8; i++)
+  //{
+  //  for (int j = 0; j < 8; j++)
+  //  {
+  //    cout << g[i][j] <<" ";
+  //  }
+  //  cout << "\n";
+  //}  
+
+
+  //cout << "\n";
+  //cout << 7 - a1 + a2 << "\n";
+  //cout << 7 - b1 + b2 << "\n";
+  int ans = g[a2][b2];
+  if (ans % 2 == 0)
+  {
+    cout << -1 << "\n";
+
+  }
+  else if(ans != 1 || ans != 0)
+  {
+    cout << ans/2 + 1 << "\n";
+  }
+  else
+  {
+    cout << 0<< "\n";
+  }
+  return 0;
+}

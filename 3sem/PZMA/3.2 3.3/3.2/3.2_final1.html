@@ -1,0 +1,249 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>3.2_final1.html</title>
+<!-- Created by Maple 2022.2, Linux -->
+</head>
+<a name="MapleAutoBookmark1" />
+
+<body bgcolor="FFFFFF">
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/3.2_final_1.gif" width="233" height="22" alt="x1 := `*`(t, `*`(ln(t))); 1; dx := diff(x1, t)" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/3.2_final_2.gif" width="101" height="18" alt="Typesetting:-mprintslash([x1 := `*`(t, `*`(ln(t)))], [`*`(t, `*`(ln(t)))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/3.2_final_3.gif" width="122" height="18" alt="Typesetting:-mprintslash([dx := `+`(ln(t), 1)], [`+`(ln(t), 1)])" align="center" border="0"></td>
+<td width='5%' align='center'>(1)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/3.2_final_4.gif" width="426" height="18" alt="dy_1 := `*`(t, `*`(dx)); -1; y_1 := rhs(dsolve(diff(y(t), t) = dy_1))" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/3.2_final_5.gif" width="218" height="43" alt="Typesetting:-mprintslash([y_1 := `+`(`*`(`/`(1, 2), `*`(`^`(t, 2), `*`(ln(t)))), `*`(`/`(1, 4), `*`(`^`(t, 2))), _C1)], [`+`(`*`(`/`(1, 2), `*`(`^`(t, 2), `*`(ln(t)))), `*`(`/`(1, 4), `*`(`^`(t, 2))),..." align="center" border="0"></td>
+<td width='5%' align='center'>(2)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/3.2_final_6.gif" width="452" height="18" alt="dy_2 := `*`(y_1, `*`(dx)); -1; des := rhs(dsolve(diff(y(t), t) = dy_2)); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/3.2_final_7.gif" width="425" height="43" alt="Typesetting:-mprintslash([des := `+`(`*`(`/`(1, 6), `*`(`^`(t, 3), `*`(`^`(ln(t), 2)))), `*`(`/`(5, 36), `*`(`^`(t, 3), `*`(ln(t)))), `*`(`/`(1, 27), `*`(`^`(t, 3))), `*`(ln(t), `*`(t, `*`(_C1))), _C2..." align="center" border="0"></td>
+<td width='5%' align='center'>(3)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/3.2_final_8.gif" width="328" height="14" alt="G1 := [x1, subs(_C1 = -10, _C2 = 1, des), t = -5 .. 5]; -1; G2 := [x1, subs(_C1 = -5, _C2 = 1, des), t = -5 .. 5]; -1; G3 := [x1, subs(_C1 = 5, _C2 = 1, des), t = -5 .. 5]; -1; G4 := [x1, subs(_C1 = 1..." align="center" border="0"><br><img src="images/3.2_final_9.gif" width="323" height="14" alt="G1 := [x1, subs(_C1 = -10, _C2 = 1, des), t = -5 .. 5]; -1; G2 := [x1, subs(_C1 = -5, _C2 = 1, des), t = -5 .. 5]; -1; G3 := [x1, subs(_C1 = 5, _C2 = 1, des), t = -5 .. 5]; -1; G4 := [x1, subs(_C1 = 1..." align="center" border="0"><br><img src="images/3.2_final_10.gif" width="314" height="14" alt="G1 := [x1, subs(_C1 = -10, _C2 = 1, des), t = -5 .. 5]; -1; G2 := [x1, subs(_C1 = -5, _C2 = 1, des), t = -5 .. 5]; -1; G3 := [x1, subs(_C1 = 5, _C2 = 1, des), t = -5 .. 5]; -1; G4 := [x1, subs(_C1 = 1..." align="center" border="0"><br><img src="images/3.2_final_11.gif" width="322" height="14" alt="G1 := [x1, subs(_C1 = -10, _C2 = 1, des), t = -5 .. 5]; -1; G2 := [x1, subs(_C1 = -5, _C2 = 1, des), t = -5 .. 5]; -1; G3 := [x1, subs(_C1 = 5, _C2 = 1, des), t = -5 .. 5]; -1; G4 := [x1, subs(_C1 = 1..." align="center" border="0"><br><img src="images/3.2_final_12.gif" width="10" height="13" alt="G1 := [x1, subs(_C1 = -10, _C2 = 1, des), t = -5 .. 5]; -1; G2 := [x1, subs(_C1 = -5, _C2 = 1, des), t = -5 .. 5]; -1; G3 := [x1, subs(_C1 = 5, _C2 = 1, des), t = -5 .. 5]; -1; G4 := [x1, subs(_C1 = 1..." align="center" border="0"><br><img src="images/3.2_final_13.gif" width="10" height="13" alt="G1 := [x1, subs(_C1 = -10, _C2 = 1, des), t = -5 .. 5]; -1; G2 := [x1, subs(_C1 = -5, _C2 = 1, des), t = -5 .. 5]; -1; G3 := [x1, subs(_C1 = 5, _C2 = 1, des), t = -5 .. 5]; -1; G4 := [x1, subs(_C1 = 1..." align="center" border="0"><br><img src="images/3.2_final_14.gif" width="152" height="14" alt="G1 := [x1, subs(_C1 = -10, _C2 = 1, des), t = -5 .. 5]; -1; G2 := [x1, subs(_C1 = -5, _C2 = 1, des), t = -5 .. 5]; -1; G3 := [x1, subs(_C1 = 5, _C2 = 1, des), t = -5 .. 5]; -1; G4 := [x1, subs(_C1 = 1..." align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/3.2_final_15.gif" width="500" height="500" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/3.2_final_16.gif" width="61" height="14" alt="restart; 1; de := `+`(`*`(cos(x), `*`(`+`(`*`(y(x), `*`(diff(diff(y(x), x), x))), `-`(`*`(`^`(diff(y(x), x), 2)))))), `*`(2, `*`(y(x), `*`(diff(y(x), x), `*`(sin(x)))))) = 0; 1; des := dsolve(de); 1; ..." align="center" border="0"><br><img src="images/3.2_final_17.gif" width="10" height="13" alt="restart; 1; de := `+`(`*`(cos(x), `*`(`+`(`*`(y(x), `*`(diff(diff(y(x), x), x))), `-`(`*`(`^`(diff(y(x), x), 2)))))), `*`(2, `*`(y(x), `*`(diff(y(x), x), `*`(sin(x)))))) = 0; 1; des := dsolve(de); 1; ..." align="center" border="0"><br><img src="images/3.2_final_18.gif" width="530" height="17" alt="restart; 1; de := `+`(`*`(cos(x), `*`(`+`(`*`(y(x), `*`(diff(diff(y(x), x), x))), `-`(`*`(`^`(diff(y(x), x), 2)))))), `*`(2, `*`(y(x), `*`(diff(y(x), x), `*`(sin(x)))))) = 0; 1; des := dsolve(de); 1; ..." align="center" border="0"><br><img src="images/3.2_final_19.gif" width="124" height="14" alt="restart; 1; de := `+`(`*`(cos(x), `*`(`+`(`*`(y(x), `*`(diff(diff(y(x), x), x))), `-`(`*`(`^`(diff(y(x), x), 2)))))), `*`(2, `*`(y(x), `*`(diff(y(x), x), `*`(sin(x)))))) = 0; 1; des := dsolve(de); 1; ..." align="center" border="0"><br><img src="images/3.2_final_20.gif" width="376" height="14" alt="restart; 1; de := `+`(`*`(cos(x), `*`(`+`(`*`(y(x), `*`(diff(diff(y(x), x), x))), `-`(`*`(`^`(diff(y(x), x), 2)))))), `*`(2, `*`(y(x), `*`(diff(y(x), x), `*`(sin(x)))))) = 0; 1; des := dsolve(de); 1; ..." align="center" border="0"><br><img src="images/3.2_final_21.gif" width="13" height="14" alt="restart; 1; de := `+`(`*`(cos(x), `*`(`+`(`*`(y(x), `*`(diff(diff(y(x), x), x))), `-`(`*`(`^`(diff(y(x), x), 2)))))), `*`(2, `*`(y(x), `*`(diff(y(x), x), `*`(sin(x)))))) = 0; 1; des := dsolve(de); 1; ..." align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/3.2_final_22.gif" width="602" height="47" alt="Typesetting:-mprintslash([de := `+`(`*`(cos(x), `*`(`+`(`*`(y(x), `*`(diff(y(x), `$`(x, 2)))), `-`(`*`(`^`(diff(y(x), x), 2)))))), `*`(2, `*`(y(x), `*`(diff(y(x), x), `*`(sin(x)))))) = 0], [`+`(`*`(co..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/3.2_final_23.gif" width="286" height="38" alt="Typesetting:-mprintslash([des := y(x) = `*`(exp(`+`(`*`(`/`(1, 2), `*`(_C1, `*`(x))))), `*`(exp(`+`(`*`(`/`(1, 4), `*`(_C1, `*`(sin(`+`(`*`(2, `*`(x))))))))), `*`(_C2)))], [y(x) = `*`(exp(`+`(`*`(`/`(..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/3.2_final_24.gif" width="500" height="500" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/3.2_final_25.gif" width="768" height="17" alt="plots[animate](plot, [rhs(subs(_C1 = A, _C2 = 1, des)), x = -1 .. 1, y = 0 .. 10], A = -10 .. 10); 1; restart; 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/3.2_final_26.gif" width="500" height="500" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/3.2_final_27.gif" width="248" height="27" alt="de := `*`(diff(y(x), x, x), `*`(sqrt(`+`(`-`(`*`(`^`(x, 2))), 1)), `*`(arcsin(x)))) = diff(y(x), x); "_noterminate" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/3.2_final_28.gif" width="390" height="47" alt="Typesetting:-mprintslash([de := `*`(diff(y(x), `$`(x, 2)), `*`(`^`(`+`(`-`(`*`(`^`(x, 2))), 1), `/`(1, 2)), `*`(arcsin(x)))) = diff(y(x), x)], [`*`(diff(diff(y(x), x), x), `*`(`^`(`+`(`-`(`*`(`^`(x, 2..." align="center" border="0"></td>
+<td width='5%' align='center'>(4)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/3.2_final_29.gif" width="148" height="18" alt="des := dsolve(de); "_noterminate" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/3.2_final_30.gif" width="399" height="27" alt="Typesetting:-mprintslash([des := y(x) = `+`(_C1, `*`(`+`(`*`(x, `*`(arcsin(x))), `*`(`^`(`+`(`-`(`*`(`^`(x, 2))), 1), `/`(1, 2)))), `*`(_C2)))], [y(x) = `+`(_C1, `*`(`+`(`*`(x, `*`(arcsin(x))), `*`(`^..." align="center" border="0"></td>
+<td width='5%' align='center'>(5)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/3.2_final_31.gif" width="476" height="18" alt="plot([seq(rhs(subs(_C1 = 1, _C2 = i, des)), i = -10 .. 10, 1)]); "_noterminate" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/3.2_final_32.gif" width="500" height="500" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/3.2_final_33.gif" width="768" height="14" alt="sq := seq(plot(rhs(subs(_C1 = 1, _C2 = i, des)), x = -1 .. 1), i = -50 .. 50, 1); -1; plots[display]([sq], insequence = true); 1; restart; 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/3.2_final_34.gif" width="500" height="500" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/3.2_final_35.gif" width="266" height="43" alt="de := `+`(diff(y(x), x, x), `/`(`*`(diff(y(x), x)), `*`(x)), `-`(`/`(`*`(y(x)), `*`(`^`(x, 2))))) = `*`(exp(x), `*`(`+`(1, x))); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/3.2_final_36.gif" width="378" height="64" alt="Typesetting:-mprintslash([de := `+`(diff(y(x), `$`(x, 2)), `/`(`*`(diff(y(x), x)), `*`(x)), `-`(`/`(`*`(y(x)), `*`(`^`(x, 2))))) = `*`(exp(x), `*`(`+`(1, x)))], [`+`(diff(diff(y(x), x), x), `/`(`*`(di..." align="center" border="0"></td>
+<td width='5%' align='center'>(6)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/3.2_final_37.gif" width="157" height="18" alt="des := dsolve(de); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/3.2_final_38.gif" width="372" height="43" alt="Typesetting:-mprintslash([des := y(x) = `+`(`*`(x, `*`(_C1)), `/`(`*`(_C2), `*`(x)), `/`(`*`(exp(x), `*`(`+`(`*`(`^`(x, 2)), `-`(`*`(2, `*`(x))), 2))), `*`(x)))], [y(x) = `+`(`*`(x, `*`(_C1)), `/`(`*`..." align="center" border="0"></td>
+<td width='5%' align='center'>(7)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/3.2_final_39.gif" width="558" height="18" alt="plot([seq(rhs(subs(_C1 = 2, _C2 = i, des)), i = -10 .. 10, 1)], x = -2 .. 2); "_noterminate" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/3.2_final_40.gif" width="500" height="500" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/3.2_final_41.gif" width="70" height="18" alt="restart; "_noterminate" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/3.2_final_42.gif" width="257" height="47" alt="de := `/`(`*`(diff(y(x), x, x, x), `*`(`+`(exp(`+`(`*`(2, `*`(x)))), exp(`+`(`-`(`*`(2, `*`(x)))))))), `*`(`+`(exp(`+`(`*`(2, `*`(x)))), `-`(exp(`+`(`-`(`*`(2, `*`(x))))))))) = `+`(`*`(2, `*`(diff(y(x..." align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/3.2_final_43.gif" width="367" height="72" alt="Typesetting:-mprintslash([de := `/`(`*`(diff(y(x), `$`(x, 3)), `*`(`+`(exp(`+`(`*`(2, `*`(x)))), exp(`+`(`-`(`*`(2, `*`(x)))))))), `*`(`+`(exp(`+`(`*`(2, `*`(x)))), `-`(exp(`+`(`-`(`*`(2, `*`(x)))))))..." align="center" border="0"></td>
+<td width='5%' align='center'>(8)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/3.2_final_44.gif" width="100" height="18" alt="dsolve(de); "_noterminate" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/3.2_final_45.gif" width="342" height="64" alt="y(x) = `+`(`*`(`/`(1, 2), `*`(_C1, `*`(`+`(`*`(`/`(1, 2), `*`(exp(`+`(`-`(`*`(2, `*`(x))))))), `*`(`/`(1, 2), `*`(exp(`+`(`*`(2, `*`(x)))))))))), `*`(_C2, `*`(x)), _C3)" align="center" border="0"></td>
+<td width='5%' align='center'>(9)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/3.2_final_46.gif" width="70" height="18" alt="restart; "_noterminate" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/3.2_final_47.gif" width="299" height="18" alt="de := `+`(diff(y(x), x, x), y(x)) = `+`(`*`(2, `*`(cos(`+`(`*`(3, `*`(x)))))), `-`(`*`(3, `*`(sin(`+`(`*`(3, `*`(x)))))))); "_noterminate" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/3.2_final_48.gif" width="368" height="47" alt="Typesetting:-mprintslash([de := `+`(diff(y(x), `$`(x, 2)), y(x)) = `+`(`*`(2, `*`(cos(`+`(`*`(3, `*`(x)))))), `-`(`*`(3, `*`(sin(`+`(`*`(3, `*`(x))))))))], [`+`(diff(diff(y(x), x), x), y(x)) = `+`(`*`..." align="center" border="0"></td>
+<td width='5%' align='center'>(10)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/3.2_final_49.gif" width="105" height="18" alt="dsolve(de); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/3.2_final_50.gif" width="442" height="39" alt="y(x) = `+`(`*`(sin(x), `*`(_C2)), `*`(cos(x), `*`(_C1)), `*`(`/`(3, 8), `*`(sin(`+`(`*`(3, `*`(x)))))), `-`(`*`(`/`(1, 4), `*`(cos(`+`(`*`(3, `*`(x))))))))" align="center" border="0"></td>
+<td width='5%' align='center'>(11)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/3.2_final_51.gif" width="17" height="18" alt="" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+
+int main()
+{
+    long long mas[26]{0};
+    std::string str;
+    std::cin >> str;
+    long long kost = (int)str.size();
+    long long sum = 0, i;
+    for (i = 0; i < str.size() / 2; i++)
+    {
+        sum += kost;
+        mas[str[i] - 97] += sum;
+        mas[str[(int)str.size() - i - 1] - 97] += sum;
+        kost -= 2;
+    }
+    if (str.size() % 2 == 1)
+    {
+        sum += kost;
+        mas[str[i] - 97] += sum;
+    }
+    for (int i = 0; i < 26; i++)
+    {
+        if (mas[i] > 0)
+            std::cout << (char)(i + 97) << ": " << mas[i] << '\n';
+    }
+    return 0;
+}

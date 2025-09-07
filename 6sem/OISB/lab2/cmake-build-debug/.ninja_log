@@ -1,0 +1,11 @@
+# ninja log v6
+120	124	1739321346830900199	CMakeFiles/lab2_vis.dir/main_vis.cpp.o.modmap	e24797fe3b2251ac
+110	851	1739321342935906887	CMakeFiles/lab2.dir/main.cpp.o	ac97e5a1d8bebc8e
+124	1003	1739321346834900192	CMakeFiles/lab2_vis.dir/main_vis.cpp.o	b1c5ea1d95a84a9d
+852	951	1739321343677905609	lab2	4ad5da01a1c60880
+1003	1093	1739321347713898690	lab2_vis	ecf4b1096993b0b0
+2	120	1739321346712900401	CMakeFiles/lab2_vis.dir/main_vis.cpp.o.ddi	6059f802741b84fb
+120	124	1739321346830900199	CMakeFiles/lab2_vis.dir/CXX.dd	e24797fe3b2251ac
+106	110	1739321342931906894	CMakeFiles/lab2.dir/CXX.dd	71454bde0a06cfcf
+2	106	1739321342827907073	CMakeFiles/lab2.dir/main.cpp.o.ddi	c4af9a0323e6b95
+106	110	1739321342931906894	CMakeFiles/lab2.dir/main.cpp.o.modmap	71454bde0a06cfcf

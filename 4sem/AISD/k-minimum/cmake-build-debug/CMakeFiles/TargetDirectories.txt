@@ -1,0 +1,3 @@
+/home/nikita/uni/4sem/AISD/k-minimum/cmake-build-debug/CMakeFiles/k_minimum.dir
+/home/nikita/uni/4sem/AISD/k-minimum/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/nikita/uni/4sem/AISD/k-minimum/cmake-build-debug/CMakeFiles/rebuild_cache.dir

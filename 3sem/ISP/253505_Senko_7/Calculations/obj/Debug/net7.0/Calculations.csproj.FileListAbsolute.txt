@@ -1,0 +1,12 @@
+/home/nikita/uni/3sem/ISP/253505_Senko_7/Calculations/bin/Debug/net7.0/Calculations.deps.json
+/home/nikita/uni/3sem/ISP/253505_Senko_7/Calculations/bin/Debug/net7.0/Calculations.dll
+/home/nikita/uni/3sem/ISP/253505_Senko_7/Calculations/bin/Debug/net7.0/Calculations.pdb
+/home/nikita/uni/3sem/ISP/253505_Senko_7/Calculations/obj/Debug/net7.0/Calculations.csproj.AssemblyReference.cache
+/home/nikita/uni/3sem/ISP/253505_Senko_7/Calculations/obj/Debug/net7.0/Calculations.GeneratedMSBuildEditorConfig.editorconfig
+/home/nikita/uni/3sem/ISP/253505_Senko_7/Calculations/obj/Debug/net7.0/Calculations.AssemblyInfoInputs.cache
+/home/nikita/uni/3sem/ISP/253505_Senko_7/Calculations/obj/Debug/net7.0/Calculations.AssemblyInfo.cs
+/home/nikita/uni/3sem/ISP/253505_Senko_7/Calculations/obj/Debug/net7.0/Calculations.csproj.CoreCompileInputs.cache
+/home/nikita/uni/3sem/ISP/253505_Senko_7/Calculations/obj/Debug/net7.0/Calculations.dll
+/home/nikita/uni/3sem/ISP/253505_Senko_7/Calculations/obj/Debug/net7.0/refint/Calculations.dll
+/home/nikita/uni/3sem/ISP/253505_Senko_7/Calculations/obj/Debug/net7.0/Calculations.pdb
+/home/nikita/uni/3sem/ISP/253505_Senko_7/Calculations/obj/Debug/net7.0/ref/Calculations.dll

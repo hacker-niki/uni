@@ -1,0 +1,29 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+int main()
+{
+    int n, a, k;
+    std::cin >> n;
+    std::vector <int> mas;
+    std::vector <int> mas2;
+    for (int i = 0; i < n; i++)
+    {
+        std::cin >> a;
+        mas.push_back(a);
+    }
+    std::cin >> k;
+    for (int i = 0; i < k; i++)
+    {
+        std::cin >> a;
+        mas2.push_back(a);
+    }
+    sort(mas.begin(), mas.end());
+    mas.erase(std::unique(begin(mas), end(mas)), end(mas));
+    for (int i = 0; i < mas2.size(); i++)
+    {
+        std::cout << lower_bound(mas.begin(), mas.end(), mas2[i]) - mas.begin() << '\n';
+    }
+    return 0;
+}

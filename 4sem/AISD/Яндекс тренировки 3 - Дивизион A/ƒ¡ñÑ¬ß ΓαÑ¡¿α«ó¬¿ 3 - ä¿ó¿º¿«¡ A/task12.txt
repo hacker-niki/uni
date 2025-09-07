@@ -1,0 +1,5 @@
+str = input()
+try:
+    print(eval(str))
+except:
+    print('WRONG')

@@ -1,0 +1,34 @@
+#include <iostream>
+#include <vector>
+#include <cmath>
+
+int main()
+{
+	int n;
+	std::cin >> n;
+	std::vector<int> queue;
+	for (int i = 0; i < n; i++)
+	{
+		char c;
+		std::cin >> c;
+		if (c == '+')
+		{
+			int num;
+			std::cin >> num;
+			queue.push_back(num);
+		}
+		else if (c == '*')
+		{
+			int num;
+			std::cin >> num;
+			auto iter = queue.begin();
+			queue.insert(iter + ceil(queue.size() / 2.0), num);
+		}
+		else if (c == '-')
+		{
+			std::cout << queue[0] << '\n';
+			queue.erase(queue.begin());
+		}
+	}
+	return 0;
+}

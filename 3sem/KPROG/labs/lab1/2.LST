@@ -1,0 +1,12 @@
+  ADDR B1 B2 B3 B4 thrass11.tmp                                     PAGE       1
+
+  C000 CE 27 0F     ldx #9999
+  C003 18 CE 03 E8  ldy #1000
+  C007 DF 01        stx $1
+  C009 18 DF 03     sty $3
+  C00C DC 01        ldd $1
+  C00E D0 04        subb $4
+  C010 92 03        sbca $3
+  C012 DD 06        std $6
+  C014 DE 06        ldx $6
+  C016 43           coma

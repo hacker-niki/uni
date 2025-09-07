@@ -1,0 +1,78 @@
+#include <iostream>
+#include <queue>
+#include <vector>
+#include <cmath>
+#include <fstream>
+
+using namespace std;
+
+
+int main() {
+
+    int n;
+    cin >> n;
+
+    int y[64801]{};
+    for (int i = 0; i < n; i++)
+    {
+        int h, m, s;
+        char c;
+        cin >> h >> c >> m >> c >> s;
+        int j = 3600 * h + 60 * m + s, t;
+        cin >> t;
+        y[j] = t;
+    }
+
+    int dp[64801]{};
+    for (int x = 32400; x < 46800; x++) {
+
+        if (!(y[x] - 0)) {
+            y[x] = y[x - 1];
+        }
+
+        dp[x + 1] = max(dp[x + 1], dp[x]);
+
+        if (x + y[x] > 46800) {
+            continue;
+        }
+
+        dp[x + y[x]] = max(dp[x + y[x]], dp[x] + 1);
+    }
+
+    int a = 0;
+
+    for (int x = 32400; x < 46801; x++) {
+        a = max(a, dp[x]);
+    }
+
+    for (int x = 46800; x < 50400; x++) {
+        if (!(y[x] - 0)) {
+            y[x] = y[x - 1];
+        }
+    }
+
+    for (int x = 50400; x < 64800; x++) {
+
+        if (!(y[x] - 0)) {
+            y[x] = y[x - 1];
+        }
+
+        dp[x + 1] = max(dp[x + 1], dp[x]);
+
+        if (x + y[x] > 64800) {
+            continue;
+        }
+
+        dp[x + y[x]] = max(dp[x + y[x]], dp[x] + 1);
+    }
+
+    int b = 0;
+
+    for (int x = 50400; x < 64801; x++) {
+        b = max(b, dp[x]);
+    }
+
+    cout << a + b << "\n";
+
+    return 0;
+}

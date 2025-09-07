@@ -1,0 +1,155 @@
+#include <iostream>
+#include <vector>
+#include <queue>
+
+
+using namespace std;
+
+const int MaXn = 1 * 1e4 + 114;
+
+const long long OO = 1 * 1e18 + 1118;
+const int oo = 1 * 1e9 + 119;
+
+const int Module = 1 * 1e9 + 7;
+
+vector <int> g[MaXn];
+
+
+int main() {
+
+    int n, k;
+    cin >> n >> k;
+
+    for (int i = 0; i < k; i++) {
+
+        int a, b;
+        cin >> a >> b;
+
+        a--, b--;
+        g[a].push_back(b), g[b].push_back(a);
+    }
+
+    int m;
+    cin >> m;
+
+    vector <int> p(m);
+
+    for (int i = 0; i < m; i++) {
+        cin >> p[i];
+    }
+
+    vector <vector <vector <int> > > d(n, vector <vector <int> >(n, vector <int>(2, oo)));
+    for (int i = 0; i < n; i++) {
+
+        queue<pair <int, int>> q;
+        q.push({ i, 0 });
+
+        d[i][i][0] = 0;
+        while (!q.empty()) {
+
+            int a = q.front().first, c = q.front().second;
+
+            for (auto b : g[a]) {
+                if (d[i][b][1 - c] > d[i][a][c] + 1) {
+
+                    d[i][b][1 - c] = d[i][a][c] + 1;
+                    q.push({ b, 1 - c });
+                }
+            }
+
+            q.pop();
+        }
+    }
+
+    double t = oo;
+    for (int i = 0; i < n; i++) {
+
+        int f = 0, e = -oo;
+        for (int j = 0; j < m; j++) {
+
+            if (!(d[p[j] - 1][i][0] - oo)) {
+
+                f = -oo;
+                break;
+            }
+
+            e = max(e, d[p[j] - 1][i][0]);
+        }
+
+        if (f < 0) {
+            continue;
+        }
+
+        t = min(t, double(e));
+    }
+
+    for (int i = 0; i < n; i++) {
+
+        int f = 0, e = -oo;
+        for (int j = 0; j < m; j++) {
+
+            if (!(d[p[j] - 1][i][1] - oo)) {
+
+                f = -oo;
+                break;
+            }
+
+            e = max(e, d[p[j] - 1][i][1]);
+        }
+
+        if (f < 0) {
+            continue;
+        }
+
+        t = min(t, double(e));
+    }
+
+    for (int i = 0; i < n; i++) {
+        for (auto j : g[i]) {
+
+            int f = /* ? */0, e = /* ? */-oo;
+            for (int q = 0; q < m; q++) {
+
+                if (!(d[p[q] - 1][i][0] - oo) && !(d[p[q] - 1][j][0] - oo)) {
+
+                    f = /* ? */-oo;
+                    break;
+                }
+
+                e = max(e, min(d[p[q] - 1][i][0], d[p[q] - 1][j][0]));
+            }
+
+            if (f < 0) {
+                continue;
+            }
+
+            t = min(t, double(e) + 0.5);
+        }
+    }
+
+    for (int i = 0; i < n; i++) {
+        for (auto j : g[i]) {
+
+            int f = 0, e = -oo;
+            for (int q = 0; q < m; q++) {
+
+                if (!(d[p[q] - 1][i][1] - oo) && !(d[p[q] - 1][j][1] - oo)) {
+
+                    f = -oo;
+                    break;
+                }
+
+                e = max(e, min(d[p[q] - 1][i][1], d[p[q] - 1][j][1]));
+            }
+
+            if (f < 0) {
+                continue;
+            }
+
+            t = min(t, double(e) + 0.5);
+        }
+    }
+
+    cout << (t < oo ? t : -1) << "\n";
+    return 0;
+}

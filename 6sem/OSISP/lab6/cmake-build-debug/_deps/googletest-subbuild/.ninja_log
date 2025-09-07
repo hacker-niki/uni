@@ -1,0 +1,21 @@
+# ninja log v6
+0	9	1738755346520873751	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	7b77735b8f927ece
+0	9	1738755346520873751	/home/nikita/uni/6sem/OSISP/lab6/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	7b77735b8f927ece
+10	923	1738755347434207296	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	4f1cd62a3ac7e500
+10	923	1738755347434207296	/home/nikita/uni/6sem/OSISP/lab6/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	4f1cd62a3ac7e500
+923	927	1738755347437540631	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	c346aa02ec9d94cf
+923	927	1738755347437540631	/home/nikita/uni/6sem/OSISP/lab6/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	c346aa02ec9d94cf
+927	931	1738755347444207298	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	a12b1d1535da24aa
+927	931	1738755347444207298	/home/nikita/uni/6sem/OSISP/lab6/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	a12b1d1535da24aa
+931	936	1738755347447540633	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	f7a9b0956f83f625
+931	936	1738755347447540633	/home/nikita/uni/6sem/OSISP/lab6/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	f7a9b0956f83f625
+936	940	1738755347450873967	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	d8559760594dbe67
+936	940	1738755347450873967	/home/nikita/uni/6sem/OSISP/lab6/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	d8559760594dbe67
+940	945	1738755347457540635	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	8313915d5c5d400f
+940	945	1738755347457540635	/home/nikita/uni/6sem/OSISP/lab6/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	8313915d5c5d400f
+945	949	1738755347460873969	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	b2882131052850e9
+945	949	1738755347460873969	/home/nikita/uni/6sem/OSISP/lab6/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	b2882131052850e9
+949	955	1738755347467540638	CMakeFiles/googletest-populate-complete	649915bdefb01329
+949	955	1738755347467540638	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	649915bdefb01329
+949	955	1738755347467540638	/home/nikita/uni/6sem/OSISP/lab6/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete	649915bdefb01329
+949	955	1738755347467540638	/home/nikita/uni/6sem/OSISP/lab6/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	649915bdefb01329

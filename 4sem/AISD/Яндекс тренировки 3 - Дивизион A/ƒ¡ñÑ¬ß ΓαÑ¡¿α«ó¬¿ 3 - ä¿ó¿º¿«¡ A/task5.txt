@@ -1,0 +1,17 @@
+#include <iostream>
+
+int main()
+{
+    int N;
+    std::cin >> N;
+    int* mas = new int[N];
+    std::cin >> mas[0];
+    long long ans = 0;
+    for (int i = 1; i < N; i++)
+    {
+        std::cin >> mas[i];
+        ans += std::min(mas[i], mas[i - 1]);
+    }
+    std::cout << ans;
+    return 0;
+}

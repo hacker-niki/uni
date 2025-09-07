@@ -1,0 +1,51 @@
+#include <iostream>
+#include <unordered_set>
+#include <list>
+#include <queue>
+#include <limits.h>
+
+int main() {
+    std::unordered_set<int> cars;
+    std::list<int>* ents;
+    std::priority_queue<std::pair<int, int>> ids;
+    long long n, k, p;
+    long long count = 0;
+    std::cin >> n >> k >> p;
+
+    ents = new std::list<int>[n];
+    int* h = new int[p];
+    for (int i = 0; i < p; i++)
+    {
+        std::cin >> h[i];
+        ents[--h[i]].push_back(i);
+    }
+
+    for (int i = 0; i < p; i++)
+    {
+        int curr = h[i];
+        ents[curr].pop_front();
+
+        if (cars.find(curr) == cars.end())
+        {
+            if (cars.size() >= k)
+            {
+                cars.erase(ids.top().second);
+                ids.pop();
+            }
+            count++;
+            cars.insert(curr);
+        }
+        if (!ents[curr].empty())
+        {
+            ids.push({ ents[curr].front(), curr });
+        }
+        else
+        {
+            ids.push({ INT_MAX, curr });
+        }
+    }
+
+    std::cout << count;
+
+    return 0;
+}

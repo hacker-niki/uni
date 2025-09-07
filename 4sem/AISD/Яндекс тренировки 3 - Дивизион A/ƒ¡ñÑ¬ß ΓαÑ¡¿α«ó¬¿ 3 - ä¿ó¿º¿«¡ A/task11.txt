@@ -1,0 +1,54 @@
+#include <iostream>
+#include <stack>
+
+int main()
+{
+	int t;
+	std::cin >> t;
+	for (int q = 0; q < t; q++)
+	{
+		std::stack<long double> st;
+		int n;
+		bool f = true;
+		long double cur = 0;
+		std::cin >> n;
+		for (int i = 0; i < n; i++)
+		{
+			long double a;
+			std::cin >> a;
+			if (st.size() == 0 || st.top() >= a)
+			{
+				st.push(a);
+			}
+			else
+			{
+				while (st.size() != 0 && st.top() < a)
+				{
+					if (cur < a)
+					{
+						cur = st.top();
+						st.pop();
+					}
+					else
+					{
+						f = false;
+						break;
+					}
+				}
+				st.push(a);
+			}
+		}
+		if (st.size() != 0 && st.top() <= cur)
+		{
+			f = false;
+		}
+		if (f)
+		{
+			std::cout << 1 << '\n';
+		}
+		else
+		{
+			std::cout << 0 << '\n';
+		}
+	}
+}

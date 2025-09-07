@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "253505_Senko_6", "253505_Senko_6\253505_Senko_6.csproj", "{215DFC55-315A-4B09-86D1-77D9779A770A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "ClassLibrary\ClassLibrary.csproj", "{349718FE-0C8E-4F7B-A663-790CFF7D0216}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{215DFC55-315A-4B09-86D1-77D9779A770A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{215DFC55-315A-4B09-86D1-77D9779A770A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{215DFC55-315A-4B09-86D1-77D9779A770A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{215DFC55-315A-4B09-86D1-77D9779A770A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{349718FE-0C8E-4F7B-A663-790CFF7D0216}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{349718FE-0C8E-4F7B-A663-790CFF7D0216}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{349718FE-0C8E-4F7B-A663-790CFF7D0216}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{349718FE-0C8E-4F7B-A663-790CFF7D0216}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

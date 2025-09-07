@@ -1,0 +1,20 @@
+{
+    "name": "nikita/gost-cipher-project",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nikita",
+            "email": "you@example.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "symfony/http-foundation": "^7.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}

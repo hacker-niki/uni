@@ -1,0 +1,23 @@
+  ADDR B1 B2 B3 B4 thrass11.tmp                                     PAGE       1
+
+                    org $7000
+  7000 C6 02        ldab #$02
+  7002 CE 70 14     ldx #ways
+  7005 1A EE 00    p0 ldy 0,x
+  7008 18 6E 00     jmp 0,y
+  700B 01          p1 nop
+  700C 08           inx
+  700D 08           inx
+  700E 20 F5        bra p0
+  7010 20 F9       p2 bra p1
+  7012 21 FE       p3 brn *
+  7014 70 0B 70 10 ways fdb p1,p2,p3
+. 7018 70 12
+
+  Symbol Table 
+
+  P0                 7005
+  P1                 700B
+  P2                 7010
+  P3                 7012
+  WAYS               7014

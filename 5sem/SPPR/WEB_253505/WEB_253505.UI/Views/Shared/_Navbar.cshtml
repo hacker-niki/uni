@@ -1,0 +1,23 @@
+@{
+    var controller = ViewContext.RouteData.Values["controller"]?
+                         .ToString()?
+                         .ToLower()
+                     ?? String.Empty;
+}
+
+<!-- Панель навигации -->
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <!-- меню сайта -->
+    <a class="navbar-brand" href="#">WEB_253505_Senko</a>
+    <div class="navbar-nav">
+        <a class="nav-item nav-link @(controller == "home" ? "active" : "")" asp-controller="Home" asp-action="Index">Лабораторная 1</a>
+        <a class="nav-item nav-link @(controller == "product" ? "active" : "")" asp-controller="Product" asp-action="Index">Каталог</a>
+        <a class="nav-item nav-link @(controller == "admin" ? "active" : "")" asp-area="Admin" asp-page="/Index">Администрирование</a>
+    </div>
+    <!-- меню сайта - конец -->
+
+    <!-- Информация пользователя -->
+    <partial name="_UserInfoPartial"/>
+    <!-- Информация пользователя - конец -->
+    
+</nav> <!-- Панель навигации - конец -->

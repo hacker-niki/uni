@@ -1,0 +1,62 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+#include <map>
+
+int main()
+{
+    std::map<char, int> dirs{ {'N', 0}, {'S', 1}, {'W', 2}, {'E', 3}, {'U', 4}, {'D', 5}};
+    
+    std::string N, S, W, E, U, D;
+    std::getline(std::cin, N);
+    std::getline(std::cin, S);
+    std::getline(std::cin, W);
+    std::getline(std::cin, E);
+    std::getline(std::cin, U);
+    std::getline(std::cin, D);
+    
+    std::string dirs2[]{ N, S, W, E, U, D };
+
+    std::string c;
+    std::cin >> c;
+    int n;
+    std::cin >> n;
+
+    int** dp = new int* [6];
+    for (int i = 0; i < 6; i++)
+    {
+        dp[i] = new int[n + 1] {};
+        dp[i][1] = 1;
+    }
+
+
+    for (int j = 2; j < n; j++)
+    {
+        for (int i = 0; i < 6; i++)
+        {
+            for (int g = 0; g < dirs2[i].size(); g++)
+            {
+                dp[i][j] += dp[dirs[dirs2[i][g]]][j - 1];
+            }
+            dp[i][j] += 1;
+        }
+    }
+    
+    for (int g = 0; g < dirs2[dirs[c[0]]].size(); g++)
+    {
+        dp[dirs[c[0]]][n] += dp[dirs[dirs2[dirs[c[0]]][g]]][n - 1];
+    }
+
+    /*for (int j = 0; j < 6; j++)
+    {
+        for (int i = 0; i < n + 1; i++)
+        {
+            std::cout << dp[j][i] << ' ';
+        }
+        std::cout << '\n';
+    }*/
+
+    std::cout << dp[dirs[c[0]]][n] + 1;
+
+    return 0;
+}

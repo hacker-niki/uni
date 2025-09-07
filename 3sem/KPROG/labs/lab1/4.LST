@@ -1,0 +1,7 @@
+  ADDR B1 B2 B3 B4 thrass11.tmp                                     PAGE       1
+
+                    org $8000
+  8000 86 00        ldaa #0
+  8002 06           tap
+  8003 4D           tsta
+

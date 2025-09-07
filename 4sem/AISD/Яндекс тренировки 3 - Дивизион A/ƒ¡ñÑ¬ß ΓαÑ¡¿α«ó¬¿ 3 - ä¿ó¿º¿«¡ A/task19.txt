@@ -1,0 +1,71 @@
+#include <map>
+#include <iomanip>
+#include <iostream>
+
+int main()
+{
+    std::map<long long, long long> mas;
+    int n;
+    std::cin >> n;
+    auto insert_value = [&mas](long number, long count)
+    {
+        auto it = mas.find(number);
+        if (it == mas.end())
+        {
+            mas.insert(std::make_pair(number, count));
+        }
+        else
+        {
+            it->second += count;
+        }
+    };
+    for (int i = 0; i < n; i++)
+    {
+        int a;
+        std::cin >> a;
+        insert_value(a, 1);
+    }
+    double cost = 0;
+    while (true)
+    {
+        if (mas.size() < 2 && mas.begin()->second < 2)
+        {
+            break;
+        }
+            
+        auto iter1 = mas.begin();
+        long a = iter1->first;
+        if (iter1->second > 1)
+        {
+            long pairs_count = iter1->second / 2;
+            iter1->second %= 2;
+            insert_value(a * 2, pairs_count);
+            cost += a * pairs_count * 2 * 0.05;
+            if (iter1->second == 0)
+            {
+                mas.erase(iter1);
+            }
+            continue;
+        }
+
+        if (mas.size() > 1)
+        {
+            auto it_second = next(iter1);
+            long second_value = it_second->first;
+            cost += (a + second_value) * 0.05;
+            it_second->second--;
+            if (it_second->second == 0)
+            {
+                mas.erase(iter1, next(it_second));
+            }
+            else
+            {
+                mas.erase(iter1);
+            }
+            insert_value(a + second_value, 1);
+        }
+    }
+    std::cout << std::setprecision(2) << std::fixed;
+    std::cout << cost;
+    return 0;
+}

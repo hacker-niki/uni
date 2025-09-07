@@ -1,0 +1,1 @@
+/usr/bin/c++ "CMakeFiles/cmake-cpp-nasm.dir/main.cpp.o" "CMakeFiles/cmake-cpp-nasm.dir/calcS.asm.o" "CMakeFiles/cmake-cpp-nasm.dir/calcY.asm.o" -o cmake-cpp-nasm 

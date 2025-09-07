@@ -1,0 +1,15 @@
+/home/nikita/uni/3sem/ISP/253505_Senko_5/SerializerLib/bin/Debug/net7.0/SerializerLib.deps.json
+/home/nikita/uni/3sem/ISP/253505_Senko_5/SerializerLib/bin/Debug/net7.0/SerializerLib.dll
+/home/nikita/uni/3sem/ISP/253505_Senko_5/SerializerLib/bin/Debug/net7.0/SerializerLib.pdb
+/home/nikita/uni/3sem/ISP/253505_Senko_5/SerializerLib/bin/Debug/net7.0/253505_Senko.Domain.dll
+/home/nikita/uni/3sem/ISP/253505_Senko_5/SerializerLib/bin/Debug/net7.0/253505_Senko.Domain.pdb
+/home/nikita/uni/3sem/ISP/253505_Senko_5/SerializerLib/obj/Debug/net7.0/SerializerLib.csproj.AssemblyReference.cache
+/home/nikita/uni/3sem/ISP/253505_Senko_5/SerializerLib/obj/Debug/net7.0/SerializerLib.GeneratedMSBuildEditorConfig.editorconfig
+/home/nikita/uni/3sem/ISP/253505_Senko_5/SerializerLib/obj/Debug/net7.0/SerializerLib.AssemblyInfoInputs.cache
+/home/nikita/uni/3sem/ISP/253505_Senko_5/SerializerLib/obj/Debug/net7.0/SerializerLib.AssemblyInfo.cs
+/home/nikita/uni/3sem/ISP/253505_Senko_5/SerializerLib/obj/Debug/net7.0/SerializerLib.csproj.CoreCompileInputs.cache
+/home/nikita/uni/3sem/ISP/253505_Senko_5/SerializerLib/obj/Debug/net7.0/SerializerLib.csproj.CopyComplete
+/home/nikita/uni/3sem/ISP/253505_Senko_5/SerializerLib/obj/Debug/net7.0/SerializerLib.dll
+/home/nikita/uni/3sem/ISP/253505_Senko_5/SerializerLib/obj/Debug/net7.0/refint/SerializerLib.dll
+/home/nikita/uni/3sem/ISP/253505_Senko_5/SerializerLib/obj/Debug/net7.0/SerializerLib.pdb
+/home/nikita/uni/3sem/ISP/253505_Senko_5/SerializerLib/obj/Debug/net7.0/ref/SerializerLib.dll

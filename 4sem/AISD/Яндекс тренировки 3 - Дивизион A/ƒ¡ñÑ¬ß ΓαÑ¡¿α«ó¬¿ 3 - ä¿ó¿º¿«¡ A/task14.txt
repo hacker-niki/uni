@@ -1,0 +1,93 @@
+#include <iostream>
+#include <stack>
+
+int main()
+{
+	long long n;
+	std::cin >> n;
+	std::stack<long long> st2;
+	std::stack<long long> st1;
+
+	std::stack<long long> st3;
+	std::stack<long long> st4;
+
+	long long* rightMas = new long long[n + 2];
+	long long* leftMas = new long long[n + 2];
+	long long* mas = new long long[n];
+	rightMas[0] = 0;
+	rightMas[n + 1] = 0;
+	leftMas[0] = 0;
+	leftMas[n + 1] = 0;
+	st1.push(-1);
+	st2.push(0);
+	st3.push(n + 1);
+	st4.push(-1);
+
+	for (int i = 1; i < n + 1; i++)
+	{
+		long long a;
+		std::cin >> a;
+		mas[i - 1] = a;
+		if (st1.top() < a)
+		{
+			leftMas[i] = st2.top();
+			st1.push(a);
+			st2.push(i);
+		}
+		else
+		{
+			while (a <= st1.top())
+			{
+				st1.pop();
+				st2.pop();
+			}
+			leftMas[i] = st2.top();
+			st1.push(a);
+			st2.push(i);
+		}
+	}
+
+
+
+	for (int i = n; i > 0; i--)
+	{
+		if (st4.top() < mas[i - 1])
+		{
+			rightMas[i] = st3.top();
+			st4.push(mas[i - 1]);
+			st3.push(i);
+		}
+		else
+		{
+			while (mas[i - 1] <= st4.top())
+			{
+				st4.pop();
+				st3.pop();
+			}
+			rightMas[i] = st3.top();
+			st4.push(mas[i - 1]);
+			st3.push(i);
+		}
+	}
+
+	/*for (int i = 1; i < n + 1; i++)
+	{
+		std::cout << rightMas[i] << ' ';
+	}
+	std::cout << '\n';
+	for (int i = 1; i < n + 1; i++)
+	{
+		std::cout << leftMas[i] << ' ';
+	}*/
+
+	long long max = 0;
+	for (int i = 1; i < n + 1; i++)
+	{
+		long long ans = mas[i - 1] * (rightMas[i] - leftMas[i] - 1);
+		if (max < ans)
+		{
+			max = ans;
+		}
+	}
+	std::cout << max;
+}

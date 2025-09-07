@@ -1,0 +1,75 @@
+; Function to sort an array using Quick Sort algorithm
+; Inputs:
+;   - arr: pointer to the array to be sorted
+;   - low: the starting index of the array
+;   - high: the ending index of the array
+; Outputs:
+;   - The array is sorted in place
+QUICK_SORT PROC
+    ; Check if the array has more than one element
+    mov eax, high
+    sub eax, low
+    cmp eax, 1
+    jle QS_EXIT
+    
+    ; Partition the array and get the pivot index
+    push high
+    push low
+    call PARTITION
+    add esp, 8
+    mov ebx, eax
+    
+    ; Recursively sort the left and right sub-arrays
+    mov eax, low
+    sub eax, 1
+    push ebx
+    push eax
+    call QUICK_SORT
+    add esp, 8
+    
+    mov eax, ebx
+    add eax, 1
+    push high
+    push eax
+    call QUICK_SORT
+    add esp, 8
+    
+QS_EXIT:
+    ret
+QUICK_SORT ENDP
+
+; Function to partition an array for Quick Sort
+; Inputs:
+;   - arr: pointer to the array to be partitioned
+;   - low: the starting index of the array
+;   - high: the ending index of the array
+; Outputs:
+;   - The array is partitioned in place and the pivot index is returned in EAX
+PARTITION PROC
+    ; Set the pivot to the last element of the array
+    mov eax, high
+    mov ecx, [arr + eax * 4]
+    
+    ; Initialize the partition index
+    mov ebx, low
+    
+    ; Loop through the array and partition it
+    mov edx, low
+    cmp edx, high
+    jge PART_EXIT
+PART_LOOP:
+    mov esi, [arr + edx * 4]
+    cmp esi, ecx
+    jg PART_NEXT
+    mov esi, [arr + ebx * 4]
+    mov [arr + edx * 4], esi
+    mov [arr + ebx * 4], ecx
+    inc ebx
+PART_NEXT:
+    inc edx
+    jmp PART_LOOP
+PART_EXIT:
+    mov eax, ebx
+    dec eax
+    ret
+PARTITION ENDP

@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "ClassLibrary/1.0.0": {
+        "dependencies": {
+          "253505_Senko_6": "1.0.0"
+        },
+        "runtime": {
+          "ClassLibrary.dll": {}
+        }
+      },
+      "253505_Senko_6/1.0.0": {
+        "runtime": {
+          "253505_Senko_6.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ClassLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "253505_Senko_6/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,33 @@
+#include <iostream>
+#include <vector>
+
+struct OneIter
+{
+    int first;
+    int final;
+};
+
+int main()
+{    
+    std::vector <OneIter> mas;
+    OneIter oneiter;
+    int N, M, a, b;
+    std::cin >> M >> N;
+    for (int i = 0; i < N; i++)
+    {
+        std::cin >> a >> b;
+
+        for (int k = mas.size() - 1; k >= 0; k--)
+        {
+            if ((mas[k].first <= a && a <= mas[k].final) || (mas[k].first <= b && b <= mas[k].final) || (a <= mas[k].first && b >= mas[k].final))
+            {
+                mas.erase(mas.begin() + k);
+            }
+        }
+        oneiter.first = a;
+        oneiter.final = b;
+        mas.push_back(oneiter);
+    }
+    std::cout << mas.size();
+    return 0;
+}

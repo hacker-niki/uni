@@ -1,0 +1,50 @@
+#include <iostream>
+#include <string>
+
+int main()
+{
+    std::string time1, time2, time3;
+    std::cin >> time1 >> time2 >> time3;
+    int seconds1, seconds2, seconds3, sec;
+    int a, b, c;
+    a = (time1[0] - 48) * 10 + time1[1] - 48;
+    b = (time1[3] - 48) * 10 + time1[4] - 48;
+    c = (time1[6] - 48) * 10 + time1[7] - 48;
+    seconds1 = a * 3600 + b * 60 + c;
+    a = (time2[0] - 48) * 10 + time2[1] - 48;
+    b = (time2[3] - 48) * 10 + time2[4] - 48;
+    c = (time2[6] - 48) * 10 + time2[7] - 48;
+    seconds2 = a * 3600 + b * 60 + c;
+    a = (time3[0] - 48) * 10 + time3[1] - 48;
+    b = (time3[3] - 48) * 10 + time3[4] - 48;
+    c = (time3[6] - 48) * 10 + time3[7] - 48;
+    seconds3 = a * 3600 + b * 60 + c;
+    if (seconds3 > seconds1)
+        sec = seconds3 - seconds1;
+    else
+        sec = 86400 + seconds3 - seconds1;
+    if (sec % 2 == 1)
+        sec = sec / 2 + 1;
+    else
+        sec /= 2;
+    seconds2 += sec;
+    seconds2 %= 86400;
+    a = seconds2 / 3600;
+    seconds2 %= 3600;
+    b = seconds2 / 60;
+    seconds2 %= 60;
+    c = seconds2;
+    if (a < 10)
+        std::cout << 0 << a << ":";
+    else
+        std::cout << a << ":";
+    if (b < 10)
+        std::cout << 0 << b << ":";
+    else
+        std::cout << b << ":";
+    if (c < 10)
+        std::cout << 0 << c;
+    else
+        std::cout << c;
+    return 0;
+}

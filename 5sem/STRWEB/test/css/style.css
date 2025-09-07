@@ -1,0 +1,187 @@
+.one {
+  border-style: solid;
+  border-width: 0 0 3px 0;
+  border-color: black;
+  border-radius: 15px;
+  margin: 20px;
+  padding: 50px 50px 0px;
+  width: 400px;
+  /*align-content: center;*/
+  /*text-align: center;*/
+}
+
+[class^="i"] {
+  width: 20%;
+  height: 20%;
+  display: block;
+  /*margin-left: auto;*/
+  /*margin-right: auto;*/
+  background-attachment: fixed;
+  margin: auto;
+  border-radius: 100%;
+}
+
+.dick {
+  width: 25%;
+}
+
+.dick:nth-child(even) {
+  background: yellow;
+}
+
+.dick:nth-child(2n+5) {
+  background: green;
+  outline: red dotted 2px;
+}
+
+.shit {
+  align-content: center;
+  content: "fuck";
+  width: 100%;
+  height: 200px;
+  background-repeat: repeat-x;
+  background-image: url("../img/img.png");
+  background-position: center;
+}
+
+p + ul {
+  background: red !important;
+}
+
+.pussy > .puss{
+  width: 200px;
+  background: yellow;
+}
+
+p {    font-size: 1.5em; /* Размер текста */    }
+q:lang(de) {    quotes: "\201E" "\201C";     }
+q:lang(en) {    quotes: "\201C" "\201D";    }
+q:lang(fr), q:lang(ru) { quotes: "\00AB" "\00BB";    }
+
+.ZOV {
+  width: 496px;
+  height: 279px;
+  /*padding: -10px;*/
+  background-image: linear-gradient(rgb(206,23,32) 65%, rgb(0,124,48) 35%);
+  background-clip: content-box;
+  border-image-source: url("/img/img_1.png");
+  border-image-slice: 68 0 68 68 fill;
+  border-image-width: 50px;
+  display: inline-block;
+  text-align: center;
+  align-content: center;
+  font-size: 13em;
+  color: white;
+  animation: shadowChange 4s infinite alternate;
+  text-shadow: 0 0 10px rgba(0, 42, 255, 0.65);
+}
+
+.ZOV2{
+  width: 496px;
+  height: 279px;
+  background-image: url("../img/img_2.png");
+  background-size:  cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  align-content: center;
+  font-size: 13em;
+  animation: shadowChange 4s infinite alternate;
+
+}
+
+.zanashih{
+  width: 496px;
+  height: 279px;
+  background-image: linear-gradient(rgb(255,255,255) 33.3%, rgb(0,0,255) 33.3% 66.6%, rgb(255,0,0) 33.3%);
+  border: 1px black solid;
+  display: inline-block;
+  text-align: center;
+  align-content: center;
+  font-size: 13em;
+  color: white;
+  animation: shadowChange 4s infinite alternate;
+  text-shadow: 0 0 10px rgba(0, 42, 255, 0.65);
+}
+
+#rounded {
+  width: 200px;
+  border: 10px solid transparent;
+  padding: 20px;
+  border-radius: 20px;
+  background-image: linear-gradient(white, white),
+  linear-gradient(to right, cyan, lime);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+/**
+ * `@property` is required for the animation to work.
+ * Without it, the angle values won’t interpolate properly.
+ *
+ * @see https://dev.to/afif/we-can-finally-animate-css-gradient-kdk
+ */
+@property --bg-angle {
+  inherits: false;
+  initial-value: 0deg;
+  syntax: "<angle>";
+}
+
+/**
+ * To animate the gradient, we set the custom property to 1 full
+ * rotation. The animation starts at the default value of `0deg`.
+ */
+@keyframes spin {
+  to {
+    --bg-angle: 360deg;
+  }
+}
+
+@keyframes shadowChange {
+  0% {
+    text-shadow: 0 0 20px rgba(0, 255, 40, 0.5);
+  }
+  50% {
+    color: rgb(0, 255, 22);
+    text-shadow: 0 0 50px rgb(0, 255, 22);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(0, 255, 40, 0.5);
+  }
+}
+
+#rounded {
+  /* add the animation, but pause it by default */
+  animation: spin 2.5s infinite linear;
+  color: white;
+  /**
+   * Using `background-origin` we can create a “border” using two gradients. And to
+   * make the gradients better-looking, we use OKLCH.
+   *
+   * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin
+   * @see https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl
+   */
+  background:
+    /* Background colors don’t work with `background-origin`, so use a gradient. */
+    linear-gradient(
+      to bottom,
+      oklch(0.1 0.2 240 / 0.95),
+      oklch(0.1 0.2 240 / 0.95)
+    )
+    padding-box, /* ends at inner border edges */
+    conic-gradient(
+      from var(--bg-angle) in oklch longer hue,
+      oklch(0.85 0.37 0) 0 0
+    )
+    border-box; /* extends to outer border edges */
+
+  /* a clear border lets the background gradient shine through */
+  border: 6px solid transparent;
+}
+
+.three{
+  white-space: nowrap;
+  word-break: break-all;
+}

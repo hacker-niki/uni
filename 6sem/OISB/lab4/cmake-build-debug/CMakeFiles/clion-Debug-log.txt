@@ -1,0 +1,5 @@
+/home/nikita/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/nikita/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -G Ninja -S /home/nikita/uni/6sem/OISB/lab4 -B /home/nikita/uni/6sem/OISB/lab4/cmake-build-debug
+-- Found Boost: /usr/lib/cmake/Boost-1.87.0/BoostConfig.cmake (found version "1.87.0") found components: system
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/nikita/uni/6sem/OISB/lab4/cmake-build-debug

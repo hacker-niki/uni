@@ -1,0 +1,9 @@
+ ldx #9999
+ ldy #1000
+ stx $1
+ sty $3
+ ldd $1
+ subb $4
+ sbca $3
+ std $6
+ ldx $6

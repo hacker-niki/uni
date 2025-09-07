@@ -1,0 +1,21 @@
+{
+    "name": "nikita/gost-cipher-project",
+    "description": "A simple web interface for GOST 28147-89 encryption, decryption, and MAC generation in PHP.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nikita",
+            "email": "you@example.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "symfony/http-foundation": "^7.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}

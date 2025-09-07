@@ -1,0 +1,14 @@
+ ldaa #%10111111
+ ldab #%00100001
+ staa $1
+ staa $2
+ stab $3
+ stab $4
+ com $2
+ com $4
+ ldaa $2
+ anda $4
+ ldab $3
+ andb $1
+ stab $1
+ oraa $1

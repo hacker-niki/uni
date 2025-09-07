@@ -1,0 +1,82 @@
+#include <iostream>
+#include <queue>
+#include <vector>
+#include <cmath>
+#include <fstream>
+
+using namespace std;
+
+
+deque<int> d;
+vector<bool> used;
+vector<int> parent;
+int a, b;
+
+
+int AddOne(int n)
+{
+    if (n / 1000 != 9) return n + 1000;
+    return n;
+}
+
+int MinusOne(int n)
+{
+    if (n % 10 != 1) return n - 1;
+    return n;
+}
+
+int ShiftLeft(int n)
+{
+    return (n % 1000) * 10 + n / 1000;
+}
+
+int ShiftRight(int n)
+{
+    return (n % 10) * 1000 + n / 10;
+}
+
+void path(int n)
+{
+    if (n == -1) 
+        return;
+    path(parent[n]);
+    cout<< n<<'\n';
+}
+
+void bfs(int start)
+{
+    int v, u, i;
+    int (*Op[4])(int) = { AddOne, MinusOne, ShiftLeft, ShiftRight };
+    d.push_front(start);
+    used[start] = 1;
+
+    while (!d.empty())
+    {
+        u = d.front(); 
+        d.pop_front();
+        if (u == b) 
+            break;
+        for (i = 0; i < 4; i++)
+        {
+            v = Op[i](u);
+            if (!used[v])
+            {
+                used[v] = 1;
+                parent[v] = u;
+                d.push_back(v);
+            }
+        }
+    }
+}
+
+
+int main() {
+    cin >> a >> b;
+
+    used.assign(10000, false);
+    parent.assign(10000, -1);
+    bfs(a);
+    path(b);
+
+    return 0;
+}

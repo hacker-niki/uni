@@ -1,0 +1,404 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>lab21.html</title>
+<!-- Created by Maple 2022.2, Linux -->
+</head>
+<a name="MapleAutoBookmark1" />
+
+<body bgcolor="FFFFFF">
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_1.gif" width="424" height="21" alt="f := proc (x) options operator, arrow; piecewise(`and`(`<=`(`+`(`-`(Pi)), x), `<`(x, 0)), `+`(`-`(Pi), `-`(x)), `and`(`<=`(0, x), `<`(x, Pi)), Pi) end proc; "_noterminate" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/lab2_2.gif" width="265" height="61" alt="Typesetting:-mprintslash([f := proc (x) options operator, arrow; piecewise(`and`(`<=`(`+`(`-`(Pi)), x), `<`(x, 0)), `+`(`-`(Pi), `-`(x)), `and`(`<=`(0, x), `<`(x, Pi)), Pi) end proc], [proc (x) option..." align="center" border="0"></td>
+<td width='5%' align='center'>(1)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_3.gif" width="295" height="18" alt="plot(f(x), x = `+`(`-`(Pi)) .. Pi, discont = true); "_noterminate" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/lab2_4.gif" width="500" height="500" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_5.gif" width="330" height="39" alt="a0 := simplify(`/`(`*`(int(f(x), x = `+`(`-`(Pi)) .. Pi)), `*`(Pi))); "_noterminate" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/lab2_6.gif" width="77" height="42" alt="Typesetting:-mprintslash([a0 := `+`(`*`(`/`(1, 2), `*`(Pi)))], [`+`(`*`(`/`(1, 2), `*`(Pi)))])" align="center" border="0"></td>
+<td width='5%' align='center'>(2)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_7.gif" width="569" height="39" alt="an := `assuming`([simplify(`/`(`*`(int(`*`(f(x), `*`(cos(`*`(n, `*`(x))))), x = `+`(`-`(Pi)) .. Pi)), `*`(Pi)))], [n::posint]); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/lab2_8.gif" width="144" height="48" alt="Typesetting:-mprintslash([an := `/`(`*`(`+`(`^`(-1, n), `-`(1))), `*`(Pi, `*`(`^`(n, 2))))], [`/`(`*`(`+`(`^`(-1, n), `-`(1))), `*`(Pi, `*`(`^`(n, 2))))])" align="center" border="0"></td>
+<td width='5%' align='center'>(3)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_9.gif" width="563" height="39" alt="bn := `assuming`([simplify(`/`(`*`(int(`*`(f(x), `*`(sin(`*`(n, `*`(x))))), x = `+`(`-`(Pi)) .. Pi)), `*`(Pi)))], [n::posint]); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/lab2_10.gif" width="161" height="43" alt="Typesetting:-mprintslash([bn := `/`(`*`(`+`(`-`(`^`(-1, n)), 2)), `*`(n))], [`/`(`*`(`+`(`-`(`^`(-1, n)), 2)), `*`(n))])" align="center" border="0"></td>
+<td width='5%' align='center'>(4)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong># Creating proc to get sum</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_11.gif" width="768" height="14" alt="FurieSum := proc (f, k) local a0, an, bn, n; description "return Furie Sum for -Pi .. Pi"; a0 := simplify(`/`(`*`(int(f(x), x = `+`(`-`(Pi)) .. Pi)), `*`(Pi))); assume(n::posint); an := simplify(`/`(`..." align="center" border="0"><br><img src="images/lab2_12.gif" width="768" height="14" alt="FurieSum := proc (f, k) local a0, an, bn, n; description "return Furie Sum for -Pi .. Pi"; a0 := simplify(`/`(`*`(int(f(x), x = `+`(`-`(Pi)) .. Pi)), `*`(Pi))); assume(n::posint); an := simplify(`/`(`..." align="center" border="0"><br><img src="images/lab2_13.gif" width="768" height="14" alt="FurieSum := proc (f, k) local a0, an, bn, n; description "return Furie Sum for -Pi .. Pi"; a0 := simplify(`/`(`*`(int(f(x), x = `+`(`-`(Pi)) .. Pi)), `*`(Pi))); assume(n::posint); an := simplify(`/`(`..." align="center" border="0"><br><img src="images/lab2_14.gif" width="768" height="16" alt="FurieSum := proc (f, k) local a0, an, bn, n; description "return Furie Sum for -Pi .. Pi"; a0 := simplify(`/`(`*`(int(f(x), x = `+`(`-`(Pi)) .. Pi)), `*`(Pi))); assume(n::posint); an := simplify(`/`(`..." align="center" border="0"><br><img src="images/lab2_15.gif" width="768" height="14" alt="FurieSum := proc (f, k) local a0, an, bn, n; description "return Furie Sum for -Pi .. Pi"; a0 := simplify(`/`(`*`(int(f(x), x = `+`(`-`(Pi)) .. Pi)), `*`(Pi))); assume(n::posint); an := simplify(`/`(`..." align="center" border="0"><br><img src="images/lab2_16.gif" width="768" height="16" alt="FurieSum := proc (f, k) local a0, an, bn, n; description "return Furie Sum for -Pi .. Pi"; a0 := simplify(`/`(`*`(int(f(x), x = `+`(`-`(Pi)) .. Pi)), `*`(Pi))); assume(n::posint); an := simplify(`/`(`..." align="center" border="0"><br><img src="images/lab2_17.gif" width="768" height="16" alt="FurieSum := proc (f, k) local a0, an, bn, n; description "return Furie Sum for -Pi .. Pi"; a0 := simplify(`/`(`*`(int(f(x), x = `+`(`-`(Pi)) .. Pi)), `*`(Pi))); assume(n::posint); an := simplify(`/`(`..." align="center" border="0"><br><img src="images/lab2_18.gif" width="768" height="14" alt="FurieSum := proc (f, k) local a0, an, bn, n; description "return Furie Sum for -Pi .. Pi"; a0 := simplify(`/`(`*`(int(f(x), x = `+`(`-`(Pi)) .. Pi)), `*`(Pi))); assume(n::posint); an := simplify(`/`(`..." align="center" border="0"><br><img src="images/lab2_19.gif" width="768" height="14" alt="FurieSum := proc (f, k) local a0, an, bn, n; description "return Furie Sum for -Pi .. Pi"; a0 := simplify(`/`(`*`(int(f(x), x = `+`(`-`(Pi)) .. Pi)), `*`(Pi))); assume(n::posint); an := simplify(`/`(`..." align="center" border="0"><br><img src="images/lab2_20.gif" width="10" height="14" alt="FurieSum := proc (f, k) local a0, an, bn, n; description "return Furie Sum for -Pi .. Pi"; a0 := simplify(`/`(`*`(int(f(x), x = `+`(`-`(Pi)) .. Pi)), `*`(Pi))); assume(n::posint); an := simplify(`/`(`..." align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_21.gif" width="188" height="18" alt="S1 := FurieSum(f, 1); -1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_22.gif" width="188" height="18" alt="S3 := FurieSum(f, 3); -1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_23.gif" width="188" height="18" alt="S7 := FurieSum(f, 7); -1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_24.gif" width="199" height="18" alt="S := FurieSum(f, 100); -1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_25.gif" width="636" height="21" alt="plot([S1, S3, S7, S], x = `+`(`-`(`*`(3, `*`(Pi)))) .. `+`(`*`(3, `*`(Pi))), legend = ["s1", "s3", "s7", "s"], discont = true); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/lab2_26.gif" width="500" height="500" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_27.gif" width="468" height="21" alt="plot([S, f(x)], x = `+`(`-`(Pi)) .. Pi, legend = ["s", "f"], discont = true); "_noterminate" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/lab2_28.gif" width="500" height="500" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_29.gif" width="504" height="18" alt="" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>#task 2 (variant 10)</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_30.gif" width="425" height="21" alt="f := proc (x) options operator, arrow; piecewise(`and`(`<`(0, x), `<`(x, 2)), `+`(`*`(.5, `*`(x)), 3), `and`(`<=`(2, x), `<=`(x, 6)), -2) end proc; 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/lab2_31.gif" width="268" height="56" alt="Typesetting:-mprintslash([f := proc (x) options operator, arrow; piecewise(`and`(`<`(0, x), `<`(x, 2)), `+`(`*`(.5, `*`(x)), 3), `and`(`<=`(2, x), `<=`(x, 6)), -2) end proc], [proc (x) options operato..." align="center" border="0"></td>
+<td width='5%' align='center'>(5)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_32.gif" width="164" height="18" alt="plot(f(x), x = 0 .. 6); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/lab2_33.gif" width="500" height="500" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>#Coefficients Fourier sum</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_34.gif" width="573" height="39" alt="a0 := simplify(`+`(`*`(`/`(1, 3), `*`(int(f(x), x = 0 .. 6, numeric = false, useunits = false))))); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/lab2_35.gif" width="186" height="18" alt="Typesetting:-mprintslash([a0 := -.3333333333], [-.3333333333])" align="center" border="0"></td>
+<td width='5%' align='center'>(6)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_36.gif" width="578" height="39" alt="an := `assuming`([simplify(`+`(`*`(`/`(1, 3), `*`(int(`*`(f(x), `*`(cos(`+`(`*`(`/`(1, 3), `*`(n, `*`(Pi, `*`(x)))))))), x = 0 .. 6)))))], [n::posint]); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/lab2_37.gif" width="768" height="43" alt="Typesetting:-mprintslash([an := `/`(`*`(`+`(`*`(1.909859317, `*`(n, `*`(sin(`+`(`*`(2.094395102, `*`(n))))))), `*`(.1519817755, `*`(cos(`+`(`*`(2.094395102, `*`(n)))))), `-`(.1519817755))), `*`(`^`(n,..." align="center" border="0"></td>
+<td width='5%' align='center'>(7)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_38.gif" width="581" height="39" alt="bn := `assuming`([simplify(`+`(`*`(`/`(1, 3), `*`(int(`*`(f(x), `*`(sin(`+`(`*`(`/`(1, 3), `*`(n, `*`(Pi, `*`(x)))))))), x = 0 .. 6)))))], [n::posint]); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/lab2_39.gif" width="768" height="42" alt="Typesetting:-mprintslash([bn := `/`(`*`(`+`(`-`(`*`(1.909859317, `*`(n, `*`(cos(`+`(`*`(2.094395102, `*`(n)))))))), `*`(1.591549431, `*`(n)), `*`(.1519817755, `*`(sin(`+`(`*`(2.094395102, `*`(n)))))))..." align="center" border="0"></td>
+<td width='5%' align='center'>(8)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>#Fourier sum procedure</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_40.gif" width="128" height="14" alt="Furie := proc (f, k, l) local a0, an, bn; a0 := `/`(`*`(int(f(x), x = 0 .. `+`(`*`(2, `*`(l))))), `*`(l)); an := simplify(`assuming`([`/`(`*`(int(`*`(f(x), `*`(cos(`/`(`*`(n, `*`(Pi, `*`(x))), `*`(l))..." align="center" border="0"><br><img src="images/lab2_41.gif" width="110" height="14" alt="Furie := proc (f, k, l) local a0, an, bn; a0 := `/`(`*`(int(f(x), x = 0 .. `+`(`*`(2, `*`(l))))), `*`(l)); an := simplify(`assuming`([`/`(`*`(int(`*`(f(x), `*`(cos(`/`(`*`(n, `*`(Pi, `*`(x))), `*`(l))..." align="center" border="0"><br><img src="images/lab2_42.gif" width="187" height="30" alt="Furie := proc (f, k, l) local a0, an, bn; a0 := `/`(`*`(int(f(x), x = 0 .. `+`(`*`(2, `*`(l))))), `*`(l)); an := simplify(`assuming`([`/`(`*`(int(`*`(f(x), `*`(cos(`/`(`*`(n, `*`(Pi, `*`(x))), `*`(l))..." align="center" border="0"><br><img src="images/lab2_43.gif" width="459" height="30" alt="Furie := proc (f, k, l) local a0, an, bn; a0 := `/`(`*`(int(f(x), x = 0 .. `+`(`*`(2, `*`(l))))), `*`(l)); an := simplify(`assuming`([`/`(`*`(int(`*`(f(x), `*`(cos(`/`(`*`(n, `*`(Pi, `*`(x))), `*`(l))..." align="center" border="0"><br><img src="images/lab2_44.gif" width="468" height="30" alt="Furie := proc (f, k, l) local a0, an, bn; a0 := `/`(`*`(int(f(x), x = 0 .. `+`(`*`(2, `*`(l))))), `*`(l)); an := simplify(`assuming`([`/`(`*`(int(`*`(f(x), `*`(cos(`/`(`*`(n, `*`(Pi, `*`(x))), `*`(l))..." align="center" border="0"><br><img src="images/lab2_45.gif" width="425" height="30" alt="Furie := proc (f, k, l) local a0, an, bn; a0 := `/`(`*`(int(f(x), x = 0 .. `+`(`*`(2, `*`(l))))), `*`(l)); an := simplify(`assuming`([`/`(`*`(int(`*`(f(x), `*`(cos(`/`(`*`(n, `*`(Pi, `*`(x))), `*`(l))..." align="center" border="0"><br><img src="images/lab2_46.gif" width="74" height="14" alt="Furie := proc (f, k, l) local a0, an, bn; a0 := `/`(`*`(int(f(x), x = 0 .. `+`(`*`(2, `*`(l))))), `*`(l)); an := simplify(`assuming`([`/`(`*`(int(`*`(f(x), `*`(cos(`/`(`*`(n, `*`(Pi, `*`(x))), `*`(l))..." align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_47.gif" width="168" height="18" alt="S1 := Furie(f, 1, 3); -1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_48.gif" width="168" height="18" alt="S3 := Furie(f, 3, 3); -1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_49.gif" width="168" height="18" alt="S5 := Furie(f, 5, 3); -1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_50.gif" width="169" height="18" alt="S7 := Furie(f, 7, 3); -1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_51.gif" width="190" height="18" alt="S := Furie(f, 1000, 3); -1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_52.gif" width="274" height="18" alt="plot([S1, S3, S7, S], x = -10 .. 10); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/lab2_53.gif" width="500" height="500" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_54.gif" width="196" height="18" alt="plot([f(x), S], x = 0 .. 6); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/lab2_55.gif" width="500" height="500" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_56.gif" width="17" height="18" alt="" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong># task 3 (variant 10)</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_57.gif" width="506" height="43" alt="f3 := proc (x) options operator, arrow; piecewise(`<`(x, 2), `+`(`-`(`*`(`/`(3, 2), `*`(`^`(`+`(x, `-`(1)), 2))))), `<=`(2, x), `+`(`*`(`/`(1, 2), `*`(x)), `-`(`/`(5, 2)))) end proc; 1; l := 5" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/lab2_58.gif" width="278" height="101" alt="Typesetting:-mprintslash([f3 := proc (x) options operator, arrow; piecewise(`<`(x, 2), `+`(`-`(`*`(`/`(3, 2), `*`(`^`(`+`(x, `-`(1)), 2))))), `<=`(2, x), `+`(`*`(`/`(1, 2), `*`(x)), `-`(`/`(5, 2)))) e..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/lab2_59.gif" width="52" height="18" alt="Typesetting:-mprintslash([l := 5], [5])" align="center" border="0"></td>
+<td width='5%' align='center'>(9)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_60.gif" width="173" height="18" alt="plot(f3(x), x = 0 .. 5); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/lab2_61.gif" width="500" height="500" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_62.gif" width="225" height="18" alt="S := Furie(f3, 10000, 2.5); -1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_63.gif" width="285" height="18" alt="plot([S], x = -10 .. 10, y = -1.5 .. 0); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/lab2_64.gif" width="500" height="500" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_65.gif" width="131" height="14" alt="Furie := proc (f, k, l) local a0, an, bn; a0 := `+`(`/`(`*`(2, `*`(int(f(x), x = 0 .. l))), `*`(l))); an := simplify(`assuming`([`+`(`/`(`*`(2, `*`(int(`*`(f(x), `*`(cos(`/`(`*`(n, `*`(Pi, `*`(x))), `..." align="center" border="0"><br><img src="images/lab2_66.gif" width="110" height="14" alt="Furie := proc (f, k, l) local a0, an, bn; a0 := `+`(`/`(`*`(2, `*`(int(f(x), x = 0 .. l))), `*`(l))); an := simplify(`assuming`([`+`(`/`(`*`(2, `*`(int(`*`(f(x), `*`(cos(`/`(`*`(n, `*`(Pi, `*`(x))), `..." align="center" border="0"><br><img src="images/lab2_67.gif" width="175" height="30" alt="Furie := proc (f, k, l) local a0, an, bn; a0 := `+`(`/`(`*`(2, `*`(int(f(x), x = 0 .. l))), `*`(l))); an := simplify(`assuming`([`+`(`/`(`*`(2, `*`(int(`*`(f(x), `*`(cos(`/`(`*`(n, `*`(Pi, `*`(x))), `..." align="center" border="0"><br><img src="images/lab2_68.gif" width="447" height="30" alt="Furie := proc (f, k, l) local a0, an, bn; a0 := `+`(`/`(`*`(2, `*`(int(f(x), x = 0 .. l))), `*`(l))); an := simplify(`assuming`([`+`(`/`(`*`(2, `*`(int(`*`(f(x), `*`(cos(`/`(`*`(n, `*`(Pi, `*`(x))), `..." align="center" border="0"><br><img src="images/lab2_69.gif" width="314" height="30" alt="Furie := proc (f, k, l) local a0, an, bn; a0 := `+`(`/`(`*`(2, `*`(int(f(x), x = 0 .. l))), `*`(l))); an := simplify(`assuming`([`+`(`/`(`*`(2, `*`(int(`*`(f(x), `*`(cos(`/`(`*`(n, `*`(Pi, `*`(x))), `..." align="center" border="0"><br><img src="images/lab2_70.gif" width="77" height="14" alt="Furie := proc (f, k, l) local a0, an, bn; a0 := `+`(`/`(`*`(2, `*`(int(f(x), x = 0 .. l))), `*`(l))); an := simplify(`assuming`([`+`(`/`(`*`(2, `*`(int(`*`(f(x), `*`(cos(`/`(`*`(n, `*`(Pi, `*`(x))), `..." align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_71.gif" width="209" height="18" alt="S := Furie(f3, 10000, 5); -1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_72.gif" width="285" height="18" alt="plot([S], x = -10 .. 10, y = -1.5 .. 0); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/lab2_73.gif" width="500" height="500" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_74.gif" width="134" height="14" alt="Furie := proc (f, k, l) local a0, an, bn; bn := simplify(`assuming`([`+`(`/`(`*`(2, `*`(int(`*`(f(x), `*`(sin(`/`(`*`(n, `*`(Pi, `*`(x))), `*`(l))))), x = 0 .. l))), `*`(l)))], [n::posint])); return s..." align="center" border="0"><br><img src="images/lab2_75.gif" width="110" height="14" alt="Furie := proc (f, k, l) local a0, an, bn; bn := simplify(`assuming`([`+`(`/`(`*`(2, `*`(int(`*`(f(x), `*`(sin(`/`(`*`(n, `*`(Pi, `*`(x))), `*`(l))))), x = 0 .. l))), `*`(l)))], [n::posint])); return s..." align="center" border="0"><br><img src="images/lab2_76.gif" width="459" height="30" alt="Furie := proc (f, k, l) local a0, an, bn; bn := simplify(`assuming`([`+`(`/`(`*`(2, `*`(int(`*`(f(x), `*`(sin(`/`(`*`(n, `*`(Pi, `*`(x))), `*`(l))))), x = 0 .. l))), `*`(l)))], [n::posint])); return s..." align="center" border="0"><br><img src="images/lab2_77.gif" width="261" height="30" alt="Furie := proc (f, k, l) local a0, an, bn; bn := simplify(`assuming`([`+`(`/`(`*`(2, `*`(int(`*`(f(x), `*`(sin(`/`(`*`(n, `*`(Pi, `*`(x))), `*`(l))))), x = 0 .. l))), `*`(l)))], [n::posint])); return s..." align="center" border="0"><br><img src="images/lab2_78.gif" width="77" height="14" alt="Furie := proc (f, k, l) local a0, an, bn; bn := simplify(`assuming`([`+`(`/`(`*`(2, `*`(int(`*`(f(x), `*`(sin(`/`(`*`(n, `*`(Pi, `*`(x))), `*`(l))))), x = 0 .. l))), `*`(l)))], [n::posint])); return s..." align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_79.gif" width="17" height="18" alt="" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_80.gif" width="209" height="18" alt="S := Furie(f3, 10000, 5); -1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/lab2_81.gif" width="300" height="18" alt="plot([S], x = -10 .. 10, y = -1.5 .. 1.5); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/lab2_82.gif" width="500" height="500" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+</body>
+</html>

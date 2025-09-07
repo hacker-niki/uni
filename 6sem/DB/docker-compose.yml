@@ -1,0 +1,24 @@
+services:
+    oracle:
+      # Docker Hub image (feel free to change the tag "latest" to any other available one)
+      image: gvenzl/oracle-free:latest
+      # Forward Oracle port to localhost
+      ports:
+        - "1521:1521"
+      # Provide passwords and other environment variables to the container
+      environment:
+        ORACLE_PASSWORD: 1
+        APP_USER: root
+        APP_USER_PASSWORD: 1
+      # Customize healthcheck script options for startup
+      healthcheck:
+        test: ["CMD", "healthcheck.sh"]
+        interval: 10s
+        timeout: 5s
+        retries: 10
+        start_period: 5s
+        start_interval: 5s
+      volumes:
+        - oracle-data:/opt/oracle/oradata
+volumes:
+  oracle-data:

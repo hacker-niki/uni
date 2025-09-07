@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - WEB_253505.UI</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="~/lib/font-awesome/css/fontawesome.min.css"/>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/WEB_253505.UI.styles.css" asp-append-version="true"/>
+</head>
+<body>
+<header>
+    <div class="container">
+        @* @await Html.PartialAsync("_Navbar") *@
+        <partial name="_Navbar"/>
+        
+    </div>
+</header>
+
+<div class="container">
+    <main role="main" class="pb-3 mt-5">
+        @RenderBody()
+    </main>
+</div>
+
+<footer class="border-top text-muted">
+    @* @await Html.PartialAsync("_Footer") *@
+    <partial name="_Footer"/>
+</footer>
+
+
+<script src="~/lib/popper.js/umd/popper.js"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+<script src="~/lib/font-awesome/js/all.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+
+@await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

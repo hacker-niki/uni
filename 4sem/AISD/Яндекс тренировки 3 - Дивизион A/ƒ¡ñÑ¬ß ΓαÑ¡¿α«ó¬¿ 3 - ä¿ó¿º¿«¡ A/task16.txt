@@ -1,0 +1,70 @@
+#include <iostream>
+#include <vector>
+#include <stdlib.h>
+#include <algorithm>
+
+using namespace std;
+
+vector< int > B, C;
+
+void build(const std::vector< int > A, int k)
+{
+	int n = A.size();
+	B.resize(n);
+	C.resize(n);
+	B.front() = A.front();
+	C.back() = A.back();
+	k--;
+
+	for (int i1(1), i2(n - 2); i1 < n; i1++, i2--)
+	{
+		B[i1] = (i1 % k) ? min(A[i1], B[i1 - 1]) : A[i1];
+		C[i2] = ((i2 + 1) % k) ? min(A[i2], C[i2 + 1]) : A[i2];
+	}
+}
+
+int GetMin(int l, int k)
+{
+	return min(C[l], B[l + k - 1]);
+}
+
+int main()
+{
+	int n, k;
+	cin >> n >> k;
+	std::vector<int> mas;
+	for (int i = 0; i < n; i++)
+	{
+		int a;
+		cin >> a;
+		mas.push_back(a);
+	}
+	if (k == 1)
+	{
+		for (int i = 0; i < n; i++)
+		{
+			cout << mas[i] << '\n';
+		}
+	}
+	else
+	{
+		build(mas, k);
+
+		for (int i = 0; i < n - k + 1; i++)
+		{
+			cout << GetMin(i, k) << '\n';
+		}
+	}
+	
+
+	/*for (int i = 0; i < n; i++)
+	{
+		cout << B[i] << ' ';
+	}
+	cout << '\n';
+	for (int i = 0; i < n; i++)
+	{
+		cout << C[i] << ' ';
+	}*/
+	return 0;
+}

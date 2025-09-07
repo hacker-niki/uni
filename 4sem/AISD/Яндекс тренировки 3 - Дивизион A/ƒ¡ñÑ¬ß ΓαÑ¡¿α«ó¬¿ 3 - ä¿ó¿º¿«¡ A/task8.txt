@@ -1,0 +1,25 @@
+#include <iostream>
+
+int main()
+{    
+    int k, a, b, minX, maxX, minY, maxY;
+    std::cin >> k >> a >> b;
+    minX = a;
+    maxX = a;
+    minY = b;
+    maxY = b;
+    for (int i = 1; i < k; i++)
+    {
+        std::cin >> a >> b;
+        if (minX > a)
+            minX = a;
+        if (maxX < a)
+            maxX = a;
+        if (minY > b)
+            minY = b;
+        if (maxY < b)
+            maxY = b;
+    }
+    std::cout << minX << ' ' << minY << ' ' << maxX << ' ' << maxY;
+    return 0;
+}

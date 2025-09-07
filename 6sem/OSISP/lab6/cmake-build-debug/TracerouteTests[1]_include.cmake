@@ -1,0 +1,5 @@
+if(EXISTS "/home/nikita/uni/6sem/OSISP/lab6/cmake-build-debug/TracerouteTests[1]_tests.cmake")
+  include("/home/nikita/uni/6sem/OSISP/lab6/cmake-build-debug/TracerouteTests[1]_tests.cmake")
+else()
+  add_test(TracerouteTests_NOT_BUILT TracerouteTests_NOT_BUILT)
+endif()

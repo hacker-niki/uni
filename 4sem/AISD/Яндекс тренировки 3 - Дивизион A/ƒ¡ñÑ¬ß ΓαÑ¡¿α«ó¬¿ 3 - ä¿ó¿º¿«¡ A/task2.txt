@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+
+int main()
+{
+    int n, count, now, l, r;
+    std::string s;
+    std::cin >> n >> s;
+    int length = s.length();
+    int ans = 1;
+    for (char c = 'a'; c <= 'z'; c++)
+    {
+        count = 0;
+        now = 0;
+        l = 0;
+        r = 0;
+        while (r < length)
+        {
+            if (s[r] != c)
+            {
+                count++;
+            }
+            while (count > n)
+            {
+                if (s[l] != c)
+                {
+                    count--;
+                }
+                l++;
+            }
+            now = std::max(now, r - l + 1);
+            r++;
+        }
+        ans = std::max(ans, now);
+    }
+    std::cout << ans;
+    return 0;
+}

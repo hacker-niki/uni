@@ -1,0 +1,44 @@
+﻿@page "/counter"
+@using System.ComponentModel.DataAnnotations
+@rendermode InteractiveServer
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+<EditForm Model="Model" class="mt-2" OnValidSubmit="SetCount" FormName="countSet">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    <InputNumber @bind-Value="Model.count"/>
+    <button class="btn btn-outline-primary ms-2" type="submit">Установить</button>
+</EditForm>
+
+@code {
+    private int currentCount = 0;
+
+    [SupplyParameterFromForm]
+    private Models.Counter Model { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Model = new()
+        {
+            count = 0
+        };
+    }
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+
+    private void SetCount()
+    {
+        currentCount = Model.count;
+    }
+
+}
