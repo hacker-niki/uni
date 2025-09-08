@@ -1,19 +1,8 @@
 <?php
-
+require_once __DIR__ . '/../vendor/autoload.php';
 use App\STB34101312011;
 
 session_start();
-
-// Подключаем класс. Убедитесь, что путь правильный.
-// Если вы используете Composer, он должен найти его автоматически.
-
-// Если используете Composer с неймспейсами, то:
-// require_once __DIR__ . '/../vendor/autoload.php';
-// use App\STB34101312011;
-
-// Для примера без Composer, предполагаем, что класс в том же файле.
-// Для работы с Request/Response от Symfony, Composer необходим.
-// Упростим для примера без него, используя стандартные функции PHP.
 
 // --- Получение данных из запроса ---
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {

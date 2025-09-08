@@ -173,7 +173,6 @@ class STB34101312011
     }
 
     /**
-     * Преобразует 32-байтовую строку в массив из 8 32-битных целых чисел.
      * @param string $key_string Ключ в виде строки.
      * @return array Массив из 8 целых чисел.
      * @throws Exception Если длина ключа не равна 32 байтам.
@@ -187,7 +186,6 @@ class STB34101312011
         $chunks = str_split($key_string, 4);
         $numeric_key = [];
         foreach ($chunks as $chunk) {
-            // 'N' - распаковывает 4 байта в 32-битное беззнаковое число (big-endian)
             $numeric_key[] = unpack('N', $chunk)[1];
         }
         return $numeric_key;

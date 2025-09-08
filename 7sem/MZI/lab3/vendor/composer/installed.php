@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'nikita/gost-cipher-project',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => 'a3eb299bdb6c80d19012ca9ab2713226c7d35db9',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'nikita/gost-cipher-project' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => 'a3eb299bdb6c80d19012ca9ab2713226c7d35db9',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

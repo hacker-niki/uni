@@ -9,8 +9,9 @@
         }
     ],
     "require": {
-        "php": "^8.0",
-        "symfony/http-foundation": "^7.3"
+        "php": "^8.4",
+        "symfony/http-foundation": "^7.3",
+      "ext-gmp": "*"
     },
     "autoload": {
         "psr-4": {
