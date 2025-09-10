@@ -1,0 +1,7 @@
+FROM mistral-nemo
+
+# set the temperature to 1 [higher is more creative, lower is more coherent]
+PARAMETER temperature 0.2
+PARAMETER num_ctx 16384
+
+
