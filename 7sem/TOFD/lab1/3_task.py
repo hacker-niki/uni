@@ -10,7 +10,7 @@ RPC_URL = "http://127.0.0.1:8899"
 
 SENDER_WALLET_PATH = "wallet-sender.json"
 AMOUNT_LAMPORTS = 100000
-RECEIVER_PUBKEY = "AfU7x9FSmVm155ThE6Qe5oit6H1xgL6qTAfhu1UQh4vu"
+RECEIVER_PUBKEY = "9yakXJfBh2xRFheqvupjtedsbxLx7ASAbjKqiSBHg5QE"
 
 def load_keypair_from_file(filepath: str) -> Keypair:
     with open(filepath, 'r') as f:

@@ -3,10 +3,7 @@ from solana.rpc.api import Client
 from solders.pubkey import Pubkey
 from solana.constants import LAMPORTS_PER_SOL
 
-# --- КОНФИГУРАЦИЯ ---
-# Для переключения на Devnet, закомментируйте LOCAL_URL и раскомментируйте DEVNET_URL
 RPC_URL = "http://127.0.0.1:8899"  # Локальный валидатор
-# RPC_URL = "https://api.devnet.solana.com" # Solana Devnet
 
 def get_address_from_args():
     if len(sys.argv) < 2:
@@ -21,7 +18,7 @@ def get_address_from_args():
 
 def airdrop(client, public_key):
     try:
-        print(f"🪂 Запрашиваем 1 SOL для {public_key}...")
+        print(f"Запрашиваем 1 SOL для {public_key}...")
         
         # Запрашиваем аирдроп
         resp = client.request_airdrop(public_key, 1 * LAMPORTS_PER_SOL)
@@ -32,7 +29,7 @@ def airdrop(client, public_key):
         # Ожидаем подтверждения транзакции
         client.confirm_transaction(signature)
         
-        print(f"✅ Аирдроп успешен! Транзакция: {signature}")
+        print(f"Аирдроп успешен! Транзакция: {signature}")
 
     except Exception as e:
         print(f"Ошибка при аирдропе: {e}")

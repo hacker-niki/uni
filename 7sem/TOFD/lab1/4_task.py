@@ -6,17 +6,13 @@ from solders.system_program import TransferParams, transfer
 from solders.transaction import Transaction
 from solana.constants import LAMPORTS_PER_SOL
 
-# --- КОНФИГУРАЦИЯ ---
-RPC_URL = "http://127.0.0.1:8899"  # Локальный валидатор
-# RPC_URL = "https://api.devnet.solana.com" # Solana Devnet
+RPC_URL = "http://127.0.0.1:8899" 
 
-SENDER_KEYPAIR_PATH = './wallet-sender.json'
-# ЗАМЕНИТЕ НА АДРЕС ПОЛУЧАТЕЛЯ ИЗ wallet-receiver.json
-RECEIVER_PUBLIC_KEY = Pubkey.from_string("вставьте_сюда_адрес_получателя")
+SENDER_KEYPAIR_PATH = './wallet-receiver.json'
+RECEIVER_PUBLIC_KEY = Pubkey.from_string("Fo8zU5fKDdPDBzUmemCVDDV7YGJjfWRGGq6meWKnBmxH")
 
 def transfer_all_sol(client, sender, receiver):
     try:
-        # 1. Получаем текущий баланс отправителя
         balance_resp = client.get_balance(sender.pubkey())
         balance_lamports = balance_resp.value
         
@@ -26,8 +22,7 @@ def transfer_all_sol(client, sender, receiver):
             print("Баланс нулевой, перевод невозможен.")
             return
 
-        # 2. Рассчитываем комиссию (для простого перевода она фиксированная)
-        fee = 5000  # 5000 лампортов
+        fee = 5000 
         
         amount_to_send = balance_lamports - fee
 
@@ -37,28 +32,41 @@ def transfer_all_sol(client, sender, receiver):
 
         print(f"Сумма к отправке (за вычетом комиссии): {amount_to_send / LAMPORTS_PER_SOL} SOL")
 
-        # 3. Создаем и отправляем транзакцию (аналогично скрипту 3)
-        recent_blockhash = client.get_latest_blockhash().value.blockhash
         instruction = transfer(
             TransferParams(from_pubkey=sender.pubkey(), to_pubkey=receiver, lamports=amount_to_send)
         )
-        transaction = Transaction([instruction], recent_blockhash, sender.pubkey())
-        transaction.sign([sender])
+        
+        recent_blockhash = client.get_latest_blockhash().value.blockhash
+        
+        transaction = Transaction.new_with_payer(
+            instructions=[instruction],
+            payer=sender.pubkey(),
+        )
+        
+        transaction.sign([sender], recent_blockhash)
+        
         resp = client.send_transaction(transaction)
         signature = resp.value
-        client.confirm_transaction(signature)
         
-        print(f"✅ Весь баланс переведен! Сигнатура: {signature}")
+        print(f"Транзакция отправлена. Ожидаем подтверждения...")
+        client.confirm_transaction(signature, 'confirmed')
+        
+        print(f"Весь баланс переведен! Сигнатура: {signature}")
 
     except Exception as e:
         print(f"Ошибка при переводе: {e}")
 
-# --- Основная логика ---
 if __name__ == "__main__":
-    with open(SENDER_KEYPAIR_PATH, 'r') as f:
-        secret_key = bytes(json.load(f))
-    sender_keypair = Keypair.from_bytes(secret_key)
-    
-    solana_client = Client(RPC_URL)
-    
-    transfer_all_sol(solana_client, sender_keypair, RECEIVER_PUBLIC_KEY)
+    try:
+        with open(SENDER_KEYPAIR_PATH, 'r') as f:
+            secret_key = bytes(json.load(f))
+        sender_keypair = Keypair.from_bytes(secret_key)
+        
+        solana_client = Client(RPC_URL)
+        
+        transfer_all_sol(solana_client, sender_keypair, RECEIVER_PUBLIC_KEY)
+
+    except FileNotFoundError:
+        print(f"Ошибка: Не найден файл кошелька '{SENDER_KEYPAIR_PATH}'")
+    except Exception as e:
+        print(f"Произошла общая ошибка: {e}")
