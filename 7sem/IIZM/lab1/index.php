@@ -1,8 +1,5 @@
 <?php
 
-/**
- * Класс для генерации игровых наборов предметов (лутбоксов).
- */
 class ItemSetGenerator
 {
     function simulateSimpleEvent(float $probability): bool

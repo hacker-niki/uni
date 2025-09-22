@@ -35,7 +35,7 @@ def lab1(c, A, b, d_minus, d_plus):
     
     # Шаг 3. Создание стека и других переменных
     S = list()
-    x_asterix = 0
+    x_asterix = 0 #рекорд
     r = 0
     S.append([d_minus, b, alpha])
 
