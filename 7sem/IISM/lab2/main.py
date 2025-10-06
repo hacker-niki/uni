@@ -222,7 +222,7 @@ sim_type = st.sidebar.radio("Выберите тип величины", ["Неп
 if sim_type == "Непрерывные":
     dist_name = st.sidebar.selectbox(
         "Выберите распределение:",
-        ["Экспоненциальное", "Нормальное", "Равномерное", "Логнормальное"]
+        ["Экспоненциальное", "Нормальное", "Равномерное"]
     )
     if dist_name == "Экспоненциальное":
         lam = st.sidebar.number_input("Параметр λ (интенсивность)", value=1.0, min_value=0.01, format="%.2f")
@@ -232,9 +232,6 @@ if sim_type == "Непрерывные":
     elif dist_name == "Равномерное":
         a = st.sidebar.number_input("a (нижняя граница)", value=0.0, format="%.2f")
         b = st.sidebar.number_input("b (верхняя граница)", value=1.0, format="%.2f")
-    elif dist_name == "Логнормальное":
-        mu = st.sidebar.number_input("μ (мат. ожидание логарифма)", value=0.0, format="%.2f")
-        sigma = st.sidebar.number_input("σ (станд. отклонение логарифма)", value=1.0, min_value=0.01, format="%.2f")
 
 else: # Дискретные
     dist_name = st.sidebar.selectbox(
@@ -272,11 +269,6 @@ if run_button:
                 if a >= b: raise ValueError("a должно быть < b")
                 samples = a + (b - a) * u
                 theoretical = stats.uniform(loc=a, scale=b - a)
-            elif dist_name == "Логнормальное":
-                if sigma <= 0: raise ValueError("σ должен быть > 0")
-                z = stats.norm.ppf(u)
-                samples = np.exp(mu + sigma * z)
-                theoretical = stats.lognorm(s=sigma, scale=np.exp(mu))
             
             fig, results_text = analyze_continuous_samples(samples, theoretical, dist_name)
 
