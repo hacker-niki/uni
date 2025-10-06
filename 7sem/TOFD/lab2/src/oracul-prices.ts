@@ -22,7 +22,8 @@ const raydium = await Raydium.load(
     }
 )
 
-const poolId = '5Tr7e68KCc2gkTViJpNBMbu4vH41z8Kgtfb6c1SjL2ER'
+const poolId = 'CGjPGN5gSPp3mFH3quECiuHEDbn4PEZH1JVQPfoPkDXP'
+// pubkeys для Pyth
 const priceIds = {
   SOL: "ef0d8b6fda2ceba41da15d4095d1da392a0d2f8ed0c6c7bc0f4cfac8c280b56d", 
   BTC: "e62df6c8b4a85fe1a67db44dc12de5db330f7ac66b72dc658afedf0f4a415b43", 
@@ -38,7 +39,7 @@ async function getPricesFromPyth() {
   for (let [symbol, id] of Object.entries(priceIds)) {
     const feed = result.parsed?.find(f => f.id === id);
     if (feed?.price?.price) {
-      prices[symbol] = feed.price.price * (10 ** feed.price.expo); 
+      prices[symbol] = feed.price.price * (10 ** feed.price.expo); // нормализация
     }
   }
 
@@ -48,7 +49,21 @@ async function getPricesFromPyth() {
 const pythPrices = await getPricesFromPyth()
 console.log(pythPrices)
 
-const gPoolInfo = await raydium.cpmm.getRpcPoolInfo(poolId)
+const kpopPoolInfo = await raydium.cpmm.getRpcPoolInfo(poolId)
+
+const raydiumMainnet = await Raydium.load(
+    {
+        owner: owner,
+        connection: solanaConnection,
+        cluster: "mainnet",
+        disableFeatureCheck: true,
+        blockhashCommitment: "finalized",
+    }
+)
 
 
-console.log(`${pythPrices["SOL"] / gPoolInfo.poolPrice} G-Token/USD`)
+const usdcPoolInfo = await raydiumMainnet.api.fetchPoolById({ids: "58oQChx4yWmvKdwLLZzBi4ChoCc2fqCUWBkwMihLYQo2"})
+
+const kpopPrice = usdcPoolInfo[0]?.price / kpopPoolInfo.poolPrice
+
+console.log(`${kpopPrice * pythPrices["USDC"]} K-POP/USD`)

@@ -11,11 +11,11 @@ import { secret } from "./secret.js";
 
 const clusterName = "devnet"
 
-const tokenAddress = "DGkr4kPRRnU6stzoeU7ZCpuB1tuA4Hbxgt9hAXQRuTBh"
+const tokenAddress = "6JXAPynE3QQqbaAUcJm8wG8eTtvxHAv319VNhabVXLX5"
 const metadataData = {
-    name: "galexsecondtoken",
-    symbol: "G-Token-2",
-    uri: "https://raw.githubusercontent.com/mi-g-alex/G_Alex-IiTP-Labs/refs/heads/master/test/2.json",
+    name: "keypop",
+    symbol: "K-POP",
+    uri: "https://raw.githubusercontent.com/LoDesFire/python-lab-works/refs/heads/main/kpop.json",
     sellerFeeBasisPoints: 0,
     creators: null,
     collection: null,
@@ -24,7 +24,7 @@ const metadataData = {
 
 
 const owner = Keypair.fromSecretKey(secret);
-console.log(`Public key: ${owner.publicKey.toBase58()}`);
+console.log(`Public key is: ${owner.publicKey.toBase58()}`);
 
 
 const connection = new Connection(clusterApiUrl(clusterName));
@@ -68,4 +68,7 @@ tx.recentBlockhash = recentBlockhash.blockhash
 tx.sign(owner)
 
 const txSignature = await connection.sendRawTransaction(tx.serialize())
-console.log(`Transaction confirmed.\nTranscation: ${txSignature}!`);
+console.log(`Transaction confirmed, ID is: ${txSignature}!`);
+
+
+

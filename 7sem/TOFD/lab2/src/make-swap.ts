@@ -16,9 +16,10 @@ import { secret } from "./secret.js";
 const txVersion = TxVersion.V0
 
 
-const poolId = '5Tr7e68KCc2gkTViJpNBMbu4vH41z8Kgtfb6c1SjL2ER'
+const poolId = 'CGjPGN5gSPp3mFH3quECiuHEDbn4PEZH1JVQPfoPkDXP'
 const inputAmount = new BN(9000)
-const inputMint = "qKhxiRpZ2VcHPEzqGjn3XDYKqfviX9HX4t6ugZWbKQX"
+const inputMint = "AdJ2eqBkEg7zecU7Y8iQsf6nWtHnza4FuzZQNuZiEZCV"
+// const inputMint = NATIVE_MINT.toBase58()
 
 
 const connection = new Connection(clusterApiUrl('devnet'))
@@ -79,7 +80,7 @@ const { execute, transaction } = await raydium.cpmm.swap({
     poolKeys,
     inputAmount,
     swapResult,
-    slippage: 0.001, 
+    slippage: 0.001, // range: 1 ~ 0.0001, means 100% ~ 0.01%
     baseIn,
     txVersion: TxVersion.V0,
 })

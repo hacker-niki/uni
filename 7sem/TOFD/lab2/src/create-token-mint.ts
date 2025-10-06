@@ -48,5 +48,4 @@ await mintTo(
     10_000_000_000,
 )
 
-console.log(`Mint account:      ${tokenMint}`);
-console.log(`Associated account ${tokenAccount}`);
+console.log(`✅ Finished! Created token mint: ${tokenMint} and associated account ${tokenAccount}`);
