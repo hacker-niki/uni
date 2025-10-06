@@ -1,0 +1,15 @@
+{
+  "name": "gaypop",
+  "symbol": "Billy",
+  "description": "Billy solana token",
+  "image": "https://raw.githubusercontent.com/hacker-niki/uni/eee24bdd05e7afcb5ba6b070f745c85fb194ea97/7sem/TOFD/lab2/src/billy.png",
+  "properties": {
+    "files": [
+      {
+        "uri": "https://raw.githubusercontent.com/hacker-niki/uni/eee24bdd05e7afcb5ba6b070f745c85fb194ea97/7sem/TOFD/lab2/src/billy.png",
+        "type": "image/png"
+      }
+    ],
+    "category": "image"
+  }
+}
