@@ -5,8 +5,6 @@ import logging
 log = logging.getLogger("simple_mceliece")
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-# --- Вспомогательные функции для GF(2) на базе NumPy ---
-
 def gf2_matmul(A, B):
     """Умножение матриц над GF(2) (A @ B) % 2"""
     return (np.array(A, dtype=int) @ np.array(B, dtype=int)) % 2
@@ -36,9 +34,6 @@ def generate_hamming_matrices(r):
     n = 2**r - 1
     k = n - r
     
-    # Создаем матрицу H = [P_matrix | I_r]
-    # P_matrix состоит из столбцов, являющихся двоичным представлением
-    # чисел от 1 до 2^r-1, которые НЕ являются степенями двойки (имеют вес > 1).
     P_cols = []
     Ir_cols = []
     
@@ -182,13 +177,10 @@ class SimpleMcElieceCipher:
         
         return m
 
-# --- Пример использования ---
 if __name__ == "__main__":
-    # Параметр r=3 создает код Хэмминга (7,4). Длина сообщения k=4.
     cipher = SimpleMcElieceCipher(r_param=4)
     cipher.generate_random_keys()
 
-    # Сообщение длиной k=4 бита
     message = np.array([1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1])
     
     print("\n--- Encrypting ---")
@@ -200,6 +192,3 @@ if __name__ == "__main__":
     
     print(f"\nOriginal:  {message}")
     print(f"Decrypted: {decrypted_message}")
-    
-    assert np.array_equal(message, decrypted_message), "Decryption failed!"
-    print("\nSUCCESS: Message decrypted correctly after correcting 1 error.")

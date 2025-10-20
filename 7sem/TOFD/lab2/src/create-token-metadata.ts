@@ -13,9 +13,9 @@ const clusterName = "devnet"
 
 const tokenAddress = "6JXAPynE3QQqbaAUcJm8wG8eTtvxHAv319VNhabVXLX5"
 const metadataData = {
-    name: "keypop",
-    symbol: "K-POP",
-    uri: "https://raw.githubusercontent.com/LoDesFire/python-lab-works/refs/heads/main/kpop.json",
+    name: "gaypop",
+    symbol: "Billy",
+    uri: "https://raw.githubusercontent.com/hacker-niki/uni/refs/heads/master/7sem/TOFD/lab2/src/metadata.json",
     sellerFeeBasisPoints: 0,
     creators: null,
     collection: null,

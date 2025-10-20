@@ -1,257 +1,222 @@
 import streamlit as st
 import json
-from collections import Counter, deque
-import io # Для работы с загруженным файлом
+import graphviz
+from copy import deepcopy
 
-# --- Функции логики Петри-сети (Оставлены почти без изменений) ---
+THEORY_TEXT = """
+### Теоретическая справка по Сетям Петри
 
-def load_petri(uploaded_file):
-    """
-    Загружает и парсит данные Петри-сети из загруженного файла.
-    Принимает объект file-like (результат st.file_uploader).
-    """
-    if uploaded_file is None:
-        return None, None, None, None, None
+**Сеть Петри** — это математическая модель для описания и анализа распределенных систем. Она состоит из:
+- **Позиций (Places)**: Изображаются кругами, представляют собой условия или ресурсы. В них могут находиться *фишки*.
+- **Переходов (Transitions)**: Изображаются прямоугольниками, представляют события, которые могут произойти.
+- **Дуг (Arcs)**: Соединяют позиции и переходы.
+- **Маркировка (Marking)**: Распределение фишек по позициям в данный момент времени. Начальная маркировка — это исходное состояние системы.
 
-    # Чтение содержимого файла и декодирование в строку
-    string_data = uploaded_file.read().decode("utf-8")
-    data = json.loads(string_data)
+**Правило срабатывания перехода:**
+1. Переход называется **разрешенным** (enabled/fireable), если в каждой из его *входных* позиций находится как минимум одна фишка (для дуг кратностью 1).
+2. **Срабатывание** (firing) перехода — это атомарный процесс:
+   - Из каждой входной позиции изымается одна фишка.
+   - В каждую выходную позицию добавляется одна фишка.
 
-    places = []
-    init_marking = {}
-    for p in data["places"]:
-        parts = p.split(",")
-        name = parts[0]
-        # Безопасное чтение токенов, если их нет, по умолчанию 0
-        try:
-            tokens = int(parts[3])
-        except (IndexError, ValueError):
-            tokens = 0
-            
-        places.append(name)
-        init_marking[name] = tokens
+**Свойства Сети Петри:**
+- **Ограниченность**: Количество фишек в любой позиции никогда не превысит некоторого числа `k`. Если `k=1`, сеть называется **безопасной**.
+- **Живость**: Характеризует отсутствие тупиков. Живая сеть гарантирует, что любой переход может в конечном итоге сработать снова.
+- **Достижимость**: Возможность перехода из одной маркировки в другую.
 
-    transitions = []
-    for t in data["trans"]:
-        name = t.split(",")[0]
-        transitions.append(name)
+---
 
-    pre = {t: {} for t in transitions}
-    post = {t: {} for t in transitions}
-    for arc in data["arcs"]:
-        s, d = arc.split(",")
-        # Предполагаем вес дуги = 1, так как в исходном формате его нет
-        if s in places and d in transitions:
-            pre[d][s] = pre[d].get(s, 0) + 1
-        elif s in transitions and d in places:
-            post[s][d] = post[s].get(d, 0) + 1
-
-    return places, transitions, pre, post, init_marking
+Формат загружаемых данных берется с сайта
+[petry](https://petri.hp102.ru/)
+"""
 
 
-def enabled(t, marking, pre):
-    for p, w in pre[t].items():
-        if marking.get(p, 0) < w:
-            return False
-    return True
-
-
-def fire(t, marking, pre, post):
-    new = Counter(marking)
-    for p, w in pre[t].items():
-        new[p] -= w
-    for p, w in post[t].items():
-        new[p] += w
-    return dict(new)
-
-
-def build_diagram(places, transitions, pre, post, init):
-    start = tuple(init.get(p, 0) for p in places)
-    q = deque([start])
-    seen = {start: None}
-    edges = []
-
-    # Устанавливаем разумный предел для предотвращения бесконечного цикла
-    max_markings = 1000 
-    
-    while q and len(seen) < max_markings:
-        mtuple = q.popleft()
-        marking = {p: mtuple[i] for i, p in enumerate(places)}
-        for t in transitions:
-            if enabled(t, marking, pre):
-                new_mark = fire(t, marking, pre, post)
-                m2 = tuple(new_mark.get(p, 0) for p in places)
-                edges.append((mtuple, t, m2))
-                if m2 not in seen:
-                    seen[m2] = (mtuple, t)
-                    q.append(m2)
-    
-    if len(seen) >= max_markings:
-        st.warning(f"Построение графа достижимости остановлено, достигнут предел в {max_markings} маркировок.")
-
-    return list(seen.keys()), edges
-
-
-def export_to_dot(places, markings, edges):
-    """
-    Генерирует строку в формате DOT для визуализации графа.
-    """
-    def fmt(mtuple):
-        # Преобразование кортежа обратно в читаемую строку маркировки
-        return "[" + ",".join(f"{mtuple[i]}" for i, p in enumerate(places)) + "]"
-
-    dot_content = "digraph Diagram {\n"
-    dot_content += "rankdir=TB;\n"
-    
-    # Определение меток узлов
-    for i, m in enumerate(markings):
-        # Используем индекс i как уникальный идентификатор узла в DOT
-        # а m (кортеж маркировки) как метку
-        dot_content += f"  m{i} [label=\"{fmt(m)}\"];\n"
-
-    # Создание словаря для быстрого поиска индекса (ID узла) по кортежу маркировки
-    marking_to_id = {m: f"m{i}" for i, m in enumerate(markings)}
-    
-    # Определение ребер
-    for m1, t, m2 in edges:
-        id1 = marking_to_id.get(m1, str(m1))
-        id2 = marking_to_id.get(m2, str(m2))
-        dot_content += f"  {id1} -> {id2} [label=\"{t}\"];\n"
+def parse_input_data(json_string: str):
+    """Парсит входную JSON строку и создает структуру сети Петри."""
+    try:
+        data = json.loads(json_string)
         
-    dot_content += "}\n"
-    
-    return dot_content
+        initial_marking = {}
+        for p_str in data.get('places', []):
+            name, _, _, tokens = p_str.split(',')
+            initial_marking[name] = int(tokens)
+            
+        transitions = {}
+        for t_str in data.get('trans', []):
+            name, _, _ = t_str.split(',')
+            transitions[name] = {'inputs': set(), 'outputs': set()}
+            
+        place_names = set(initial_marking.keys())
+        transition_names = set(transitions.keys())
 
-
-# --- Streamlit UI ---
-
-def main():
-    st.title("Анализатор сетей Петри (Streamlit)")
-
-    # Инициализация состояния сессии
-    if 'places' not in st.session_state:
-        st.session_state.places = []
-        st.session_state.markings = []
-        st.session_state.dot_content = ""
-
-    # Справка по классам сетей Петри (скрыта в Expander)
-    intro_text = """
-        **Классы сетей Петри:**
-        - **Автоматные сети** — сети, в которых переход имеет не более одного входа и не более одного выхода.
-        - **Маркированные сети** — сети, в которых каждая позиция имеет не более одного входа и не более одного выхода.
-        - **Сети свободного выбора** — сети, в которых каждая дуга, выходящая из позиции, является либо единственным выходом из нее, либо единственным входом в переход.
-        - **Простые сети** — сети, в которых каждый переход может иметь не более одной общей позиции с другими переходами.
-
-        **Пример (из исходного Tkinter кода):**
-        * **Первая сеть:** Срабатывание нескольких переходов возможно (Например a, b).
-          * **Классификация по динамическим ограничениям:** безопасная (1-ограниченная), 1-консарвативная (кол-во маркеров постоянно), живая, неустойчивая.
-          * **Классификация по статическим ограничениям:** Сеть свободного выбора.
-        * **Вторая сеть:** Срабатывание нескольких переходов возможно (Например t2, t3).
-          * **Классификация по динамическим ограничениям:** ограниченная (2-ограниченная), консарвативная (кол-во маркеров никогда не превышает 4), живая, устойчивая.
-          * **Классификация по статическим ограничениям:** Маркированная сеть.
-    """
-    with st.expander("Справка по классам сетей Петри"):
-        st.markdown(intro_text)
-
-    # --- Ввод данных и построение ---
-    st.header("1. Загрузка и анализ")
-
-    uploaded_file = st.file_uploader(
-        "Загрузите файл с описанием сети (.json)",
-        type=["json", "txt"],
-        help="Ожидается JSON-файл с полями 'places', 'trans', 'arcs', как в исходном коде."
-    )
-
-    col1, col2 = st.columns(2)
-
-    with col1:
-        # Кнопка для запуска построения
-        if st.button("Построить диаграмму достижимости"):
-            if uploaded_file is None:
-                st.error("Пожалуйста, загрузите файл.")
+        for a_str in data.get('arcs', []):
+            source, dest = a_str.split(',')
+            if source in place_names and dest in transition_names:
+                transitions[dest]['inputs'].add(source)
+            elif source in transition_names and dest in place_names:
+                transitions[source]['outputs'].add(dest)
             else:
-                try:
-                    # 1. Загрузка
-                    places, transitions, pre, post, init = load_petri(uploaded_file)
-                    st.session_state.places = places
-                    
-                    # 2. Построение
-                    with st.spinner('Строю граф достижимости...'):
-                        markings, edges = build_diagram(places, transitions, pre, post, init)
-                        st.session_state.markings = markings
-                        
-                    # 3. Экспорт в DOT
-                    dot_content = export_to_dot(places, markings, edges)
-                    st.session_state.dot_content = dot_content
-                    
-                    st.success("Диаграмма достижимости успешно построена.")
-                    st.info(f"Найдено маркировок: {len(markings)}. Переходов: {len(edges)}.")
+                st.error(f"Неверная дуга: {a_str}. Один из элементов не определен.")
+                return None, None
+                
+        return initial_marking, {'transitions': transitions, 'places': place_names}
 
-                except Exception as e:
-                    st.error(f"Ошибка при обработке файла: {e}")
-                    st.session_state.places = []
-                    st.session_state.markings = []
-                    st.session_state.dot_content = ""
+    except (json.JSONDecodeError, ValueError, IndexError) as e:
+        st.error(f"Ошибка при обработке входных данных: {e}")
+        return None, None
 
-    # --- Скачивание DOT файла ---
-    with col2:
-        if st.session_state.dot_content:
-            st.download_button(
-                label="Скачать DOT-файл",
-                data=st.session_state.dot_content,
-                file_name="diagram.dot",
-                mime="text/plain",
-                help="Файл в формате Graphviz DOT для просмотра в онлайн-сервисах (например, GraphvizOnline)"
-            )
-            
-    # --- Проверка достижимости ---
-    st.header("2. Проверка достижимости")
-    
-    if st.session_state.places:
-        place_names = ", ".join(st.session_state.places)
-        st.caption(f"Позиции в сети: {place_names}")
+def get_fireable_transitions(marking: dict, net_structure: dict) -> list:
+    """Возвращает список переходов, которые могут сработать при текущей маркировке."""
+    fireable = []
+    if not net_structure or 'transitions' not in net_structure:
+        return []
         
-        marking_placeholder = "Пример: " + ",".join(['0'] * len(st.session_state.places))
-        text = st.text_input(
-            "Введите маркировку для проверки (через запятую):", 
-            key="marking_input",
-            placeholder=marking_placeholder
+    for t_name, t_data in net_structure['transitions'].items():
+        # Переход разрешен, если все его входные позиции имеют хотя бы одну фишку
+        is_enabled = all(marking.get(p_name, 0) > 0 for p_name in t_data['inputs'])
+        if is_enabled:
+            fireable.append(t_name)
+    return sorted(fireable)
+
+def fire_transition(marking: dict, net_structure: dict, transition_name: str) -> dict:
+    """Выполняет срабатывание перехода и возвращает новую маркировку."""
+    if transition_name not in get_fireable_transitions(marking, net_structure):
+        # Дополнительная проверка, если состояние изменилось
+        return marking
+
+    new_marking = marking.copy()
+    transition_data = net_structure['transitions'][transition_name]
+    
+    # Забираем фишки из входных позиций
+    for p_in in transition_data['inputs']:
+        new_marking[p_in] -= 1
+        
+    # Добавляем фишки в выходные позиции
+    for p_out in transition_data['outputs']:
+        new_marking[p_out] += 1
+        
+    return new_marking
+
+def generate_graphviz_dot(marking: dict, net_structure: dict, fireable_transitions: list) -> str:
+    """Генерирует DOT-строку для визуализации сети с помощью Graphviz."""
+    dot = graphviz.Digraph('PetriNet', comment='Petri Net Simulation')
+    dot.attr(rankdir='LR', splines='true') # Расположение слева направо
+
+    # Добавляем позиции (круги)
+    for p_name in sorted(net_structure['places']):
+        tokens = marking.get(p_name, 0)
+        # label отображает имя и кол-во фишек
+        # fillcolor меняется, если в позиции есть фишки
+        dot.node(
+            p_name, 
+            label=f"{p_name}\\n({tokens})", 
+            shape='circle', 
+            style='filled', 
+            fillcolor='lightyellow' if tokens > 0 else 'white'
         )
 
-        if st.button("Проверить достижимость"):
-            if not st.session_state.markings:
-                st.warning("Сначала постройте диаграмму.")
-                return
+    # Добавляем переходы (прямоугольники)
+    for t_name in sorted(net_structure['transitions'].keys()):
+        is_fireable = t_name in fireable_transitions
+        # Разрешенные переходы подсвечиваются зеленым
+        dot.node(
+            t_name, 
+            label=t_name, 
+            shape='box', 
+            style='filled',
+            fillcolor='lightgreen' if is_fireable else 'lightblue'
+        )
 
-            try:
-                # Преобразование введенной строки в кортеж чисел
-                mtuple = tuple(int(x.strip()) for x in text.split(","))
-                
-                if len(mtuple) != len(st.session_state.places):
-                    st.error(f"Количество значений в маркировке ({len(mtuple)}) не соответствует количеству позиций ({len(st.session_state.places)}).")
-                elif mtuple in st.session_state.markings:
-                    st.success(f"Маркировка **{mtuple}** достижима.")
-                else:
-                    st.info(f"Маркировка **{mtuple}** недостижима.")
-            except ValueError:
-                st.error("Введите маркировку через запятую, используя только целые числа (например, 0,1,0).")
-                
-    else:
-        st.info("Пожалуйста, загрузите файл и постройте диаграмму, чтобы проверить достижимость.")
+    # Добавляем дуги
+    for t_name, t_data in net_structure['transitions'].items():
+        for p_in in t_data['inputs']:
+            dot.edge(p_in, t_name)
+        for p_out in t_data['outputs']:
+            dot.edge(t_name, p_out)
+            
+    return dot
 
+st.set_page_config(layout="wide")
+st.title("Симулятор Сетей Петри")
 
-    # --- Визуализация ---
-    st.header("3. Визуализация графа (Graphviz)")
+# Разделяем интерфейс на две колонки
+col1, col2 = st.columns([1, 2])
+
+with col1:
+    st.header("1. Определение Сети")
     
-    if st.session_state.dot_content:
-        # Streamlit имеет встроенную поддержку Graphviz,
-        # что позволяет отобразить граф прямо в приложении.
-        try:
-            st.graphviz_chart(st.session_state.dot_content)
-        except Exception as e:
-            st.warning(f"Не удалось отобразить граф (слишком большой или ошибка в синтаксисе DOT). Скачайте DOT-файл для просмотра. Ошибка: {e}")
-    else:
-        st.info("Граф будет отображен здесь после успешного построения.")
+    # Поле для ввода данных с примером по умолчанию
+    default_input = '''
+{
+    "places":["P1,506,126,0","P2,627,131,0","P3,658,357,1","P5,300,347,0","P6,493,354,1"],
+    "trans":["T1,465,238","T2,588,247","T3,691,247","T4,403,350"],
+    "arcs":["P1,T2","P2,T2","T3,P2","T1,P1","T2,P3","P3,T3","T2,P6","P6,T1","P6,T4","T4,P5"]
+}
+    '''
+    json_input = st.text_area("Введите структуру сети в формате JSON:", value=default_input, height=250)
+    
+    # Кнопка для загрузки/сброса симуляции
+    if st.button("Загрузить / Сбросить модель"):
+        initial_marking, net_structure = parse_input_data(json_input)
+        if initial_marking is not None and net_structure is not None:
+            st.session_state.marking = initial_marking
+            st.session_state.net_structure = net_structure
+            st.session_state.history = [("Начальное состояние", initial_marking)]
+            st.success("Модель успешно загружена!")
+        else:
+            st.error("Не удалось загрузить модель. Проверьте формат данных.")
+            # Очищаем состояние, если загрузка не удалась
+            st.session_state.marking = None
+            st.session_state.net_structure = None
+            st.session_state.history = []
 
-if __name__ == "__main__":
-    main()
+    # Отображение информации только если модель загружена
+    if 'marking' in st.session_state and st.session_state.marking is not None:
+        st.header("2. Управление Симуляцией")
+        
+        current_marking = st.session_state.marking
+        net_structure = st.session_state.net_structure
+        
+        fireable_transitions = get_fireable_transitions(current_marking, net_structure)
+        
+        if not fireable_transitions:
+            st.warning("Нет доступных переходов для срабатывания (тупик).")
+        else:
+            st.write("**Доступные переходы:**")
+            # Создаем кнопки для каждого доступного перехода
+            for t_name in fireable_transitions:
+                if st.button(f"Запустить переход {t_name}", key=f"fire_{t_name}"):
+                    new_marking = fire_transition(current_marking, net_structure, t_name)
+                    st.session_state.history.append((t_name, current_marking))
+                    st.session_state.marking = new_marking
+                    st.rerun() # Перезапускаем скрипт для обновления UI
+
+        st.header("Текущая Маркировка")
+        st.json(st.session_state.marking)
+
+with col2:
+    st.header("Визуализация Сети")
+
+    if 'marking' in st.session_state and st.session_state.marking is not None:
+        current_marking = st.session_state.marking
+        net_structure = st.session_state.net_structure
+        fireable = get_fireable_transitions(current_marking, net_structure)
+        
+        # Генерируем и отображаем граф
+        dot_graph = generate_graphviz_dot(current_marking, net_structure, fireable)
+        st.graphviz_chart(dot_graph)
+        
+        st.header("История срабатываний")
+        # Отображаем историю в обратном порядке (последние события сверху)
+        history_log = ""
+        for i, (action, marking) in enumerate(reversed(st.session_state.history)):
+            if action == "Начальное состояние":
+                history_log += f"{action}"
+            else:
+                history_log += f"`{action}` <-"
+        st.markdown(history_log)
+
+    else:
+        st.info("Загрузите модель сети, чтобы начать симуляцию.")
+    
+    with st.expander("теория"):
+        st.markdown(THEORY_TEXT)

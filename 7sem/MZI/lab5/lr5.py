@@ -1,7 +1,7 @@
 from gost import GOST3411
 from msha1 import SHA1
 
-message = "Hello, world".encode('utf-8')
+message = "".encode('utf-8')
 
 
 print(f"Initial message: {message}")

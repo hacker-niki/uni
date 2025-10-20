@@ -16,9 +16,9 @@ import { secret } from "./secret.js";
 const txVersion = TxVersion.V0
 
 
-const poolId = 'CGjPGN5gSPp3mFH3quECiuHEDbn4PEZH1JVQPfoPkDXP'
+const poolId = 'BNjcyQ6WgC2uHKDuzLqYY8BBJ2c8MmCFHsY85nTQsezR'
 const inputAmount = new BN(9000)
-const inputMint = "AdJ2eqBkEg7zecU7Y8iQsf6nWtHnza4FuzZQNuZiEZCV"
+const inputMint = "6JXAPynE3QQqbaAUcJm8wG8eTtvxHAv319VNhabVXLX5"
 // const inputMint = NATIVE_MINT.toBase58()
 
 

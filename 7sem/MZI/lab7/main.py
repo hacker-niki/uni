@@ -41,7 +41,7 @@ if __name__ == "__main__":
     H_A = point_mult(d_A, G, a, p) #публичный ключ Алисы
     H_B = point_mult(d_B, G, a, p) #публичный ключ Боба
 
-    message = "Calm Kindness Kinship Love"
+    message = "asd"
     
     print(f"Исходное сообщение: {message}")
 

@@ -10,10 +10,10 @@ import { secret } from "./secret.js";
 
 const txVersion = TxVersion.V0
 
-const mintAAddress = 'AdJ2eqBkEg7zecU7Y8iQsf6nWtHnza4FuzZQNuZiEZCV'
+const mintAAddress = '6JXAPynE3QQqbaAUcJm8wG8eTtvxHAv319VNhabVXLX5'
 const mintBAddress = 'So11111111111111111111111111111111111111112'
 const mintAAmount = 90_000
-const mintBAmount = 2_997_960_720
+const mintBAmount = 1_000_000_000
 
 
 const connection = new Connection(clusterApiUrl('devnet'))

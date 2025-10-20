@@ -253,7 +253,7 @@ class GOST3411:
         v512 = [0] * 64
         v512[1] = 0x02
 
-        while len(M) >= 64:  #64, а не 512, т к в байтах, а не в битах
+        while len(M) >= 64:
             m = M[-64:]
             h = GOST3411.gN(N, h, m)
             N = GOST3411.modular_addition(N, v512)

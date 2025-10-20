@@ -3,7 +3,7 @@ from solana.rpc.api import Client
 from solders.pubkey import Pubkey
 from solana.constants import LAMPORTS_PER_SOL
 
-RPC_URL = "http://127.0.0.1:8899"  # Локальный валидатор
+RPC_URL = "https://api.devnet.solana.com"
 
 def get_address_from_args():
     if len(sys.argv) < 2:
@@ -18,10 +18,10 @@ def get_address_from_args():
 
 def airdrop(client, public_key):
     try:
-        print(f"Запрашиваем 1 SOL для {public_key}...")
+        print(f"Запрашиваем 5 SOL для {public_key}...")
         
         # Запрашиваем аирдроп
-        resp = client.request_airdrop(public_key, 1 * LAMPORTS_PER_SOL)
+        resp = client.request_airdrop(public_key, 5 * LAMPORTS_PER_SOL)
         
         # Получаем подпись транзакции
         signature = resp.value
