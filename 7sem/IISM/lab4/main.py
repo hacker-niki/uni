@@ -1,9 +1,11 @@
 import streamlit as st
+import random
+import time
 
 # --- Интерфейс Streamlit ---
 
 st.set_page_config(layout="wide")
-st.title("Аналитический калькулятор СМО M/M/1")
+st.title("Аналитический калькулятор и симулятор СМО M/M/1")
 st.markdown("##### На примере задачи о билетной кассе")
 
 st.markdown("""
@@ -28,6 +30,7 @@ with col2:
     time_service = st.number_input("За время (минут)", min_value=1, value=10, step=1)
 
 # --- Расчеты ---
+st.header("Аналитический расчет (по формулам)")
 if st.button("Рассчитать характеристики СМО"):
 
     # 1. Расчет интенсивностей
@@ -52,14 +55,15 @@ if st.button("Рассчитать характеристики СМО"):
             st.success("Система стабильна (λ < μ). Финальные вероятности существуют.")
             st.markdown(f"**Коэффициент загрузки (ρ = λ/μ):** `{rho:.4f}`")
         else:
+            rho = lambda_total / mu
             st.error("Система НЕстабильна (λ ≥ μ). Очередь будет расти бесконечно.")
             st.warning("Дальнейшие расчеты характеристик не имеют смысла для нестабильной системы.")
+            st.markdown(f"**Коэффициент загрузки (ρ = λ/μ):** `{rho:.4f}`")
     
     # 3. Расчет характеристик (только если система стабильна)
     if is_stable:
         with col_res2:
             st.subheader("Финальные вероятности состояний")
-            # p_k = (1 - rho) * rho**k
             p0 = 1 - rho
             p1 = p0 * rho
             p2 = p0 * rho**2
@@ -68,13 +72,9 @@ if st.button("Рассчитать характеристики СМО"):
             st.markdown(f"**p₂** (2 чел. в кассе): `{p2:.4f}` ({p2:.2%})")
 
         st.subheader("Характеристики эффективности СМО")
-        # Среднее число заявок в системе
         L = rho / (1 - rho)
-        # Среднее число заявок в очереди
         Lq = rho**2 / (1 - rho)
-        # Среднее время пребывания в системе
         W = L / lambda_total
-        # Среднее время пребывания в очереди
         Wq = Lq / lambda_total
         
         results_col1, results_col2 = st.columns(2)
@@ -87,4 +87,114 @@ if st.button("Рассчитать характеристики СМО"):
             st.metric(label="Среднее время в системе (W)", value=f"{W:.3f} мин.")
             st.metric(label="Среднее время в очереди (Wq)", value=f"{Wq:.3f} мин.")
 else:
-    st.info("Нажмите кнопку для выполнения расчетов.")
+    st.info("Нажмите кнопку для выполнения аналитических расчетов.")
+
+
+# --- СИМУЛЯЦИЯ ---
+st.markdown("---")
+st.header("Визуализация симуляции в реальном времени")
+
+sim_col1, sim_col2 = st.columns([1, 2])
+with sim_col1:
+    simulation_time = 10000
+    simulation_speed = 0.1
+
+if st.button("🚀 Запустить визуализацию"):
+    lambda_total = (passengers_a + passengers_b) / time_arrival
+    mu = served_passengers / time_service
+
+    if lambda_total == 0 or mu == 0:
+        st.error("Интенсивность потока и обслуживания должны быть больше нуля для симуляции.")
+    else:
+        # --- Инициализация симуляции ---
+        current_time = 0
+        queue = 0
+        server_busy = False
+        
+        # События: (время, тип_события)
+        # Типы: 0 - прибытие, 1 - уход (окончание обслуживания)
+        events = []
+        
+        # Генерируем первое прибытие
+        next_arrival_time = random.expovariate(lambda_total)
+        events.append((next_arrival_time, 0))
+
+        # --- Создаем плейсхолдеры для обновления "в реальном времени" ---
+        st.subheader("Панель мониторинга")
+        kpi_col1, kpi_col2, kpi_col3 = st.columns(3)
+        time_placeholder = kpi_col1.empty()
+        queue_placeholder = kpi_col2.empty()
+        status_placeholder = kpi_col3.empty()
+
+        st.subheader("Процесс")
+        viz_placeholder = st.empty()
+        log_placeholder = st.empty()
+        log_text = ""
+
+        while current_time < simulation_time:
+            if not events:
+                break # Если событий нет, выходим
+
+            # Получаем ближайшее событие
+            events.sort()
+            event_time, event_type = events.pop(0)
+            current_time = event_time
+
+            # --- Обработка событий ---
+            if event_type == 0: # Прибытие
+                log_text += f"{current_time:.2f} мин: 🚶 Прибыл новый пассажир.\n"
+                if not server_busy:
+                    # Сразу начинаем обслуживание
+                    server_busy = True
+                    log_text += f"{current_time:.2f} мин: ✅ Пассажир начал обслуживание.\n"
+                    # Генерируем время ухода
+                    service_duration = random.expovariate(mu)
+                    next_departure_time = current_time + service_duration
+                    events.append((next_departure_time, 1))
+                else:
+                    # Встаем в очередь
+                    queue += 1
+                
+                # Генерируем следующее прибытие
+                next_arrival_time = current_time + random.expovariate(lambda_total)
+                events.append((next_arrival_time, 0))
+
+            elif event_type == 1: # Уход
+                log_text += f"{current_time:.2f} мин: 🏁 Пассажир обслужен и ушел.\n"
+                if queue > 0:
+                    # Берем следующего из очереди
+                    queue -= 1
+                    log_text += f"{current_time:.2f} мин: ✅ Следующий из очереди начал обслуживание.\n"
+                    # Генерируем время ухода для него
+                    service_duration = random.expovariate(mu)
+                    next_departure_time = current_time + service_duration
+                    events.append((next_departure_time, 1))
+                else:
+                    # Очереди нет, касса свободна
+                    server_busy = False
+
+            # --- Обновление визуализации ---
+            time_placeholder.metric("Симулированное время", f"{current_time:.2f} мин.")
+            queue_placeholder.metric("Длина очереди", f"{queue} чел.")
+            
+            if server_busy:
+                status_placeholder.metric("Статус кассы", "Занята 🟨")
+                server_viz = "[👨‍💻]"
+            else:
+                status_placeholder.metric("Статус кассы", "Свободна 🟩")
+                server_viz = "[   ]"
+
+            queue_viz = "🚶" * queue
+            viz_placeholder.markdown(f"**Касса:** {server_viz} <br> **Очередь:** {queue_viz}", unsafe_allow_html=True)
+            
+            # Обрезаем лог, чтобы он не стал слишком длинным
+            log_lines = log_text.strip().split('\n')
+            if len(log_lines) > 10:
+                log_text = '\n'.join(log_lines[-10:]) + '\n'
+
+            log_placeholder.text_area("Журнал событий (последние 10)", log_text, height=200)
+
+            # Пауза для эффекта "реального времени"
+            time.sleep(simulation_speed)
+            
+        st.success(f"Симуляция завершена на времени {current_time:.2f} минут.")

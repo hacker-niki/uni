@@ -1,5 +1,4 @@
 def point_add(P, Q, a, p):
-    """Складывает две точки P и Q на эллиптической кривой."""
     if P is None:
         return Q
     if Q is None:
@@ -27,10 +26,6 @@ def point_add(P, Q, a, p):
     return (x3, y3)
 
 def point_mult(k, point, a, p):
-    """
-    Умножает точку на скаляр k с использованием алгоритма Double-and-Add.
-    Вычисляет k * P.
-    """
     result = None
     to_add = point
     

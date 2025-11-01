@@ -2,7 +2,6 @@ import random
 from elliptic_math import point_add, point_mult
 
 # y^2 = (x^3 + ax + b) mod p
-#https://habr.com/ru/articles/335906/
 
 p = 0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2f
 a = 0

@@ -6,7 +6,6 @@ import scipy.stats as stats
 from scipy.integrate import quad # <--- ДОБАВЛЕНО: для численного интегрирования
 from matplotlib import cm
 
-# --- НОВАЯ Логика для непрерывной случайной величины (Метод 1: Отбор в 2D) ---
 
 def generate_continuous_samples_rejection(n):
     """
