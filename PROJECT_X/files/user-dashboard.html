@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><meta charset="UTF-8"><title>Мои тесты</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:Manrope,sans-serif;background:#f8fafc;padding:20px}.container{max-width:1200px;margin:0 auto}.header{background:#fff;padding:20px 30px;border-radius:16px;box-shadow:0 2px 10px rgba(0,0,0,.05);margin-bottom:20px;display:flex;justify-content:space-between;align-items:center}.logo{font-size:1.5rem;font-weight:700;color:#667eea}.user-info{display:flex;align-items:center;gap:15px}.avatar{width:40px;height:40px;background:linear-gradient(135deg,#667eea,#764ba2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600}.tests-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(350px,1fr));gap:20px}.test-card{background:#fff;border-radius:16px;padding:25px;box-shadow:0 2px 10px rgba(0,0,0,.05);transition:all .3s}.test-card:hover{transform:translateY(-5px);box-shadow:0 10px 30px rgba(0,0,0,.1)}.test-header{display:flex;justify-content:space-between;align-items:start;margin-bottom:15px}.test-title{font-size:1.2rem;font-weight:700;color:#0f172a}.badge{padding:4px 12px;border-radius:6px;font-size:.8rem;font-weight:600}.badge.active{background:#dcfce7;color:#166534}.badge.completed{background:#dbeafe;color:#1e40af}.test-meta{display:flex;gap:20px;margin:15px 0;font-size:.9rem;color:#64748b}.test-meta span{display:flex;align-items:center;gap:5px}.btn{padding:12px 24px;border:none;border-radius:10px;font-weight:600;cursor:pointer;transition:all .3s}.btn-primary{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 5px 20px rgba(102,126,234,.3)}.stats{background:#fff;padding:20px;border-radius:16px;margin-bottom:20px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.stat-item{text-align:center}.stat-number{font-size:2rem;font-weight:700;color:#667eea}.stat-label{color:#64748b;font-size:.9rem}</style>
+</head>
+<body>
+<div class="container">
+<div class="header"><div class="logo">📝 TestGen</div><div class="user-info"><span>Иванов Иван</span><div class="avatar">ИИ</div></div></div>
+<div class="stats">
+<div class="stat-item"><div class="stat-number">4</div><div class="stat-label">Назначено</div></div>
+<div class="stat-item"><div class="stat-number">12</div><div class="stat-label">Пройдено</div></div>
+<div class="stat-item"><div class="stat-number">87%</div><div class="stat-label">Средний балл</div></div>
+<div class="stat-item"><div class="stat-number">2</div><div class="stat-label">Активных</div></div>
+</div>
+<div class="tests-grid">
+<div class="test-card"><div class="test-header"><div class="test-title">Основы SQL</div><span class="badge active">Активен</span></div><p style="color:#64748b;margin-bottom:15px">Тест по базовым операциям SQL: SELECT, INSERT, UPDATE, DELETE</p><div class="test-meta"><span>📝 20 вопросов</span><span>⏱️ 30 минут</span></div><button class="btn btn-primary">Начать тест</button></div>
+<div class="test-card"><div class="test-header"><div class="test-title">Проектирование БД</div><span class="badge active">Активен</span></div><p style="color:#64748b;margin-bottom:15px">Нормализация, ER-диаграммы и проектирование реляционных БД</p><div class="test-meta"><span>📝 25 вопросов</span><span>⏱️ 45 минут</span></div><button class="btn btn-primary">Начать тест</button></div>
+<div class="test-card"><div class="test-header"><div class="test-title">Python для аналитики</div><span class="badge completed">Завершен</span></div><p style="color:#64748b;margin-bottom:15px">Pandas, NumPy и визуализация данных</p><div class="test-meta"><span>📝 18 вопросов</span><span>✅ 92%</span></div><button class="btn" style="background:#f1f5f9;color:#334155">Просмотреть результат</button></div>
+<div class="test-card"><div class="test-header"><div class="test-title">Git и GitHub</div><span class="badge completed">Завершен</span></div><p style="color:#64748b;margin-bottom:15px">Система контроля версий и командная работа</p><div class="test-meta"><span>📝 15 вопросов</span><span>✅ 88%</span></div><button class="btn" style="background:#f1f5f9;color:#334155">Просмотреть результат</button></div>
+</div>
+</div>
+</body>
+</html>

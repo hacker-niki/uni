@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><meta charset="UTF-8"><title>Создание теста</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:Manrope,sans-serif;background:#f8fafc}.sidebar{width:250px;background:#0f172a;height:100vh;position:fixed;padding:20px;color:#fff}.logo{font-size:1.5rem;font-weight:700;margin-bottom:40px;color:#667eea}.nav-item{padding:12px 16px;border-radius:8px;margin-bottom:5px;cursor:pointer;display:flex;align-items:center;gap:10px}.nav-item.active{background:rgba(102,126,234,.2)}.main{margin-left:250px;padding:30px}.card{background:#fff;border-radius:16px;padding:30px;box-shadow:0 2px 10px rgba(0,0,0,.05);margin-bottom:20px}h1{font-size:2rem;font-weight:700;color:#0f172a;margin-bottom:30px}.form-group{margin-bottom:25px}label{display:block;font-weight:600;color:#334155;margin-bottom:8px}input,textarea,select{width:100%;padding:12px;border:2px solid #e2e8f0;border-radius:10px;font-family:Manrope,sans-serif;font-size:1rem}input:focus,textarea:focus,select:focus{outline:none;border-color:#667eea}textarea{min-height:100px;resize:vertical}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}.btn{padding:14px 28px;border:none;border-radius:10px;font-weight:600;cursor:pointer;font-size:1rem}.btn-primary{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff}.btn-secondary{background:#f1f5f9;color:#334155;margin-right:10px}.actions{display:flex;gap:10px;margin-top:30px}</style>
+</head>
+<body>
+<div class="sidebar"><div class="logo">📝 TestGen</div><div class="nav-item">👥 Пользователи</div><div class="nav-item">📄 Документы</div><div class="nav-item active">📝 Тесты</div><div class="nav-item">📊 Результаты</div><div class="nav-item">⚙️ Настройки</div></div>
+<div class="main">
+<h1>Создание нового теста</h1>
+<div class="card">
+<form>
+<div class="form-group"><label>Название теста *</label><input type="text" placeholder="Например: Основы Python" value="Основы Python"></div>
+<div class="form-group"><label>Описание</label><textarea placeholder="Краткое описание содержания теста">Тест охватывает базовые конструкции языка Python: переменные, условия, циклы, функции и работу с коллекциями</textarea></div>
+<div class="form-row">
+<div class="form-group"><label>Ограничение по времени (минуты)</label><input type="number" value="45"></div>
+<div class="form-group"><label>Количество попыток</label><select><option>Не ограничено</option><option selected>1 попытка</option><option>2 попытки</option><option>3 попытки</option></select></div>
+</div>
+<div class="form-row">
+<div class="form-group"><label>Проходной балл (%)</label><input type="number" value="70"></div>
+<div class="form-group"><label>Категория</label><select><option>Программирование</option><option selected>Базы данных</option><option>Аналитика</option></select></div>
+</div>
+<div class="actions"><button type="submit" class="btn btn-primary">Далее: Выбор вопросов →</button><button type="button" class="btn btn-secondary">Отмена</button></div>
+</form>
+</div>
+</div>
+</body></html>

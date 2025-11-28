@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каскадное удаление</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .terminal {
+            background: #1e1e1e;
+            border: 1px solid #3e3e3e;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+        .prompt { color: #4ec9b0; }
+        .keyword { color: #569cd6; font-weight: 600; }
+        .string { color: #ce9178; }
+        .number { color: #b5cea8; }
+        .success { color: #4ec9b0; }
+        .comment { color: #6a9955; }
+        .line { margin: 5px 0; }
+        .warning { color: #d7ba7d; }
+    </style>
+</head>
+<body>
+    <div class="terminal">
+        <div class="line"><span class="comment">-- Проверка связанных записей до удаления</span></div>
+        <div class="line"><span class="prompt">mysql></span> <span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) <span class="keyword">FROM</span> test_sessions <span class="keyword">WHERE</span> user_id = <span class="number">5</span>;</div>
+        <div class="line">+----------+</div>
+        <div class="line">| COUNT(*) |</div>
+        <div class="line">+----------+</div>
+        <div class="line">|       <span class="number">12</span> |</div>
+        <div class="line">+----------+</div>
+        <div class="line">&nbsp;</div>
+
+        <div class="line"><span class="prompt">mysql></span> <span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) <span class="keyword">FROM</span> user_answers ua</div>
+        <div class="line">    -> <span class="keyword">JOIN</span> test_sessions ts <span class="keyword">ON</span> ua.test_session_id = ts.id</div>
+        <div class="line">    -> <span class="keyword">WHERE</span> ts.user_id = <span class="number">5</span>;</div>
+        <div class="line">+----------+</div>
+        <div class="line">| COUNT(*) |</div>
+        <div class="line">+----------+</div>
+        <div class="line">|      <span class="number">180</span> |</div>
+        <div class="line">+----------+</div>
+        <div class="line">&nbsp;</div>
+
+        <div class="line"><span class="comment">-- Удаление пользователя (триггер каскадное удаление)</span></div>
+        <div class="line"><span class="prompt">mysql></span> <span class="keyword">DELETE FROM</span> users <span class="keyword">WHERE</span> id = <span class="number">5</span>;</div>
+        <div class="line"><span class="success">Query OK, 1 row affected (0.03 sec)</span></div>
+        <div class="line">&nbsp;</div>
+
+        <div class="line"><span class="comment">-- Проверка каскадного удаления</span></div>
+        <div class="line"><span class="prompt">mysql></span> <span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) <span class="keyword">FROM</span> test_sessions <span class="keyword">WHERE</span> user_id = <span class="number">5</span>;</div>
+        <div class="line">+----------+</div>
+        <div class="line">| COUNT(*) |</div>
+        <div class="line">+----------+</div>
+        <div class="line">|        <span class="number">0</span> | <span class="comment">← Все сессии удалены</span></div>
+        <div class="line">+----------+</div>
+        <div class="line">&nbsp;</div>
+
+        <div class="line"><span class="prompt">mysql></span> <span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) <span class="keyword">FROM</span> user_answers ua</div>
+        <div class="line">    -> <span class="keyword">LEFT JOIN</span> test_sessions ts <span class="keyword">ON</span> ua.test_session_id = ts.id</div>
+        <div class="line">    -> <span class="keyword">WHERE</span> ts.id <span class="keyword">IS NULL</span>;</div>
+        <div class="line">+----------+</div>
+        <div class="line">| COUNT(*) |</div>
+        <div class="line">+----------+</div>
+        <div class="line">|        <span class="number">0</span> | <span class="comment">← Осиротевших записей нет</span></div>
+        <div class="line">+----------+</div>
+        <div class="line">&nbsp;</div>
+        <div class="line"><span class="success">✓ Каскадное удаление работает корректно</span></div>
+    </div>
+</body>
+</html>

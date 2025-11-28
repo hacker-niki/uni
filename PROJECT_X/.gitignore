@@ -1,2 +1,39 @@
+# Python
 .venv
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Django
 db.sqlite3
+db.sqlite3-journal
+*.log
+local_settings.py
+/static/
+/media/
+
+# Environment
+.env
+.env.local
+
+# Docker
+*.pid
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+from_server/
+new_generation/
+dip/
+reports/
+tests/

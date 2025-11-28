@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ошибка внешнего ключа - MySQL</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .terminal {
+            background: #1e1e1e;
+            border: 1px solid #3e3e3e;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+
+        .terminal-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #3e3e3e;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .dot.red { background: #ff5f56; }
+        .dot.yellow { background: #ffbd2e; }
+        .dot.green { background: #27c93f; }
+
+        .terminal-title {
+            margin-left: 10px;
+            color: #888;
+            font-size: 12px;
+        }
+
+        .prompt {
+            color: #4ec9b0;
+        }
+
+        .command {
+            color: #d7ba7d;
+        }
+
+        .keyword {
+            color: #569cd6;
+            font-weight: 600;
+        }
+
+        .string {
+            color: #ce9178;
+        }
+
+        .number {
+            color: #b5cea8;
+        }
+
+        .error {
+            color: #f48771;
+            background: rgba(244, 135, 113, 0.1);
+            padding: 10px;
+            border-left: 3px solid #f48771;
+            margin: 10px 0;
+        }
+
+        .success {
+            color: #4ec9b0;
+        }
+
+        .comment {
+            color: #6a9955;
+        }
+
+        .line {
+            margin: 5px 0;
+        }
+
+        .timestamp {
+            color: #858585;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="terminal">
+        <div class="terminal-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">mysql@localhost:testing_system</span>
+        </div>
+
+        <div class="line"><span class="prompt">mysql></span> <span class="keyword">USE</span> testing_system;</div>
+        <div class="line"><span class="success">Database changed</span></div>
+        <div class="line">&nbsp;</div>
+
+        <div class="line"><span class="comment">-- Попытка вставки вопроса с несуществующим source_document_id</span></div>
+        <div class="line"><span class="prompt">mysql></span> <span class="keyword">INSERT INTO</span> questions (question_text, source_document_id, creator_id)</div>
+        <div class="line">    -> <span class="keyword">VALUES</span> (<span class="string">'Тестовый вопрос'</span>, <span class="number">99999</span>, <span class="number">1</span>);</div>
+        <div class="line">&nbsp;</div>
+
+        <div class="error">
+            <div><strong>ERROR 1452 (23000):</strong> Cannot add or update a child row: a foreign key constraint fails</div>
+            <div>(`testing_system`.`questions`, CONSTRAINT `fk_question_document`</div>
+            <div>FOREIGN KEY (`source_document_id`) REFERENCES `source_documents` (`id`)</div>
+            <div>ON DELETE SET NULL)</div>
+        </div>
+
+        <div class="line">&nbsp;</div>
+        <div class="line"><span class="comment">-- Проверка существования документа с id=99999</span></div>
+        <div class="line"><span class="prompt">mysql></span> <span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) <span class="keyword">FROM</span> source_documents <span class="keyword">WHERE</span> id = <span class="number">99999</span>;</div>
+        <div class="line">+----------+</div>
+        <div class="line">| COUNT(*) |</div>
+        <div class="line">+----------+</div>
+        <div class="line">|        <span class="number">0</span> |</div>
+        <div class="line">+----------+</div>
+        <div class="line"><span class="timestamp">1 row in set (0.00 sec)</span></div>
+        <div class="line">&nbsp;</div>
+
+        <div class="line"><span class="comment">-- Вставка с существующим документом (id=1)</span></div>
+        <div class="line"><span class="prompt">mysql></span> <span class="keyword">INSERT INTO</span> questions (question_text, source_document_id, creator_id)</div>
+        <div class="line">    -> <span class="keyword">VALUES</span> (<span class="string">'Тестовый вопрос'</span>, <span class="number">1</span>, <span class="number">1</span>);</div>
+        <div class="line">&nbsp;</div>
+        <div class="line"><span class="success">Query OK, 1 row affected (0.01 sec)</span></div>
+        <div class="line">&nbsp;</div>
+
+        <div class="line"><span class="prompt">mysql></span> <span class="keyword">SELECT</span> id, question_text, source_document_id <span class="keyword">FROM</span> questions <span class="keyword">WHERE</span> id = <span class="keyword">LAST_INSERT_ID</span>();</div>
+        <div class="line">+----+------------------+---------------------+</div>
+        <div class="line">| id | question_text    | source_document_id  |</div>
+        <div class="line">+----+------------------+---------------------+</div>
+        <div class="line">| <span class="number">42</span> | Тестовый вопрос  |                   <span class="number">1</span> |</div>
+        <div class="line">+----+------------------+---------------------+</div>
+        <div class="line"><span class="timestamp">1 row in set (0.00 sec)</span></div>
+        <div class="line">&nbsp;</div>
+        <div class="line"><span class="prompt">mysql></span> <span style="animation: blink 1s infinite;">_</span></div>
+    </div>
+
+    <style>
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+    </style>
+</body>
+</html>

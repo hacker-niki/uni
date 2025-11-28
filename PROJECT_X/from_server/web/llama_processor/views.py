@@ -45,10 +45,11 @@ def upload_file_and_display_questions(request):
             for index, chunk in enumerate(text_entry.chunks.all().order_by('order')):
                 print('chunk ', index)
                 # Отправка содержимого файла в нейронную сеть
+                ollama_url = os.environ.get('OLLAMA_URL', 'http://ollama:11434')
                 ollama_response = requests.post(
-                    'http://localhost:11434/api/generate',
+                    f'{ollama_url}/api/generate',
                     json={
-                        'model': 'question_generator',
+                        'model': 'question_processor',
                         'prompt': chunk.chunk_text,
                         'stream': False
                     }

@@ -1,0 +1,65 @@
+services:
+  db:
+    image: mariadb:11.2
+    container_name: testgen-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: testgen_root_pass
+      MYSQL_DATABASE: testgen
+      MYSQL_USER: testgen_user
+      MYSQL_PASSWORD: testgen_pass
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - db_data:/var/lib/mysql
+    networks:
+      - testgen-network
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build: ./backend
+    container_name: testgen-backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_USER=testgen_user
+      - DB_PASSWORD=testgen_pass
+      - DB_NAME=testgen
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - testgen-network
+
+  frontend:
+    build: ./frontend
+    container_name: testgen-frontend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    networks:
+      - testgen-network
+
+volumes:
+  db_data:
+    driver: local
+
+networks:
+  testgen-network:
+    driver: bridge
